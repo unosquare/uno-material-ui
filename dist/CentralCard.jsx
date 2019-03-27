@@ -2,7 +2,7 @@ import Card from '@material-ui/core/Card';
 import Grid from '@material-ui/core/Grid';
 import makeStyles from '@material-ui/styles/makeStyles';
 import * as React from 'react';
-var useStyles = makeStyles(function () { return ({
+const useStyles = makeStyles(() => ({
     grid: {
         alignContent: 'center',
         justifyContent: 'center',
@@ -12,9 +12,9 @@ var useStyles = makeStyles(function () { return ({
         left: '50%',
         transform: 'translate(-50%, -50%)',
     },
-}); });
-var CentralCard = function (props) {
-    var classes = useStyles();
+}));
+const CentralCard = (props) => {
+    const classes = useStyles();
     return (<Grid container={true} className={classes.grid}>
             <Card>
                 {props.children}

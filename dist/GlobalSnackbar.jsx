@@ -13,13 +13,13 @@ import Info from '@material-ui/icons/Info';
 import Warning from '@material-ui/icons/Warning';
 import makeStyles from '@material-ui/styles/makeStyles';
 import * as React from 'react';
-var useStyles = makeStyles(function (theme) { return ({
+const useStyles = makeStyles((theme) => ({
     closeIcon: {
         color: '#fff !important',
         fontSize: '20px  !important',
     },
     error: {
-        backgroundColor: theme.palette ? theme.palette.error.main + " !important" : red[600] + " !important",
+        backgroundColor: theme.palette ? `${theme.palette.error.main} !important` : `${red[600]} !important`,
         display: 'flex !important',
     },
     icon: {
@@ -31,11 +31,11 @@ var useStyles = makeStyles(function (theme) { return ({
         marginRight: '15px  !important',
     },
     info: {
-        backgroundColor: theme.palette ? theme.palette.primary.main + " !important" : blue[600] + " !important",
+        backgroundColor: theme.palette ? `${theme.palette.primary.main} !important` : `${blue[600]} !important`,
         display: 'flex !important',
     },
     success: {
-        backgroundColor: green[600] + " !important",
+        backgroundColor: `${green[600]} !important`,
         display: 'flex !important',
     },
     text: {
@@ -50,15 +50,14 @@ var useStyles = makeStyles(function (theme) { return ({
         fontSize: '28px !important',
     },
     warning: {
-        backgroundColor: amber[700] + " !important",
+        backgroundColor: `${amber[700]} !important`,
         display: 'flex !important',
     },
-}); });
-var GlobalSnackbar = function (_a) {
-    var message = _a.message, _b = _a.seconds, seconds = _b === void 0 ? 2500 : _b, _c = _a.mobile, mobile = _c === void 0 ? false : _c;
-    var classes = useStyles();
-    var _d = React.useState(false), open = _d[0], setOpen = _d[1];
-    var getIcon = function () {
+}));
+const GlobalSnackbar = ({ message, seconds = 2500, mobile = false }) => {
+    const classes = useStyles();
+    const [open, setOpen] = React.useState(false);
+    const getIcon = () => {
         switch (message.messageType) {
             case 'info': return <Info className={getIconStyle()}/>;
             case 'warning': return <Warning className={getIconStyle()}/>;
@@ -66,7 +65,7 @@ var GlobalSnackbar = function (_a) {
             default: return <CheckCircle className={getIconStyle()}/>;
         }
     };
-    var getStyle = function () {
+    const getStyle = () => {
         switch (message.messageType) {
             case 'info': return classes.info;
             case 'warning': return classes.warning;
@@ -74,18 +73,18 @@ var GlobalSnackbar = function (_a) {
             default: return classes.success;
         }
     };
-    var getTextStyle = function () { return (mobile ? classes.textMobile : classes.text); };
-    var getIconStyle = function () { return (mobile ? classes.iconMobile : classes.icon); };
-    var onClose = function () { return setOpen(false); };
-    React.useEffect(function () {
+    const getTextStyle = () => (mobile ? classes.textMobile : classes.text);
+    const getIconStyle = () => (mobile ? classes.iconMobile : classes.icon);
+    const onClose = () => setOpen(false);
+    React.useEffect(() => {
         if (message && message.messageText !== '') {
             setOpen(true);
-            setTimeout(function () {
+            setTimeout(() => {
                 setOpen(false);
             }, seconds);
         }
     }, [message]);
-    var anchorOrigin = {
+    const anchorOrigin = {
         horizontal: mobile ? 'center' : 'right',
         vertical: 'bottom',
     };

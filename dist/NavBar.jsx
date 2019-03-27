@@ -3,7 +3,7 @@ import Grid from '@material-ui/core/Grid';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import * as React from 'react';
-var NavBar = function (props) { return (<AppBar position='absolute' color='primary'>
+const NavBar = (props) => (<AppBar position='absolute' color='primary'>
         <Toolbar>
             <Grid container={true} direction='row' item={true} xs={12}>
                 <Grid item={true} xs={6} container direction={'row'} justify={'flex-start'} alignItems={'center'}>
@@ -16,5 +16,5 @@ var NavBar = function (props) { return (<AppBar position='absolute' color='prima
                 </Grid>
             </Grid>
         </Toolbar>
-    </AppBar>); };
+    </AppBar>);
 export default NavBar;

@@ -1,5 +1,5 @@
 import createMuiTheme from '@material-ui/core/styles/createMuiTheme';
-export var UnoTheme = createMuiTheme({
+export const UnoTheme = createMuiTheme({
     palette: {
         error: {
             main: '#f44336',

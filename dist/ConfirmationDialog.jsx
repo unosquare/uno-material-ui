@@ -6,12 +6,11 @@ import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import Typography from '@material-ui/core/Typography';
 import * as React from 'react';
-var buttonStyle = {
+const buttonStyle = {
     marginRight: '5px !important',
 };
-export var ConfirmationDialog = function (_a) {
-    var contentText = _a.contentText, title = _a.title, onAgreeAction = _a.onAgreeAction, onClose = _a.onClose, open = _a.open, _b = _a.agree, agree = _b === void 0 ? 'Agree' : _b, _c = _a.disagree, disagree = _c === void 0 ? 'Disagree' : _c, _d = _a.textColor, textColor = _d === void 0 ? 'textSecondary' : _d;
-    var handleAgree = function (e) { return onAgreeAction(e); };
+export const ConfirmationDialog = ({ contentText, title, onAgreeAction, onClose, open, agree = 'Agree', disagree = 'Disagree', textColor = 'textSecondary', }) => {
+    const handleAgree = (e) => onAgreeAction(e);
     return (<Dialog open={open} onClose={onClose}>
             <DialogTitle>{title}</DialogTitle>
             <DialogContent>
