@@ -33,20 +33,20 @@ const styles = ({ palette }: any) => createStyles({
 });
 
 export class ErrorBoundary extends React.Component<WithStyles<typeof styles>> {
-    state = {
+    public state = {
         error: null,
         errorData: null,
         errorInfo: null,
     };
 
-    componentDidCatch(error: any, errorInfo: any) {
+    public componentDidCatch(error: any, errorInfo: any) {
         this.setState({
             error,
             errorInfo,
         });
     }
 
-    render() {
+    public render() {
         if (this.state.errorInfo) {
             const { classes } = this.props;
 

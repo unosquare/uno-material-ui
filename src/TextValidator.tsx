@@ -5,7 +5,7 @@ import { ValidatorComponent } from 'react-form-validator-core';
 import { humanize } from 'uno-react';
 
 export default class TextValidator extends ValidatorComponent {
-    state = {
+    public state = {
         isValid: null,
     };
 

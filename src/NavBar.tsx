@@ -8,8 +8,10 @@ const NavBar = (props: any) => (
     <AppBar position='absolute' color='primary'>
         <Toolbar>
             <Grid container={true} direction='row' item={true} xs={12}>
-                <Grid item={true} xs={6}
-                    container
+                <Grid
+                    item={true}
+                    xs={6}
+                    container={true}
                     direction={'row'}
                     justify={'flex-start'}
                     alignItems={'center'}
@@ -18,7 +20,9 @@ const NavBar = (props: any) => (
                         {props.title || 'uno-react'}
                     </Typography>
                 </Grid>
-                <Grid xs={6} item={true}
+                <Grid
+                    xs={6}
+                    item={true}
                     container={true}
                     direction={'row'}
                     justify={'flex-end'}
