@@ -1,3 +1,4 @@
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/ddb0cdc179c748b3b8f16ddad1194f07)](https://app.codacy.com/app/UnosquareLabs/uno-material-ui?utm_source=github.com&utm_medium=referral&utm_content=unosquare/uno-material-ui&utm_campaign=Badge_Grade_Dashboard)
 [![Build Status](https://travis-ci.org/unosquare/uno-material-ui.svg?branch=master)](https://travis-ci.org/unosquare/uno-material-ui)
 
 # uno-material-ui
