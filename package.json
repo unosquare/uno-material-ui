@@ -1,0 +1,57 @@
+{
+  "name": "uno-material-ui",
+  "version": "0.1.0",
+  "description": "Components and extensions for Material UI",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "build": "tsc --p tsconfig.json",
+    "lint": "tslint src/**/*.ts src/**/*.tsx"
+  },
+  "jest": {
+    "automock": false,
+    "setupFiles": [
+      "<rootDir>/test/setupTest.js"
+    ],
+    "moduleFileExtensions": [
+      "jsx",
+      "js"
+    ],
+    "testMatch": [
+      "<rootDir>/test/**/*.spec.(js|jsx)"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/unosquare/uno-material-ui.git"
+  },
+  "keywords": [
+    "material-ui",
+    "react",
+    "hooks",
+    "components"
+  ],
+  "author": "Unosquare",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/unosquare/uno-material-ui/issues"
+  },
+  "homepage": "https://github.com/unosquare/uno-material-ui#readme",
+  "devDependencies": {
+    "typescript": "^3.3.4000",
+    "tslint": "^5.13.1",
+    "tslint-react": "^3.6.0",
+    "ts-jest": "^24.0.0",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.11.2",
+    "jest": "^24.5.0"
+  },
+  "dependencies": {
+    "@material-ui/core": "^3.9.2",
+    "@material-ui/icons": "^3.0.2",
+    "@material-ui/styles": "^3.0.0-alpha.10",
+    "jss": "^10.0.0-alpha.9",
+    "react-form-validator-core": "^0.6.2",
+    "uno-react": "^0.2.2"
+  }
+}
