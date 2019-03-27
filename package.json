@@ -1,6 +1,6 @@
 {
   "name": "uno-material-ui",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Components and extensions for Material UI",
   "main": "dist/index.js",
   "scripts": {
@@ -54,7 +54,7 @@
     "@material-ui/styles": "^3.0.0-alpha.10",
     "jss": "^10.0.0-alpha.9",
     "react-form-validator-core": "^0.6.2",
-    "uno-react": "^0.3.1"
+    "uno-react": "^0.3.3"
   },
   "files": [
     "dist"
