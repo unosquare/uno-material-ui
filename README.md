@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/unosquare/uno-material-ui.svg?branch=master)](https://travis-ci.org/unosquare/uno-material-ui)
+
 # uno-material-ui
 
 Components and extensions for Material UI
