@@ -1,15 +1,26 @@
 {
     "compilerOptions": {
-        "moduleResolution": "node",
-        "preserveConstEnums": true,
-        "outDir": "dist",
-        "jsx": "react",
-        "lib": ["es5", "es6", "dom"],
-        "declaration": true,
-        "sourceMap": true,
+        "baseUrl": ".",
+        "paths": { "*": ["types/*"] },
         "target": "es5",
-        "skipLibCheck": true
+        "lib": [
+            "dom",
+            "dom.iterable",
+            "esnext"
+        ],
+        "allowJs": true,
+        "skipLibCheck": true,
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "strict": false,
+        "forceConsistentCasingInFileNames": true,
+        "module": "esnext",
+        "moduleResolution": "node",
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "jsx": "preserve",
+        "outDir": "./dist",
     },
-    "include": [ "src/**/*.ts", "src/**/*.tsx" ],
-    "exclude": [ "test/**/*.*", "node_modules" ]
+    "include": ["src/**/*.ts", "src/**/*.tsx"],
+    "exclude": ["test/**/*.*", "node_modules"]
 }

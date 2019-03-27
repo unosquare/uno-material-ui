@@ -3,7 +3,7 @@ import blue from '@material-ui/core/colors/blue';
 import green from '@material-ui/core/colors/green';
 import red from '@material-ui/core/colors/red';
 import IconButton from '@material-ui/core/IconButton';
-import Snackbar from '@material-ui/core/Snackbar';
+import Snackbar, { SnackbarOrigin } from '@material-ui/core/Snackbar';
 import SnackbarContent from '@material-ui/core/SnackbarContent';
 import Typography from '@material-ui/core/Typography';
 import CheckCircle from '@material-ui/icons/CheckCircle';
@@ -52,11 +52,11 @@ const useStyles = makeStyles((theme: any) => ({
     },
     warning: {
         backgroundColor: `${amber[700]} !important`,
-        display: 'flex !important'
+        display: 'flex !important',
     },
 }));
 
-const GlobalSnackbar = ({ message, seconds = 2500, mobile = false }) => {
+const GlobalSnackbar = ({ message, seconds = 2500, mobile = false }: any) => {
     const classes = useStyles();
     const [open, setOpen] = React.useState(false);
 
@@ -92,7 +92,7 @@ const GlobalSnackbar = ({ message, seconds = 2500, mobile = false }) => {
         }
     }, [message]);
 
-    const anchorOrigin = {
+    const anchorOrigin: SnackbarOrigin = {
         horizontal: mobile ? 'center' : 'right',
         vertical: 'bottom',
     };

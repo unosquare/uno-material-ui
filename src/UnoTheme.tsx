@@ -20,6 +20,6 @@ export const UnoTheme = createMuiTheme({
     useNextVariants: true,
   },
   zIndex: {
-    appBar: '1201 !important',
+    appBar: 1201,
   },
 });

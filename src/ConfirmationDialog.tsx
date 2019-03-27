@@ -20,8 +20,8 @@ export const ConfirmationDialog = ({
     agree = 'Agree',
     disagree = 'Disagree',
     textColor = 'textSecondary',
-}) => {
-    const handleAgree = (e) => onAgreeAction(e);
+}: any) => {
+    const handleAgree = (e: any) => onAgreeAction(e);
 
     return (
         <Dialog

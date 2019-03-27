@@ -1,9 +1,10 @@
 import Paper from '@material-ui/core/Paper';
-import withStyles from '@material-ui/core/styles/withStyles';
+import createStyles from '@material-ui/core/styles/createStyles';
+import withStyles, { WithStyles } from '@material-ui/core/styles/withStyles';
 import Typography from '@material-ui/core/Typography';
 import * as React from 'react';
 
-const styles = ({ palette }) => ({
+const styles = ({ palette }: any) => createStyles({
     error: {
         backgroundColor: palette.error.dark,
     },
@@ -31,16 +32,17 @@ const styles = ({ palette }) => ({
     },
 });
 
-export class ErrorBoundary extends React.Component {
+export class ErrorBoundary extends React.Component<WithStyles<typeof styles>> {
     state = {
         error: null,
-        errorInfo: null
+        errorData: null,
+        errorInfo: null,
     };
 
-    componentDidCatch(error, errorInfo) {
+    componentDidCatch(error: any, errorInfo: any) {
         this.setState({
             error,
-            errorInfo
+            errorInfo,
         });
     }
 

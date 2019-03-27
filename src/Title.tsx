@@ -1,15 +1,15 @@
 import Typography from '@material-ui/core/Typography';
 import * as React from 'react';
 
-export function Title({ prefix, suffix, value, titleClass }) {
+export function Title({ prefix, suffix, value, titleClass }: any) {
     const title = `${prefix || ''}${value}${suffix || ''}`;
-    React.useEffect(() => { document.title = title; }, [ title ]);
+    React.useEffect(() => { document.title = title; }, [title]);
 
     return <Typography variant='h4' className={titleClass}>{value}</Typography>;
 }
 
-export function AppTitle(prefix, suffix) {
-    return ({ value, titleClass }) => {
+export function AppTitle(prefix: any, suffix: any) {
+    return ({ value, titleClass }: any) => {
         const props = { prefix, suffix, value, titleClass };
 
         return <Title {...props} />;
