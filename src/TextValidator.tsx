@@ -6,7 +6,7 @@ import { humanize } from 'uno-react';
 
 export class TextValidator extends ValidatorComponent {
     public state = {
-        isValid: null,
+        isValid: true,
     };
 
     public render() {
