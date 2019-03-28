@@ -1,24 +1,37 @@
-import Button from '@material-ui/core/Button';
-import Dialog from '@material-ui/core/Dialog';
-import DialogActions from '@material-ui/core/DialogActions';
-import DialogContent from '@material-ui/core/DialogContent';
-import DialogContentText from '@material-ui/core/DialogContentText';
-import DialogTitle from '@material-ui/core/DialogTitle';
-import Typography from '@material-ui/core/Typography';
-import * as React from 'react';
-const buttonStyle = {
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];
+    result["default"] = mod;
+    return result;
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var Button_1 = __importDefault(require("@material-ui/core/Button"));
+var Dialog_1 = __importDefault(require("@material-ui/core/Dialog"));
+var DialogActions_1 = __importDefault(require("@material-ui/core/DialogActions"));
+var DialogContent_1 = __importDefault(require("@material-ui/core/DialogContent"));
+var DialogContentText_1 = __importDefault(require("@material-ui/core/DialogContentText"));
+var DialogTitle_1 = __importDefault(require("@material-ui/core/DialogTitle"));
+var Typography_1 = __importDefault(require("@material-ui/core/Typography"));
+var React = __importStar(require("react"));
+var buttonStyle = {
     marginRight: '5px !important',
 };
-export const ConfirmationDialog = ({ contentText, title, onAgreeAction, onClose, open, agree = 'Agree', disagree = 'Disagree', textColor = 'textSecondary', }) => {
-    const handleAgree = (e) => onAgreeAction(e);
-    return (React.createElement(Dialog, { open: open, onClose: onClose },
-        React.createElement(DialogTitle, null, title),
-        React.createElement(DialogContent, null,
-            React.createElement(DialogContentText, null,
-                React.createElement(Typography, { color: textColor }, contentText))),
-        React.createElement(DialogActions, null,
+exports.ConfirmationDialog = function (_a) {
+    var contentText = _a.contentText, title = _a.title, onAgreeAction = _a.onAgreeAction, onClose = _a.onClose, open = _a.open, _b = _a.agree, agree = _b === void 0 ? 'Agree' : _b, _c = _a.disagree, disagree = _c === void 0 ? 'Disagree' : _c, _d = _a.textColor, textColor = _d === void 0 ? 'textSecondary' : _d;
+    var handleAgree = function (e) { return onAgreeAction(e); };
+    return (React.createElement(Dialog_1.default, { open: open, onClose: onClose },
+        React.createElement(DialogTitle_1.default, null, title),
+        React.createElement(DialogContent_1.default, null,
+            React.createElement(DialogContentText_1.default, null,
+                React.createElement(Typography_1.default, { color: textColor }, contentText))),
+        React.createElement(DialogActions_1.default, null,
             onClose &&
-                React.createElement(Button, { onClick: onClose, style: buttonStyle, color: 'secondary', variant: 'contained' }, disagree),
+                React.createElement(Button_1.default, { onClick: onClose, style: buttonStyle, color: 'secondary', variant: 'contained' }, disagree),
             onAgreeAction &&
-                React.createElement(Button, { onClick: handleAgree, color: 'primary', autoFocus: true, variant: 'contained' }, agree))));
+                React.createElement(Button_1.default, { onClick: handleAgree, color: 'primary', autoFocus: true, variant: 'contained' }, agree))));
 };

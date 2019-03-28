@@ -1,8 +1,16 @@
-import CircularProgress from '@material-ui/core/CircularProgress';
-import styled from '@material-ui/styles/styled';
-export const LoadingIcon = styled(CircularProgress)(({ theme }) => ({
-    color: theme.palette.primary.main,
-    display: 'block !important',
-    margin: 'auto !important',
-    marginBottom: '15px !important',
-}));
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var CircularProgress_1 = __importDefault(require("@material-ui/core/CircularProgress"));
+var styled_1 = __importDefault(require("@material-ui/styles/styled"));
+exports.LoadingIcon = styled_1.default(CircularProgress_1.default)(function (_a) {
+    var theme = _a.theme;
+    return ({
+        color: theme.palette.primary.main,
+        display: 'block !important',
+        margin: 'auto !important',
+        marginBottom: '15px !important',
+    });
+});

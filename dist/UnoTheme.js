@@ -1,5 +1,10 @@
-import createMuiTheme from '@material-ui/core/styles/createMuiTheme';
-export const UnoTheme = createMuiTheme({
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var createMuiTheme_1 = __importDefault(require("@material-ui/core/styles/createMuiTheme"));
+exports.UnoTheme = createMuiTheme_1.default({
     palette: {
         error: {
             main: '#f44336',
