@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme: any) => ({
     toolbar: theme.mixins.toolbar,
 }));
 
-const MenuList = (props: any) => {
+export const MenuList = (props: any) => {
     const classes = useStyles();
 
     return (
@@ -30,5 +30,3 @@ const MenuList = (props: any) => {
         </Drawer>
     );
 };
-
-export default MenuList;

@@ -4,7 +4,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import * as React from 'react';
 
-const NavBar = (props: any) => (
+export const NavBar = (props: any) => (
     <AppBar position='absolute' color='primary'>
         <Toolbar>
             <Grid container={true} direction='row' item={true} xs={12}>
@@ -34,5 +34,3 @@ const NavBar = (props: any) => (
         </Toolbar>
     </AppBar>
 );
-
-export default NavBar;

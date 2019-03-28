@@ -64,4 +64,4 @@ var TextValidator = /** @class */ (function (_super) {
     };
     return TextValidator;
 }(react_form_validator_core_1.ValidatorComponent));
-exports.default = TextValidator;
+exports.TextValidator = TextValidator;

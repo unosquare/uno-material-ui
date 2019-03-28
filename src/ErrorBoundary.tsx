@@ -32,7 +32,7 @@ const styles = ({ palette }: any) => createStyles({
     },
 });
 
-export class ErrorBoundary extends React.Component<WithStyles<typeof styles>> {
+class ErrorBoundaryComponent extends React.Component<WithStyles<typeof styles>> {
     public state = {
         error: null,
         errorData: null,
@@ -90,4 +90,4 @@ export class ErrorBoundary extends React.Component<WithStyles<typeof styles>> {
     }
 }
 
-export default withStyles(styles)(ErrorBoundary);
+export const ErrorBoundary = withStyles(styles)(ErrorBoundaryComponent);

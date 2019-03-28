@@ -2,7 +2,7 @@ import Button from '@material-ui/core/Button';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import * as React from 'react';
 
-const ButtonWithLoading = ({ isFetching = false, text = 'Save', className = '' }) => (
+export const ButtonWithLoading = ({ isFetching = false, text = 'Save', className = '' }) => (
     <div className={className}>
         {
             isFetching ?
@@ -14,5 +14,3 @@ const ButtonWithLoading = ({ isFetching = false, text = 'Save', className = '' }
         }
     </div>
 );
-
-export default ButtonWithLoading;

@@ -23,10 +23,9 @@ var useStyles = makeStyles_1.default(function (theme) { return ({
     },
     toolbar: theme.mixins.toolbar,
 }); });
-var MenuList = function (props) {
+exports.MenuList = function (props) {
     var classes = useStyles();
     return (React.createElement(Drawer_1.default, { variant: 'permanent', className: classes.drawer, classes: { paper: classes.drawerPaper } },
         React.createElement("div", { className: classes.toolbar }),
         React.createElement(List_1.default, null, props.children)));
 };
-exports.default = MenuList;

@@ -15,7 +15,7 @@ const useStyles = makeStyles(() => ({
     },
 }));
 
-const CentralCard = (props: any) => {
+export const CentralCard = (props: any) => {
     const classes = useStyles();
 
     return (
@@ -27,4 +27,3 @@ const CentralCard = (props: any) => {
     );
 };
 
-export default CentralCard;

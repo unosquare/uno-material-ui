@@ -58,9 +58,9 @@ var styles = function (_a) {
         },
     });
 };
-var ErrorBoundary = /** @class */ (function (_super) {
-    __extends(ErrorBoundary, _super);
-    function ErrorBoundary() {
+var ErrorBoundaryComponent = /** @class */ (function (_super) {
+    __extends(ErrorBoundaryComponent, _super);
+    function ErrorBoundaryComponent() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
         _this.state = {
             error: null,
@@ -69,13 +69,13 @@ var ErrorBoundary = /** @class */ (function (_super) {
         };
         return _this;
     }
-    ErrorBoundary.prototype.componentDidCatch = function (error, errorInfo) {
+    ErrorBoundaryComponent.prototype.componentDidCatch = function (error, errorInfo) {
         this.setState({
             error: error,
             errorInfo: errorInfo,
         });
     };
-    ErrorBoundary.prototype.render = function () {
+    ErrorBoundaryComponent.prototype.render = function () {
         if (this.state.errorInfo) {
             var classes = this.props.classes;
             var errorDesc = this.state.error && this.state.error.toString()
@@ -92,7 +92,6 @@ var ErrorBoundary = /** @class */ (function (_super) {
         // eslint-disable-next-line react/prop-types
         return this.props.children;
     };
-    return ErrorBoundary;
+    return ErrorBoundaryComponent;
 }(React.Component));
-exports.ErrorBoundary = ErrorBoundary;
-exports.default = withStyles_1.default(styles)(ErrorBoundary);
+exports.ErrorBoundary = withStyles_1.default(styles)(ErrorBoundaryComponent);

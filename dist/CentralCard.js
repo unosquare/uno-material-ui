@@ -25,9 +25,8 @@ var useStyles = makeStyles_1.default(function () { return ({
         transform: 'translate(-50%, -50%)',
     },
 }); });
-var CentralCard = function (props) {
+exports.CentralCard = function (props) {
     var classes = useStyles();
     return (React.createElement(Grid_1.default, { container: true, className: classes.grid },
         React.createElement(Card_1.default, null, props.children)));
 };
-exports.default = CentralCard;
