@@ -53,7 +53,7 @@ var TextValidator = /** @class */ (function (_super) {
     function TextValidator() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
         _this.state = {
-            isValid: null,
+            isValid: true,
         };
         return _this;
     }
