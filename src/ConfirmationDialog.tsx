@@ -36,7 +36,7 @@ export const ConfirmationDialog = ({
             </DialogContent>
             <DialogActions>
                 {onClose &&
-                    <Button onClick={onClose} style={buttonStyle} color='secondary' variant='contained'>
+                    <Button onClick={onClose} style={buttonStyle} color='secondary'>
                         {disagree}
                     </Button>
                 }
