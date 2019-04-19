@@ -3,7 +3,7 @@
 
 # uno-material-ui
 
-Components and extensions for Material UI
+Components and extensions for [Material UI](https://material-ui.com) (React).
 
 Table of contents
 =================
