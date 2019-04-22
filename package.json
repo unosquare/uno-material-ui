@@ -1,6 +1,6 @@
 {
   "name": "uno-material-ui",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "description": "Components and extensions for Material UI",
   "main": "dist/index.js",
   "scripts": {
@@ -39,22 +39,22 @@
   },
   "homepage": "https://github.com/unosquare/uno-material-ui#readme",
   "devDependencies": {
-    "@types/react": "16.8.13",
+    "@types/react": "16.8.14",
     "@types/react-dom": "16.8.4",
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.12.1",
     "jest": "^24.7.1",
     "ts-jest": "^24.0.2",
-    "tslint": "^5.15.0",
+    "tslint": "^5.16.0",
     "tslint-react": "^4.0.0",
-    "typescript": "^3.4.3"
+    "typescript": "^3.4.4"
   },
   "dependencies": {
     "@material-ui/core": "^3.9.3",
     "@material-ui/icons": "^3.0.2",
     "@material-ui/styles": "^3.0.0-alpha.10",
     "jss": "^10.0.0-alpha.9",
-    "react-form-validator-core": "^0.6.2",
+    "react-form-validator-core": "^0.6.3",
     "uno-react": "^0.4.0"
   },
   "peerDependencies": {

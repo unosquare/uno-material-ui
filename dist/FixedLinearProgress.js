@@ -16,6 +16,7 @@ var React = __importStar(require("react"));
 var useStyles = makeStyles_1.default(function (theme) { return ({
     linearProgress: {
         height: theme.spacing.unit * 2,
+        marginTop: theme.spacing.unit,
     },
 }); });
 exports.FixedLinearProgress = function (_a) {
