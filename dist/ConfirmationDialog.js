@@ -31,7 +31,7 @@ exports.ConfirmationDialog = function (_a) {
                 React.createElement(Typography_1.default, { color: textColor }, contentText))),
         React.createElement(DialogActions_1.default, null,
             onClose &&
-                React.createElement(Button_1.default, { onClick: onClose, style: buttonStyle, color: 'secondary', variant: 'contained' }, disagree),
+                React.createElement(Button_1.default, { onClick: onClose, style: buttonStyle, color: 'secondary' }, disagree),
             onAgreeAction &&
                 React.createElement(Button_1.default, { onClick: handleAgree, color: 'primary', autoFocus: true, variant: 'contained' }, agree))));
 };

@@ -15,3 +15,4 @@ __export(require("./TextValidator"));
 __export(require("./Title"));
 __export(require("./UnoSuspense"));
 __export(require("./UnoTheme"));
+__export(require("./FixedLinearProgress"));
