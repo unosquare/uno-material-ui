@@ -6,7 +6,7 @@ const useStyles = makeStyles(theme => ({
     linearProgress: {
         height: theme.spacing.unit * 2,
     },
-  }));
+}));
 
 export const LinearProgress = ({ isLoading = false }) => {
     const classes = useStyles();
