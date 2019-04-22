@@ -2,11 +2,11 @@ import * as React from 'react';
 import LinearProgress from '@material-ui/core/LinearProgress';
 import makeStyles from '@material-ui/styles/makeStyles';
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles(theme => ({
     linearProgress: {
-        height: '20px',
+        height: theme.spacing.unit * 2,
     },
-}));
+  }));
 
 export const LinearProgress = ({ isLoading = false }) => {
     const classes = useStyles();
