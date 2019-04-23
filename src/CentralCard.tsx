@@ -26,4 +26,3 @@ export const CentralCard = (props: any) => {
         </Grid>
     );
 };
-
