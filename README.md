@@ -3,6 +3,8 @@
 
 # uno-material-ui
 
+*:star: Please star this project if you find it useful!*
+
 Components and extensions for [Material UI](https://material-ui.com) (React).
 
 Table of contents
