@@ -21,7 +21,16 @@ export const ConfirmationDialog = ({
     disagree = 'Disagree',
     textColor = 'textSecondary',
 }: any) => {
-    const handleAgree = (e: any) => onAgreeAction(e);
+    const [disabled, setDisabled] = React.useState(false);
+    const handleAgree = (e: any) => {
+        setDisabled(true);
+        onAgreeAction(e);
+    };
+
+    const handleDisagree = () => {
+        setDisabled(true);
+        onClose();
+    };
 
     return (
         <Dialog
@@ -36,12 +45,12 @@ export const ConfirmationDialog = ({
             </DialogContent>
             <DialogActions>
                 {onClose &&
-                    <Button onClick={onClose} style={buttonStyle} color='secondary'>
+                    <Button onClick={handleDisagree} style={buttonStyle} disabled={disabled} color='secondary'>
                         {disagree}
                     </Button>
                 }
                 {onAgreeAction &&
-                    <Button onClick={handleAgree} color='primary' autoFocus={true} variant='contained'>
+                    <Button onClick={handleAgree} color='primary' disabled={disabled} autoFocus={true} variant='contained'>
                         {agree}
                     </Button>
                 }
