@@ -23,7 +23,15 @@ var buttonStyle = {
 };
 exports.ConfirmationDialog = function (_a) {
     var contentText = _a.contentText, title = _a.title, onAgreeAction = _a.onAgreeAction, onClose = _a.onClose, open = _a.open, _b = _a.agree, agree = _b === void 0 ? 'Agree' : _b, _c = _a.disagree, disagree = _c === void 0 ? 'Disagree' : _c, _d = _a.textColor, textColor = _d === void 0 ? 'textSecondary' : _d;
-    var handleAgree = function (e) { return onAgreeAction(e); };
+    var _e = React.useState(false), disabled = _e[0], setDisabled = _e[1];
+    var handleAgree = function (e) {
+        setDisabled(true);
+        onAgreeAction(e);
+    };
+    var handleDisagree = function () {
+        setDisabled(true);
+        onClose();
+    };
     return (React.createElement(Dialog_1.default, { open: open, onClose: onClose },
         React.createElement(DialogTitle_1.default, null, title),
         React.createElement(DialogContent_1.default, null,
@@ -31,7 +39,7 @@ exports.ConfirmationDialog = function (_a) {
                 React.createElement(Typography_1.default, { color: textColor }, contentText))),
         React.createElement(DialogActions_1.default, null,
             onClose &&
-                React.createElement(Button_1.default, { onClick: onClose, style: buttonStyle, color: 'secondary' }, disagree),
+                React.createElement(Button_1.default, { onClick: handleDisagree, style: buttonStyle, disabled: disabled, color: 'secondary' }, disagree),
             onAgreeAction &&
-                React.createElement(Button_1.default, { onClick: handleAgree, color: 'primary', autoFocus: true, variant: 'contained' }, agree))));
+                React.createElement(Button_1.default, { onClick: handleAgree, color: 'primary', disabled: disabled, autoFocus: true, variant: 'contained' }, agree))));
 };
