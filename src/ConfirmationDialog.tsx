@@ -45,12 +45,23 @@ export const ConfirmationDialog = ({
             </DialogContent>
             <DialogActions>
                 {onClose &&
-                    <Button onClick={handleDisagree} style={buttonStyle} disabled={disabled} color='secondary'>
+                    <Button
+                        onClick={handleDisagree}
+                        style={buttonStyle}
+                        disabled={disabled}
+                        color='secondary'
+                    >
                         {disagree}
                     </Button>
                 }
                 {onAgreeAction &&
-                    <Button onClick={handleAgree} color='primary' disabled={disabled} autoFocus={true} variant='contained'>
+                    <Button
+                        onClick={handleAgree}
+                        color='primary'
+                        disabled={disabled}
+                        autoFocus={true}
+                        variant='contained'
+                    >
                         {agree}
                     </Button>
                 }
