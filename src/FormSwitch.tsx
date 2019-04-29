@@ -8,7 +8,7 @@ export const FormSwitch: React.FunctionComponent<any> = ({
     disabled,
     label,
     labelClassName,
-    labelPlacement,
+    labelPlacement = 'end',
     name,
     onChange,
 }) => (
