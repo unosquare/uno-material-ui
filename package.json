@@ -1,6 +1,6 @@
 {
   "name": "uno-material-ui",
-  "version": "0.1.11",
+  "version": "0.2.0",
   "description": "Components and extensions for Material UI",
   "main": "dist/index.js",
   "scripts": {
