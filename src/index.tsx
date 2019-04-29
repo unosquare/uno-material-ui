@@ -11,3 +11,4 @@ export * from './Title';
 export * from './UnoSuspense';
 export * from './UnoTheme';
 export * from './FixedLinearProgress';
+export * from './FormSwitch';
