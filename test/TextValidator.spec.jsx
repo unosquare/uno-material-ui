@@ -1,7 +1,6 @@
 import * as React from 'react';
 import createShallow from '@material-ui/core/test-utils/createShallow';
-import TextValidator from '../../src/classes/TextValidator';
-import TextField from '@material-ui/core/TextField';
+import { TextValidator } from '../src/TextValidator';
 import { ValidatorComponent } from 'react-form-validator-core';
 
 xdescribe('TextValidator', () => {
@@ -27,7 +26,6 @@ xdescribe('TextValidator', () => {
     });
 
     test('Should contain a <TextField />', () => {
-        //console.log(wrapper.find(TextValidator).debug({ignoreProps: true}));
-        //expect(wrapper.find(TextField)).toHaveLength(1);
+        expect(wrapper.find(TextField)).toHaveLength(1);
     });
 });

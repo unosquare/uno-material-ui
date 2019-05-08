@@ -1,11 +1,11 @@
-import * as React from 'react';
-import context from '../dataSource/__mocks__/TestContextHelper';
-import createShallow from '@material-ui/core/test-utils/createShallow';
-import { ConfirmationDialog } from '../../src/components/ConfirmationDialog';
 import {
     Button, Dialog, DialogActions, DialogContent,
     DialogContentText, DialogTitle,
 } from '@material-ui/core';
+import createShallow from '@material-ui/core/test-utils/createShallow';
+import * as React from 'react';
+import context from './dataSource/__mocks__/TestContextHelper';
+import { ConfirmationDialog } from '../src/ConfirmationDialog';
 
 describe('ConfirmationDialog', () => {
     let wrapper;
@@ -46,18 +46,18 @@ describe('ConfirmationDialog', () => {
         expect(wrapper.find(Button)).toHaveLength(2);
     });
 
-    test('Test OnAgreeAction', () => { 
-        const agreeButton = wrapper.find( { color: 'primary' } );
+    test('Test OnAgreeAction', () => {
+        const agreeButton = wrapper.find({ color: 'primary' });
         expect(agreeButton).toHaveLength(1);
-        
+
         agreeButton.simulate('click');
         expect(context.actions.onAgreeAction).toHaveBeenCalled();
     });
 
-    test('Test OnCloseAction', () => { 
-        const agreeButton = wrapper.find( { color: 'secondary' } );
+    test('Test OnCloseAction', () => {
+        const agreeButton = wrapper.find({ color: 'secondary' });
         expect(agreeButton).toHaveLength(1);
-        
+
         agreeButton.simulate('click');
         expect(context.actions.onDesagreeAction).toHaveBeenCalled();
     });
