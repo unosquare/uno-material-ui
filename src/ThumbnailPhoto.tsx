@@ -11,29 +11,21 @@ interface IThumbnailPhotoProps {
 }
 
 export const ThumbnailPhoto: React.FunctionComponent<IThumbnailPhotoProps> = ({
-    className,
     fullName,
     imgSrc,
-    onClick,
     placement,
+    ...rest
 }) => {
-    const [imgLoaded, setImgLoad] = React.useState(false);
-    const [userInitials, setInitials] = React.useState('');
 
-    const splitName = () => {
-        const initials = fullName ? fullName.split(' ').reduce((p, s, i) => i > 1 ? p : p + s[0], '')
-            : '';
-        setInitials(initials);
+    const initials = fullName ? fullName.split(' ').reduce((p, s, i) => i > 1 ? p : p + s[0], '') : '';
+    const [imgLoaded, setImgLoad] = React.useState(false);
+    const thumbnail = new Image();
+
+    thumbnail.onload = () => {
+        setImgLoad(true);
     };
 
-    React.useEffect(() => {
-        splitName();
-        const thumbnail = new Image();
-        thumbnail.onload = () => {
-            setImgLoad(true);
-        };
-        thumbnail.src = imgSrc;
-    });
+    thumbnail.src = imgSrc;
 
     return (
         <Tooltip
@@ -41,13 +33,12 @@ export const ThumbnailPhoto: React.FunctionComponent<IThumbnailPhotoProps> = ({
             placement={placement}
         >
             <Avatar
-                className={className}
+                {...rest}
                 src={imgLoaded ? imgSrc : ''}
-                onClick={onClick}
             >
                 {
                     !imgLoaded &&
-                    userInitials
+                    initials
                 }
             </Avatar>
         </Tooltip>
