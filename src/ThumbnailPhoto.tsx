@@ -1,12 +1,10 @@
-import Avatar from '@material-ui/core/Avatar/Avatar';
+import Avatar, { AvatarProps } from '@material-ui/core/Avatar/Avatar';
 import Tooltip from '@material-ui/core/Tooltip/Tooltip';
 import * as React from 'react';
 
-interface IThumbnailPhotoProps {
-    className: any;
+interface IThumbnailPhotoProps extends AvatarProps {
     fullName: string;
     imgSrc: string;
-    onClick?: any;
     placement: any;
 }
 
