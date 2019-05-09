@@ -4,8 +4,8 @@ import {
 } from '@material-ui/core';
 import createShallow from '@material-ui/core/test-utils/createShallow';
 import * as React from 'react';
-import context from './dataSource/__mocks__/TestContextHelper';
 import { ConfirmationDialog } from '../src/ConfirmationDialog';
+import context from './dataSource/__mocks__/TestContextHelper';
 
 describe('ConfirmationDialog', () => {
     let wrapper;

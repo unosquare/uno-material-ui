@@ -1,7 +1,8 @@
-import * as React from 'react';
 import createShallow from '@material-ui/core/test-utils/createShallow';
-import { TextValidator } from '../src/TextValidator';
+import TextField from '@material-ui/core/TextField';
+import * as React from 'react';
 import { ValidatorComponent } from 'react-form-validator-core';
+import { TextValidator } from '../src/TextValidator';
 
 xdescribe('TextValidator', () => {
     let wrapper;
@@ -11,13 +12,10 @@ xdescribe('TextValidator', () => {
         jest.resetModules();
         shallow = createShallow();
         wrapper = shallow(
-                <TextValidator
-                    name='nameProperty'
-                >
+                <TextValidator>
                     <ValidatorComponent />
                 </TextValidator>
             );
-        //wrapper.find(TextValidator).setState({ isValid: true });
         wrapper.update();
     });
 

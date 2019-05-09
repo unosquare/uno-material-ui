@@ -11,22 +11,22 @@
   },
   "jest": {
     "automock": false,
-    "setupFiles": [
-      "<rootDir>/test/setupTest.js"
-    ],
     "moduleFileExtensions": [
       "tsx",
-      "jsx",
+      "ts",
       "js"
     ],
     "testMatch": [
-      "<rootDir>/test/**/*.spec.(js|jsx)"
+      "<rootDir>/test/**/*.spec.tsx"
     ],
     "transform": {
-      "^.+\\.tsx?$": "ts-jest",
-      "^.+\\.jsx?$": "babel-jest"
+      "^.+\\.tsx?$": "ts-jest"
     },
-    "preset": "ts-jest"
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "setupFiles": [
+      "<rootDir>/test/setupTest.ts"
+    ]
   },
   "repository": {
     "type": "git",
@@ -45,13 +45,7 @@
   },
   "homepage": "https://github.com/unosquare/uno-material-ui#readme",
   "devDependencies": {
-    "@babel/cli": "^7.2.3",
-    "@babel/core": "^7.3.4",
-    "@babel/plugin-proposal-class-properties": "^7.3.4",
-    "@babel/plugin-transform-runtime": "^7.3.4",
-    "@babel/preset-env": "^7.3.4",
-    "@babel/preset-react": "^7.0.0",
-    "babel-eslint": "^10.0.1",
+    "@types/enzyme": "^3.9.1",
     "@types/jest": "^24.0.12",
     "@types/react": "16.8.14",
     "@types/react-dom": "16.8.4",
@@ -69,7 +63,6 @@
     "@material-ui/core": "^3.9.3",
     "@material-ui/icons": "^3.0.2",
     "@material-ui/styles": "^3.0.0-alpha.10",
-    "babel-jest": "^24.8.0",
     "jss": "^10.0.0-alpha.9",
     "react-form-validator-core": "^0.6.3",
     "uno-react": "^0.4.0"
