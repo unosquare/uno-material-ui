@@ -17,13 +17,12 @@ export const ThumbnailPhoto: React.FunctionComponent<IThumbnailPhotoProps> = ({
 
     const initials = fullName ? fullName.split(' ').reduce((p, s, i) => i > 1 ? p : p + s[0], '') : '';
     const [imgLoaded, setImgLoad] = React.useState(false);
-    const thumbnail = new Image();
 
-    thumbnail.onload = () => {
-        setImgLoad(true);
-    };
-
-    thumbnail.src = imgSrc;
+    React.useEffect(() => {
+        const thumbnail = new Image();
+        thumbnail.onload = () => setImgLoad(true);
+        thumbnail.src = imgSrc;
+    }, [imgSrc]);
 
     return (
         <Tooltip

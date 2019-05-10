@@ -17,3 +17,4 @@ __export(require("./UnoSuspense"));
 __export(require("./UnoTheme"));
 __export(require("./FixedLinearProgress"));
 __export(require("./FormSwitch"));
+__export(require("./ThumbnailPhoto"));
