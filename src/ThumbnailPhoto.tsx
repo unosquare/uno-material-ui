@@ -34,7 +34,7 @@ export const ThumbnailPhoto: React.FunctionComponent<IThumbnailPhotoProps> = ({
                 src={imgLoaded ? imgSrc : ''}
             >
                 {
-                    !imgLoaded &&
+                    (!imgLoaded) &&
                     initials
                 }
             </Avatar>
