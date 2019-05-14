@@ -43,6 +43,6 @@ exports.ThumbnailPhoto = function (_a) {
         thumbnail.src = imgSrc;
     }, [imgSrc]);
     return (React.createElement(Tooltip_1.default, { title: (imgLoaded && fullName) ? fullName : '', placement: placement },
-        React.createElement(Avatar_1.default, __assign({}, rest, { src: imgLoaded ? imgSrc : '' }), !imgLoaded &&
+        React.createElement(Avatar_1.default, __assign({}, rest, { src: imgLoaded ? imgSrc : '' }), (!imgLoaded) &&
             initials)));
 };
