@@ -12,7 +12,7 @@ const useStyles = makeStyles(theme => ({
     flexGrow: 1,
     minWidth: 0,
     overflowY: 'auto',
-    padding: theme.spacing.unit * 2,
+    padding: theme.spacing(2),
   },
   link: {
       textDecoration: 'none',
