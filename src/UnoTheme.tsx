@@ -24,4 +24,4 @@ let  UnoTheme = createMuiTheme({
 
 UnoTheme = responsiveFontSizes(UnoTheme);
 
-export UnoTheme;
+export default UnoTheme;
