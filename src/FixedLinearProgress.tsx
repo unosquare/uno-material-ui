@@ -4,8 +4,8 @@ import * as React from 'react';
 
 const useStyles = makeStyles((theme: any) => ({
     linearProgress: {
-        height: theme.spacing.unit * 2,
-        marginTop: theme.spacing.unit,
+        height: theme.spacing(2),
+        marginTop: theme.spacing(1),
     },
 }));
 

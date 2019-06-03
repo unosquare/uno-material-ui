@@ -15,8 +15,8 @@ var makeStyles_1 = __importDefault(require("@material-ui/styles/makeStyles"));
 var React = __importStar(require("react"));
 var useStyles = makeStyles_1.default(function (theme) { return ({
     linearProgress: {
-        height: theme.spacing.unit * 2,
-        marginTop: theme.spacing.unit,
+        height: theme.spacing(2),
+        marginTop: theme.spacing(1),
     },
 }); });
 exports.FixedLinearProgress = function (_a) {

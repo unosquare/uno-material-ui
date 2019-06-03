@@ -4,7 +4,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var createMuiTheme_1 = __importDefault(require("@material-ui/core/styles/createMuiTheme"));
-exports.UnoTheme = createMuiTheme_1.default({
+var responsiveFontSizes_1 = __importDefault(require("@material-ui/core/styles/responsiveFontSizes"));
+var UnoTheme = createMuiTheme_1.default({
     palette: {
         error: {
             main: '#f44336',
@@ -20,10 +21,9 @@ exports.UnoTheme = createMuiTheme_1.default({
             secondary: '#000',
         },
     },
-    typography: {
-        useNextVariants: true,
-    },
     zIndex: {
         appBar: 1201,
     },
 });
+UnoTheme = responsiveFontSizes_1.default(UnoTheme);
+exports.default = UnoTheme;

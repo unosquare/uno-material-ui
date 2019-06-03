@@ -1,6 +1,7 @@
 import createMuiTheme from '@material-ui/core/styles/createMuiTheme';
+import responsiveFontSizes from '@material-ui/core/styles/responsiveFontSizes';
 
-export const UnoTheme = createMuiTheme({
+let  UnoTheme = createMuiTheme({
   palette: {
     error: {
       main: '#f44336',
@@ -16,10 +17,11 @@ export const UnoTheme = createMuiTheme({
       secondary: '#000',
     },
   },
-  typography: {
-    useNextVariants: true,
-  },
   zIndex: {
     appBar: 1201,
   },
 });
+
+UnoTheme = responsiveFontSizes(UnoTheme);
+
+export default UnoTheme;
