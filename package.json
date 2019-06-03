@@ -11,15 +11,21 @@
   },
   "jest": {
     "automock": false,
-    "setupFiles": [
-      "<rootDir>/test/setupTest.js"
-    ],
     "moduleFileExtensions": [
-      "jsx",
+      "tsx",
+      "ts",
       "js"
     ],
     "testMatch": [
-      "<rootDir>/test/**/*.spec.(js|jsx)"
+      "<rootDir>/test/**/*.spec.tsx"
+    ],
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "setupFiles": [
+      "<rootDir>/test/setupTest.ts"
     ]
   },
   "repository": {
@@ -39,10 +45,12 @@
   },
   "homepage": "https://github.com/unosquare/uno-material-ui#readme",
   "devDependencies": {
-    "@types/react": "16.8.17",
+    "@types/enzyme": "^3.9.1",
+    "@types/jest": "^24.0.12",
+    "@types/react": "16.8.14",
     "@types/react-dom": "16.8.4",
     "enzyme": "^3.9.0",
-    "enzyme-adapter-react-16": "^1.13.0",
+    "enzyme-adapter-react-16": "^1.12.1",
     "jest": "^24.8.0",
     "ts-jest": "^24.0.2",
     "tslint": "^5.16.0",
