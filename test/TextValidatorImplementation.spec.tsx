@@ -1,7 +1,7 @@
 import * as React from 'react';
 import createShallow from '@material-ui/core/test-utils/createShallow';
 import TextValidatorImplementation from './TextValidatorImplementation';
-import TextValidator from '../../src/classes/TextValidator';
+import { TextValidator } from '../src/TextValidator';
 
 describe('TextValidatorImplementation', () => {
     let wrapper;
