@@ -32,6 +32,10 @@ export const ConfirmationDialog = ({
         onClose();
     };
 
+    if (disabled && !open) {
+        setDisabled(false);
+    }
+
     return (
         <Dialog
             open={open}
