@@ -4,7 +4,7 @@
   "description": "Components and extensions for Material UI",
   "main": "dist/index.js",
   "scripts": {
-    "build:docs": "parcel build ./srcdocs/index.html --no-source-maps -d ./docs",
+    "build:docs": "parcel build ./srcdocs/index.html --no-source-maps --public-url /uno-material-ui/ -d ./docs",
     "start:docs": "parcel ./srcdocs/index.html --no-source-maps --port 8080 --open -d ./docs",
     "test": "jest",
     "test-export": "node ./test",
@@ -71,6 +71,7 @@
     "react-dom": "^16.8.6",
     "react-form-validator-core": "^0.6.3",
     "react-router-dom": "^5.0.1",
+    "react-router-hash-link": "^1.2.1",
     "uno-react": "^0.7.0"
   },
   "peerDependencies": {

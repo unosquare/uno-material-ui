@@ -1,5 +1,4 @@
 export * from './ButtonWithLoading';
-export * from './CentralCard';
 export * from './ConfirmationDialog';
 export * from './ErrorBoundary';
 export * from './GlobalSnackbar';

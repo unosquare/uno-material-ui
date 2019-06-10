@@ -9,7 +9,8 @@ import { MenuList } from '../../src';
 
 const useStyles = makeStyles(({ palette }: any) => ({
     icon: {
-        color: palette.secondary.light,
+        color: palette.primary.light,
+        marginRight: '5px',
     },
     link: {
         textDecoration: 'none',
@@ -24,13 +25,13 @@ export default (props: any) => {
             <Link to='#' className={classes.link}>
                 <ListItem button={true}>
                     <Dashboard className={classes.icon} />
-                    <ListItemText primary='Dashboard' />
+                    <ListItemText secondary='Dashboard' />
                 </ListItem>
             </Link>
             <Link to='#' className={classes.link}>
                 <ListItem button={true}>
                     <Build className={classes.icon} />
-                    <ListItemText primary='Tools' />
+                    <ListItemText secondary='Tools' />
                 </ListItem>
             </Link>
         </MenuList>
