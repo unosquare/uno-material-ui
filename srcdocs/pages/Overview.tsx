@@ -33,6 +33,7 @@ const useStyles = makeStyles({
     paper: {
         minHeight: '300px',
         padding: 30,
+        width: '100%',
     },
     section: {
         marginBottom: '40px',
