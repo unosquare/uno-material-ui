@@ -32,8 +32,8 @@ export default (props) => {
             <Navigation />
             <main className={classes.content}>
                 <div className={classes.toolbar} />
-                    <Route path='/' exact={true} component={Overview} />
-                    <Route path='/examples' exact={true} component={Examples} />
+                    <Route path='/uno-material-ui/' exact={true} component={Overview} />
+                    <Route path='/uno-material-ui/examples' exact={true} component={Examples} />
             </main>
         </div>
     );

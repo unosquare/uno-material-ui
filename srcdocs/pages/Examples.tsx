@@ -2,7 +2,6 @@ import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import makeStyles from '@material-ui/styles/makeStyles';
 import * as React from 'react';
-import Highlight from 'react-highlight';
 import ButtonWithLoading from '../components/ButtonWithLoading';
 import Component from '../components/Component';
 import ConfirmationDialog from '../components/ConfirmationDialog';
@@ -16,17 +15,10 @@ import NavBar from '../components/NavBar';
 import TextValidator from '../components/TextValidator';
 import ThumbnailPhoto from '../components/ThumbnailPhoto';
 import Title from '../components/Title';
-import UnoTheme from '../components/UnoTheme';
 import Apis from '../utils/componentsApi';
+import Codes from '../utils/componentsCode';
 
 const useStyles = makeStyles({
-    code: {
-        fontSize: 15,
-    },
-    codeTag: {
-        background: '#F8F8FF',
-        padding: '6px',
-    },
     container: {
         margin: '0',
         padding: 30,
@@ -45,8 +37,8 @@ const useStyles = makeStyles({
     },
 });
 
-export default (props: any) => {
-    const classes = useStyles(props);
+export default () => {
+    const classes = useStyles();
 
     return (
         <Grid container={true} className={classes.container}>
@@ -55,6 +47,7 @@ export default (props: any) => {
                     title='ButtonWithLoading'
                     text='A button with a animated loading icon when the action is resolving.'
                     api={Apis.ButtonWithLoading}
+                    code={Codes.ButtonWithLoading}
                 >
                     <ButtonWithLoading />
                 </Component>
@@ -62,12 +55,14 @@ export default (props: any) => {
                     title='ConfirmationDialog'
                     text='A customizable dialog to confirm important actions like delete an item.'
                     api={Apis.ConfirmationDialog}
+                    code={Codes.ConfirmationDialog}
                 >
                     <ConfirmationDialog />
                 </Component>
                 <Component
                     title='ErrorBoundary'
                     text='This container catch an error in the children, displaying it.'
+                    code={Codes.ErrorBoundary}
                 >
                     <ErrorBoundary />
                 </Component>
@@ -75,6 +70,7 @@ export default (props: any) => {
                     title='FixedLinearProgress'
                     text='A linear progress component with a height calculated by the spacing of the Theme.'
                     api={Apis.FixedLinearProgress}
+                    code={Codes.FixedLinearProgress}
                 >
                     <FixedLinearProgress />
                 </Component>
@@ -82,6 +78,7 @@ export default (props: any) => {
                     title='FormSwitch'
                     text='A useful switch component with label, perfect for forms.'
                     api={Apis.FormSwitch}
+                    code={Codes.FormSwitch}
                 >
                     <FormSwitch />
                 </Component>
@@ -89,6 +86,7 @@ export default (props: any) => {
                     title='GlobalSnackBar'
                     text='A snackbar to display information.'
                     api={Apis.GlobalSnackBar}
+                    code={Codes.GlobalSnackBar}
                 >
                     <GlobalSnackbar />
                 </Component>
@@ -96,6 +94,7 @@ export default (props: any) => {
                     title='LoadingIcon'
                     text='A center-aligned circular loading animation.'
                     api={Apis.LoadingIcon}
+                    code={Codes.LoadingIcon}
                 >
                     <LoadingIcon />
                 </Component>
@@ -103,12 +102,14 @@ export default (props: any) => {
                     title='MenuList'
                     text='A left-side permanent drawer to display navigation options,
                      it leaves an space to add a Navbar.'
+                    code={Codes.MenuList}
                 >
                     <MenuList />
                 </Component>
                 <Component
-                    title='Navbar'
+                    title='NavBar'
                     text='A navbar that uses the primary color in your Theme, you can add a title or logo, and buttons.'
+                    code={Codes.NavBar}
                 >
                     <NavBar />
                 </Component>
@@ -116,6 +117,7 @@ export default (props: any) => {
                     title='TextValidator'
                     text='An input with validations'
                     api={Apis.TextValidator}
+                    code={Codes.TextValidator}
                 >
                     <TextValidator />
                 </Component>
@@ -123,6 +125,7 @@ export default (props: any) => {
                     title='ThumbnailPhoto'
                     text='An small avatar to display a photo with tooltip'
                     api={Apis.ThumbnailPhoto}
+                    code={Codes.ThumbnailPhoto}
                 >
                     <ThumbnailPhoto />
                 </Component>
@@ -131,14 +134,9 @@ export default (props: any) => {
                     text='A title, it also changes the document title,
                      so it is displayed on the tab of your web browser.'
                     api={Apis.Title}
+                    code={Codes.Title}
                 >
                     <Title />
-                </Component>
-                <Component
-                    title='UnoTheme'
-                    text='A customized theme.'
-                >
-                    <UnoTheme />
                 </Component>
             </Paper>
         </Grid>
