@@ -4,7 +4,6 @@ function __export(m) {
 }
 Object.defineProperty(exports, "__esModule", { value: true });
 __export(require("./ButtonWithLoading"));
-__export(require("./CentralCard"));
 __export(require("./ConfirmationDialog"));
 __export(require("./ErrorBoundary"));
 __export(require("./GlobalSnackbar"));

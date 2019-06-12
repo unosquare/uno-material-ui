@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme: any) => ({
 }));
 
 export const MenuList = (props: any) => {
-    const classes = useStyles();
+    const classes = useStyles(props);
 
     return (
         <Drawer

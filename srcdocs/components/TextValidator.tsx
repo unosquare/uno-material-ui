@@ -1,16 +1,26 @@
 import Button from '@material-ui/core/Button';
+import makeStyles from '@material-ui/styles/makeStyles';
 import * as React from 'react';
 import { ValidatorForm } from 'react-form-validator-core';
-import { TextValidator } from '../../src/';
 import { useStateForModel } from 'uno-react';
+import { TextValidator } from '../../src/';
 
-export default () => {
-    const [data, handleChange] = useStateForModel({name: ''});
+const useStyles = makeStyles({
+    form: {
+        display: 'flex',
+        flexDirection: 'column',
+        width: '50%',
+    },
+});
 
-    const sendData = () => handleChange({name: ''});
+export default (props: any) => {
+    const classes = useStyles(props);
+    const [data, handleChange] = useStateForModel({ name: '' });
+
+    const sendData = () => handleChange({ name: '' });
 
     return (
-        <ValidatorForm onSubmit={sendData}>
+        <ValidatorForm onSubmit={sendData} className={classes.form}>
             <TextValidator
                 id='name'
                 label='Name'

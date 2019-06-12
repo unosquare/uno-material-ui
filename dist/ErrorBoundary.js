@@ -23,41 +23,16 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var Paper_1 = __importDefault(require("@material-ui/core/Paper"));
 var createStyles_1 = __importDefault(require("@material-ui/core/styles/createStyles"));
 var withStyles_1 = __importDefault(require("@material-ui/core/styles/withStyles"));
 var Typography_1 = __importDefault(require("@material-ui/core/Typography"));
 var React = __importStar(require("react"));
-var styles = function (_a) {
-    var palette = _a.palette;
-    return createStyles_1.default({
-        error: {
-            backgroundColor: palette.error.dark,
-        },
-        errorBoundBody: {
-            color: 'red',
-            fontFamily: 'verdana',
-            fontSize: 10,
-        },
-        errorBoundDetails: {
-            fontFamily: 'verdana',
-            fontSize: 9,
-            whiteSpace: 'pre-wrap',
-        },
-        errorBoundPaper: {
-            display: 'flex',
-            flexWrap: 'wrap',
-            justifyContent: 'center',
-            padding: '50px',
-            width: '80%',
-        },
-        errorBoundTitle: {
-            fontFamily: 'verdana',
-            fontSize: 9,
-            whiteSpace: 'pre-wrap',
-        },
-    });
-};
+var styles = function () { return createStyles_1.default({
+    errorBoundBody: {
+        color: 'red',
+        marginBottom: '30px',
+    },
+}); };
 var ErrorBoundaryComponent = /** @class */ (function (_super) {
     __extends(ErrorBoundaryComponent, _super);
     function ErrorBoundaryComponent() {
@@ -78,16 +53,9 @@ var ErrorBoundaryComponent = /** @class */ (function (_super) {
     ErrorBoundaryComponent.prototype.render = function () {
         if (this.state.errorInfo) {
             var classes = this.props.classes;
-            var errorDesc = this.state.error && this.state.error.toString()
-                ? this.state.error.toString()
-                : null;
             return (React.createElement(React.Fragment, null,
-                React.createElement(Typography_1.default, { variant: 'h4' }, "Something went terribly wrong..."),
-                React.createElement(Paper_1.default, { className: classes.errorBoundPaper, elevation: 8 },
-                    React.createElement(Typography_1.default, { className: classes.errorBoundTitle, variant: 'subtitle1' }, errorDesc),
-                    React.createElement("br", null),
-                    React.createElement("details", { className: classes.errorBoundDetails },
-                        React.createElement(Typography_1.default, { className: classes.errorBoundBody, variant: 'body2' }, this.state.errorData.componentStack)))));
+                React.createElement(Typography_1.default, { className: classes.errorBoundBody, variant: 'h4' }, "Something went terribly wrong..."),
+                React.createElement(Typography_1.default, { variant: 'h5' }, "Please, refresh the page.")));
         }
         // eslint-disable-next-line react/prop-types
         return this.props.children;
