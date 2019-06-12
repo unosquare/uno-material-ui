@@ -17,6 +17,7 @@ import TextValidator from '../components/TextValidator';
 import ThumbnailPhoto from '../components/ThumbnailPhoto';
 import Title from '../components/Title';
 import UnoTheme from '../components/UnoTheme';
+import Apis from '../utils/componentsApi';
 
 const useStyles = makeStyles({
     code: {
@@ -53,12 +54,14 @@ export default (props: any) => {
                 <Component
                     title='ButtonWithLoading'
                     text='A button with a animated loading icon when the action is resolving.'
+                    api={Apis.ButtonWithLoading}
                 >
                     <ButtonWithLoading />
                 </Component>
                 <Component
                     title='ConfirmationDialog'
                     text='A customizable dialog to confirm important actions like delete an item.'
+                    api={Apis.ConfirmationDialog}
                 >
                     <ConfirmationDialog />
                 </Component>
@@ -71,24 +74,28 @@ export default (props: any) => {
                 <Component
                     title='FixedLinearProgress'
                     text='A linear progress component with a height calculated by the spacing of the Theme.'
+                    api={Apis.FixedLinearProgress}
                 >
                     <FixedLinearProgress />
                 </Component>
                 <Component
                     title='FormSwitch'
                     text='A useful switch component with label, perfect for forms.'
+                    api={Apis.FormSwitch}
                 >
                     <FormSwitch />
                 </Component>
                 <Component
-                    title='GlobalSnackbar'
+                    title='GlobalSnackBar'
                     text='A snackbar to display information.'
+                    api={Apis.GlobalSnackBar}
                 >
                     <GlobalSnackbar />
                 </Component>
                 <Component
                     title='LoadingIcon'
                     text='A center-aligned circular loading animation.'
+                    api={Apis.LoadingIcon}
                 >
                     <LoadingIcon />
                 </Component>
@@ -108,12 +115,14 @@ export default (props: any) => {
                 <Component
                     title='TextValidator'
                     text='An input with validations'
+                    api={Apis.TextValidator}
                 >
                     <TextValidator />
                 </Component>
                 <Component
                     title='ThumbnailPhoto'
                     text='An small avatar to display a photo with tooltip'
+                    api={Apis.ThumbnailPhoto}
                 >
                     <ThumbnailPhoto />
                 </Component>
@@ -121,6 +130,7 @@ export default (props: any) => {
                     title='Title'
                     text='A title, it also changes the document title,
                      so it is displayed on the tab of your web browser.'
+                    api={Apis.Title}
                 >
                     <Title />
                 </Component>

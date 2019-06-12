@@ -32,6 +32,9 @@ exports.ConfirmationDialog = function (_a) {
         setDisabled(true);
         onClose();
     };
+    if (disabled && !open) {
+        setDisabled(false);
+    }
     return (React.createElement(Dialog_1.default, { open: open, onClose: onClose },
         React.createElement(DialogTitle_1.default, null, title),
         React.createElement(DialogContent_1.default, null,
