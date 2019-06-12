@@ -1,5 +1,6 @@
 import Divider from '@material-ui/core/Divider';
 import IconButton from '@material-ui/core/IconButton';
+import Tooltip from '@material-ui/core/Tooltip';
 import Typography from '@material-ui/core/Typography';
 import Code from '@material-ui/icons/Code';
 import Settings from '@material-ui/icons/Settings';
@@ -7,19 +8,13 @@ import makeStyles from '@material-ui/styles/makeStyles';
 import React from 'react';
 import { useToggle } from 'uno-react';
 import ApiTable from '../utils/ApiTable';
+import CodeSample from '../utils/CodeSample';
 
 const useStyles = makeStyles({
-    code: {
-        fontSize: 15,
-    },
-    codeTag: {
-        background: '#F8F8FF',
-        padding: '6px',
-    },
     container: {
         alignItems: 'flex-end',
         display: 'flex',
-        flexDirection: 'row'
+        flexDirection: 'row',
     },
     divider: {
         marginBottom: '15px',
@@ -37,9 +32,10 @@ const useStyles = makeStyles({
     },
 });
 
-export default ({ children, title, text, api }: any) => {
+export default ({ children, title, text, api, code }: any) => {
     const classes = useStyles();
     const [openApi, setOpenApi] = useToggle(false);
+    const [openCode, setOpenCode] = useToggle(false);
 
     return (
         <div className={classes.section} id={title}>
@@ -47,13 +43,17 @@ export default ({ children, title, text, api }: any) => {
                 <Typography variant='h4' className={classes.title}>
                     {title}
                 </Typography>
-                <IconButton className={classes.icon}>
-                    <Code />
-                </IconButton>
-                {api &&
-                    <IconButton onClick={setOpenApi}>
-                        <Settings />
+                <Tooltip title={'Show Code'} onClick={setOpenCode}>
+                    <IconButton className={classes.icon}>
+                        <Code />
                     </IconButton>
+                </Tooltip>
+                {api &&
+                    <Tooltip title={'Component API'}>
+                        <IconButton onClick={setOpenApi}>
+                            <Settings />
+                        </IconButton>
+                    </Tooltip>
                 }
             </div>
             <Divider className={classes.divider} />
@@ -61,6 +61,7 @@ export default ({ children, title, text, api }: any) => {
                 {text}
             </Typography>
             {openApi && <ApiTable data={api} />}
+            {openCode && <CodeSample data={code} />}
             {...children}
         </div>
     );
