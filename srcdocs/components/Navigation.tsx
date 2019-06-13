@@ -5,6 +5,7 @@ import * as React from 'react';
 import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 import { MenuList, NavBar } from '../../src';
+import logo from '../static/uno-material-logo-white.svg';
 
 const useStyles = makeStyles(() => ({
     button: {
@@ -12,6 +13,9 @@ const useStyles = makeStyles(() => ({
     },
     link: {
         textDecoration: 'none',
+    },
+    logo: {
+        width: '210px',
     },
     sub: {
         marginLeft: '20px',
@@ -23,7 +27,7 @@ export default (props: any) => {
 
     return (
         <React.Fragment>
-            <NavBar title={'uno-material-ui'} />
+            <NavBar title={<img className={classes.logo} src={logo} />} />
             <MenuList>
                 <Link to='/uno-material-ui/' className={classes.link}>
                     <ListItem button={true}>
@@ -88,11 +92,6 @@ export default (props: any) => {
                 <HashLink to='/uno-material-ui/examples#Title' className={classes.link}>
                     <ListItem button={true}>
                         <ListItemText className={classes.sub} secondary='Title' />
-                    </ListItem>
-                </HashLink>
-                <HashLink to='/uno-material-ui/examples#UnoTheme' className={classes.link}>
-                    <ListItem button={true}>
-                        <ListItemText className={classes.sub} secondary='UnoTheme' />
                     </ListItem>
                 </HashLink>
             </MenuList>

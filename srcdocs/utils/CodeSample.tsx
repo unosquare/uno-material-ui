@@ -19,7 +19,7 @@ export default (data: any) => {
         <div className={classes.codeTag}>
             <Highlight
                 language='javascript'
-                className={classes.code}
+                className='javascript'
             >
                 {data.data}
             </Highlight>

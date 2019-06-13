@@ -43,14 +43,18 @@ export default ({ children, title, text, api, code }: any) => {
                 <Typography variant='h4' className={classes.title}>
                     {title}
                 </Typography>
-                <Tooltip title={'Show Code'} onClick={setOpenCode}>
-                    <IconButton className={classes.icon}>
+                <Tooltip title={'Show Code'}>
+                    <IconButton
+                        className={classes.icon}
+                        onClick={setOpenCode}
+                        color={openCode ? 'primary' : 'secondary'}
+                    >
                         <Code />
                     </IconButton>
                 </Tooltip>
                 {api &&
                     <Tooltip title={'Component API'}>
-                        <IconButton onClick={setOpenApi}>
+                        <IconButton onClick={setOpenApi} color={openApi ? 'primary' : 'secondary'}>
                             <Settings />
                         </IconButton>
                     </Tooltip>

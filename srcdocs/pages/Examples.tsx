@@ -45,7 +45,7 @@ export default () => {
             <Paper className={classes.paper}>
                 <Component
                     title='ButtonWithLoading'
-                    text='A button with a animated loading icon when the action is resolving.'
+                    text='A button that turns into an animated loading icon when the action is resolving.'
                     api={Apis.ButtonWithLoading}
                     code={Codes.ButtonWithLoading}
                 >

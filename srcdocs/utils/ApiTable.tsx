@@ -6,7 +6,7 @@ import TableRow from '@material-ui/core/TableRow';
 import * as React from 'react';
 
 export default (data: any) => (
-    <Table style={{marginBottom: '20px'}}>
+    <Table size='small' style={{marginBottom: '20px'}}>
         <TableHead>
             <TableRow>
                 <TableCell>Prop Name</TableCell>
