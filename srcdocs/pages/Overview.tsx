@@ -25,6 +25,7 @@ const useStyles = makeStyles({
         marginBottom: '15px',
     },
     link: {
+        color: '#165ffb',
         textDecoration: 'none',
     },
     logo: {
@@ -123,7 +124,7 @@ export default (props: any) => {
                 <Typography variant='body1' paragraph={true}>
                     To install and save in your <code className={classes.code}>package.json</code> dependencies, run:
                 </Typography>
-                <Highlight language='javascript' className={classes.code}>
+                <Highlight language='javascript'>
                     npm install tubular-react --save
                 </Highlight>
                 <br />
