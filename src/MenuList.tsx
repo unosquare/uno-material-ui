@@ -4,15 +4,17 @@ import List from '@material-ui/core/List';
 import makeStyles from '@material-ui/styles/makeStyles';
 import * as React from 'react';
 
-const useStyles = makeStyles((theme: any) => ({
+const useStyles = makeStyles({
     drawer: {
         flexShrink: 0,
     },
     drawerPaper: {
         position: 'relative',
     },
-    toolbar: theme.mixins.toolbar,
-}));
+    list: {
+        marginTop: '70px',
+    },
+});
 
 export const MenuList = (props: any) => {
     const classes = useStyles(props);
@@ -23,8 +25,7 @@ export const MenuList = (props: any) => {
             className={classes.drawer}
             classes={{ paper: classes.drawerPaper }}
         >
-            <div className={classes.toolbar} />
-            <List>
+            <List className={classes.list}>
                 {props.children}
             </List>
         </Drawer>
