@@ -12,8 +12,18 @@ Table of contents
 
   * [💾Installation](#installation)
   * [What's in the library](#whats-in-the-library)
+    * [ButtonWithLoading](#buttonwithloading)
+    * [ConfirmationDialog](#confirmationdialog)
     * [ErrorBoundary](#errorboundary)
+    * [FixedLinearProgress](#fixedlinearprogress)
+    * [FormSwitch](#formswitch)
     * [GlobalSnackbar](#globalsnackbar)
+    * [LoadingIcon](#loadingicon)
+    * [MenuList](#menulist)
+    * [NavBar](#navbar)
+    * [TextValidator](#textvalidator)
+    * [ThumbnailPhoto](#thumbnailphoto)
+    * [Title](#title)
 
 ### Installation
 
