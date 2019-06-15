@@ -14,18 +14,19 @@ var Drawer_1 = __importDefault(require("@material-ui/core/Drawer"));
 var List_1 = __importDefault(require("@material-ui/core/List"));
 var makeStyles_1 = __importDefault(require("@material-ui/styles/makeStyles"));
 var React = __importStar(require("react"));
-var useStyles = makeStyles_1.default(function (theme) { return ({
+var useStyles = makeStyles_1.default({
     drawer: {
         flexShrink: 0,
     },
     drawerPaper: {
         position: 'relative',
     },
-    toolbar: theme.mixins.toolbar,
-}); });
+    list: {
+        marginTop: '70px',
+    },
+});
 exports.MenuList = function (props) {
     var classes = useStyles(props);
     return (React.createElement(Drawer_1.default, { variant: 'permanent', className: classes.drawer, classes: { paper: classes.drawerPaper } },
-        React.createElement("div", { className: classes.toolbar }),
-        React.createElement(List_1.default, null, props.children)));
+        React.createElement(List_1.default, { className: classes.list }, props.children)));
 };
