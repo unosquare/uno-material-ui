@@ -57,7 +57,7 @@ const useStyles = makeStyles((theme: any) => ({
 }));
 
 export const GlobalSnackbar = ({ message, seconds = 2500, mobile = false }: any) => {
-    const classes = useStyles();
+    const classes = useStyles({});
     const [open, setOpen] = React.useState(false);
 
     const getIcon = () => {

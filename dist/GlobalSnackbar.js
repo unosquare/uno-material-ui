@@ -68,7 +68,7 @@ var useStyles = makeStyles_1.default(function (theme) { return ({
 }); });
 exports.GlobalSnackbar = function (_a) {
     var message = _a.message, _b = _a.seconds, seconds = _b === void 0 ? 2500 : _b, _c = _a.mobile, mobile = _c === void 0 ? false : _c;
-    var classes = useStyles();
+    var classes = useStyles({});
     var _d = React.useState(false), open = _d[0], setOpen = _d[1];
     var getIcon = function () {
         switch (message.messageType) {
