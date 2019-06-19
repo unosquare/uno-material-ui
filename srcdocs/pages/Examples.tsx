@@ -68,7 +68,7 @@ export default () => {
                 </Component>
                 <Component
                     title='FixedLinearProgress'
-                    text='A linear progress component with a height calculated by the spacing of the Theme.'
+                    text='A linear progress component.'
                     api={Apis.FixedLinearProgress}
                     code={Codes.FixedLinearProgress}
                 >

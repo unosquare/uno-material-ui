@@ -110,10 +110,10 @@ export default (props: any) => {
                         </li>
                         <li>
                             <a
-                                href='https://github.com/ReactTraining/react-router'
+                                href='https://es.reactjs.org/docs/react-dom.html'
                                 className={classes.link}
                             >
-                                React-Router-Dom - Version: 5.0.1
+                                React-Dom - Version: 16.8.6
                             </a>
                         </li>
                     </ul>

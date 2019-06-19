@@ -57,8 +57,8 @@ const TextValidator = [
 ];
 
 const ThumbnailPhoto = [
-    createData('fullName', 'An error message for each validator', 'Array of strings', '[]'),
-    createData('imgSrc', 'Functions to validate the input', 'Array of functions', '[]'),
+    createData('fullName', 'The tooltip content.', 'string', ''),
+    createData('imgSrc', 'The image path.', 'string', ''),
     createData('placement',
      'Tooltip position: "left" | "top" | "right" | "bottom", each of them with X-start and X-end variant, like: top-start', 'string', '"bottom"'),
 ];
