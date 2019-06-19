@@ -6571,7 +6571,7 @@ var createMuiTheme_1 = __importDefault(require("@material-ui/core/styles/createM
 
 var responsiveFontSizes_1 = __importDefault(require("@material-ui/core/styles/responsiveFontSizes"));
 
-var UnoTheme = createMuiTheme_1.default({
+var theme = createMuiTheme_1.default({
   palette: {
     error: {
       main: '#f44336'
@@ -6591,8 +6591,7 @@ var UnoTheme = createMuiTheme_1.default({
     appBar: 1201
   }
 });
-UnoTheme = responsiveFontSizes_1.default(UnoTheme);
-exports.default = UnoTheme;
+exports.UnoTheme = responsiveFontSizes_1.default(theme);
 },{"@material-ui/core/styles/createMuiTheme":"../node_modules/@material-ui/core/styles/createMuiTheme.js","@material-ui/core/styles/responsiveFontSizes":"../node_modules/@material-ui/core/styles/responsiveFontSizes.js"}],"../node_modules/is-in-browser/dist/module.js":[function(require,module,exports) {
 "use strict";
 
@@ -49578,13 +49577,13 @@ var react_dom_1 = require("react-dom");
 
 var react_router_dom_1 = require("react-router-dom");
 
-var UnoTheme_1 = __importDefault(require("../../src/UnoTheme"));
+var UnoTheme_1 = require("../../src/UnoTheme");
 
 var Home_1 = __importDefault(require("./Home"));
 
 var App = function App() {
   return React.createElement(ThemeProvider_1.default, {
-    theme: UnoTheme_1.default
+    theme: UnoTheme_1.UnoTheme
   }, React.createElement(react_router_dom_1.BrowserRouter, null, React.createElement(react_router_dom_1.Switch, null, React.createElement(Home_1.default, null))));
 };
 
@@ -49617,7 +49616,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57455" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49547" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

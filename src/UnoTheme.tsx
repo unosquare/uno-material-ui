@@ -1,7 +1,7 @@
 import createMuiTheme from '@material-ui/core/styles/createMuiTheme';
 import responsiveFontSizes from '@material-ui/core/styles/responsiveFontSizes';
 
-let  UnoTheme = createMuiTheme({
+const theme = createMuiTheme({
   palette: {
     error: {
       main: '#f44336',
@@ -22,6 +22,4 @@ let  UnoTheme = createMuiTheme({
   },
 });
 
-UnoTheme = responsiveFontSizes(UnoTheme);
-
-export default UnoTheme;
+export const UnoTheme = responsiveFontSizes(theme);
