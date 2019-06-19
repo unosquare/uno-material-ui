@@ -1,6 +1,6 @@
 {
   "name": "uno-material-ui",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Components and extensions for Material UI",
   "main": "dist/index.js",
   "scripts": {
@@ -47,32 +47,32 @@
   },
   "homepage": "https://github.com/unosquare/uno-material-ui#readme",
   "devDependencies": {
-    "@types/enzyme": "^3.9.1",
-    "@types/jest": "^24.0.12",
-    "@types/react": "16.8.14",
+    "@types/enzyme": "^3.9.3",
+    "@types/jest": "^24.0.15",
+    "@types/react": "16.8.20",
     "@types/react-dom": "16.8.4",
-    "enzyme": "^3.9.0",
-    "enzyme-adapter-react-16": "^1.12.1",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0",
     "jest": "^24.8.0",
     "react-highlight": "^0.12.0",
+    "react-router-dom": "^5.0.1",
+    "react-router-hash-link": "^1.2.1",
     "ts-jest": "^24.0.2",
     "parcel-bundler": "^1.12.3",
     "parcel-plugin-clean-easy": "^1.0.2",
-    "tslint": "^5.16.0",
+    "tslint": "^5.17.0",
     "tslint-react": "^4.0.0",
-    "typescript": "^3.4.5"
+    "typescript": "^3.5.2"
   },
   "dependencies": {
-    "@material-ui/core": "^4.0.1",
-    "@material-ui/icons": "^4.0.1",
-    "@material-ui/styles": "^4.0.1",
+    "@material-ui/core": "^4.1.1",
+    "@material-ui/icons": "^4.2.0",
+    "@material-ui/styles": "^4.1.1",
     "jss": "^10.0.0-alpha.9",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-form-validator-core": "^0.6.3",
-    "react-router-dom": "^5.0.1",
-    "react-router-hash-link": "^1.2.1",
-    "uno-react": "^0.7.0"
+    "react-form-validator-core": "^0.6.4",
+    "uno-react": "^0.7.1"
   },
   "peerDependencies": {
     "react": "^16.8.6",

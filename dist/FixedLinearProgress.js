@@ -13,15 +13,15 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var LinearProgress_1 = __importDefault(require("@material-ui/core/LinearProgress"));
 var makeStyles_1 = __importDefault(require("@material-ui/styles/makeStyles"));
 var React = __importStar(require("react"));
-var useStyles = makeStyles_1.default(function (theme) { return ({
+var useStyles = makeStyles_1.default({
     linearProgress: {
-        height: theme.spacing(2),
-        marginTop: theme.spacing(1),
+        height: '20px',
+        marginTop: '10px',
     },
-}); });
+});
 exports.FixedLinearProgress = function (_a) {
     var _b = _a.isLoading, isLoading = _b === void 0 ? false : _b;
-    var classes = useStyles();
+    var classes = useStyles({});
     return (React.createElement("div", { className: classes.linearProgress }, isLoading &&
         React.createElement(LinearProgress_1.default, null)));
 };
