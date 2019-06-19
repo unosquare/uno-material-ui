@@ -49130,7 +49130,7 @@ var FormSwitch = [createData('checked', 'It controls if the switch is active', '
 var GlobalSnackBar = [createData('message', 'An object with 2 props, messageText, the text to be displayed and messageType, that it can be: "info" | "warning" | "error" | "success"', 'Object', ''), createData('seconds', 'How many miliseconds until the snackbar disappear', 'number', '2500'), createData('mobile', 'It displays the mobile version, a centered and bigger variant', 'boolean', 'false')];
 var LoadingIcon = [createData('color', 'The color of the icon: "primary" | "secondary" | "inherit"', 'string', 'primary')];
 var TextValidator = [createData('errorMessages', 'An error message for each validator', 'Array of strings', '[]'), createData('validators', 'Functions to validate the input', 'Array of functions', '[]'), createData('helperText', 'Text to explain the input', 'string', ''), createData('label', 'The input label', 'string', ''), createData('id', 'The input id, if there is not label, the id is the label too', 'string', '')];
-var ThumbnailPhoto = [createData('fullName', 'An error message for each validator', 'Array of strings', '[]'), createData('imgSrc', 'Functions to validate the input', 'Array of functions', '[]'), createData('placement', 'Tooltip position: "left" | "top" | "right" | "bottom", each of them with X-start and X-end variant, like: top-start', 'string', '"bottom"')];
+var ThumbnailPhoto = [createData('fullName', 'The tooltip content.', 'string', ''), createData('imgSrc', 'The image path.', 'string', ''), createData('placement', 'Tooltip position: "left" | "top" | "right" | "bottom", each of them with X-start and X-end variant, like: top-start', 'string', '"bottom"')];
 var Title = [createData('prefix', 'The document title prefix', 'string', ''), createData('suffix', 'The document title suffix', 'string', ''), createData('value', 'The document title, also the component text', 'string', ''), createData('titleClass', 'The component style', 'Object', '')];
 var Apis = {
   ButtonWithLoading: ButtonWithLoading,
@@ -49280,7 +49280,7 @@ exports.default = function () {
     code: componentsCode_1.default.ErrorBoundary
   }, React.createElement(ErrorBoundary_1.default, null)), React.createElement(Component_1.default, {
     title: 'FixedLinearProgress',
-    text: 'A linear progress component with a height calculated by the spacing of the Theme.',
+    text: 'A linear progress component.',
     api: componentsApi_1.default.FixedLinearProgress,
     code: componentsCode_1.default.FixedLinearProgress
   }, React.createElement(FixedLinearProgress_1.default, null)), React.createElement(Component_1.default, {
@@ -49445,9 +49445,9 @@ exports.default = function (props) {
     href: 'https://reactjs.org/',
     className: classes.link
   }, "React - Version: 16.8.6")), React.createElement("li", null, React.createElement("a", {
-    href: 'https://github.com/ReactTraining/react-router',
+    href: 'https://es.reactjs.org/docs/react-dom.html',
     className: classes.link
-  }, "React-Router-Dom - Version: 5.0.1")))), React.createElement(Typography_1.default, {
+  }, "React-Dom - Version: 16.8.6")))), React.createElement(Typography_1.default, {
     variant: 'h5',
     paragraph: true
   }, "npm"), React.createElement(Typography_1.default, {
@@ -49616,7 +49616,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63376" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49547" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
