@@ -49577,13 +49577,13 @@ var react_dom_1 = require("react-dom");
 
 var react_router_dom_1 = require("react-router-dom");
 
-var UnoTheme_1 = __importDefault(require("../../src/UnoTheme"));
+var UnoTheme_1 = require("../../src/UnoTheme");
 
 var Home_1 = __importDefault(require("./Home"));
 
 var App = function App() {
   return React.createElement(ThemeProvider_1.default, {
-    theme: UnoTheme_1.default
+    theme: UnoTheme_1.UnoTheme
   }, React.createElement(react_router_dom_1.BrowserRouter, null, React.createElement(react_router_dom_1.Switch, null, React.createElement(Home_1.default, null))));
 };
 
