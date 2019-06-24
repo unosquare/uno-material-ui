@@ -53,7 +53,7 @@ export default (props: any) => {
                     variant='subtitle1'
                     className={classes.content}
                 >
-                    Uno-Material-UI is a set of custom
+                    uno-material-ui is a set of custom
                     <a className={classes.link} href='https://material-ui.com/'> Material-UI</a> components
                     that extend their funcionalities in specific scenarios.
                 </Typography>
@@ -63,7 +63,7 @@ export default (props: any) => {
                 </Typography>
                 <Divider className={classes.divider}/>
                 <Typography variant='subtitle1' paragraph={true}>
-                    Uno-Material-UI is available as a <a
+                    uno-material-ui is available as a <a
                         href='https://www.npmjs.com/package/uno-material-ui'
                         className={classes.link}
                         target='_blank'
@@ -125,7 +125,7 @@ export default (props: any) => {
                     To install and save in your <code className={classes.code}>package.json</code> dependencies, run:
                 </Typography>
                 <Highlight language='javascript'>
-                    npm install tubular-react --save
+                    npm install uno-material-ui --save
                 </Highlight>
                 <br />
                 <Typography variant='h4'>

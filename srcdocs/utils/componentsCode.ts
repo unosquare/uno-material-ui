@@ -289,7 +289,7 @@ import * as React from 'react';
 import { Title } from 'uno-material-ui';
 
 export default () => (
-    <Title prefix='Unosquare' suffix='Uno-Material-UI' value='This is a title' />
+    <Title prefix='Unosquare' suffix='uno-material-ui' value='This is a title' />
 );`;
 
 const Codes = {

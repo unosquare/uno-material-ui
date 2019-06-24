@@ -20,7 +20,7 @@ export default () => (
                     alignItems={'center'}
                 >
                     <Typography color='textSecondary' variant='h5'>
-                        Uno-Material-UI
+                        uno-material-ui
                     </Typography>
                 </Grid>
                 <Grid
