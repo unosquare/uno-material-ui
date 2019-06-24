@@ -6,5 +6,5 @@ function Title({ prefix, suffix, value, titleClass }: any) {
 }
 
 export default () => (
-    <Title prefix='Unosquare' suffix='Uno-Material-UI' value='This is a title' />
+    <Title prefix='Unosquare' suffix='uno-material-ui' value='This is a title' />
 );
