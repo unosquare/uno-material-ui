@@ -346,6 +346,36 @@ export default () => (
 );
 ```
 
+### `SnackbarContextProvider`
+
+A context provider to handle snackbar notifications. You can add custom messages and set a .
+
+### Parameters
+- `messageText` **[string]** A custom message to show on the snackbar component.
+
+- `messageType` **[string]** Type of the message to show to the user. ***defaultValue***: `info`.
+
+### Example
+
+```javascript
+import Typography from '@material-ui/core/Typography/Typography';
+import * as React from 'react';
+import { getClasses } from '../Providers/ClassesProvider';
+import { SnackbarContext } from '../Providers/SnackbarContextProvider';
+import { UpdateLogo } from '../Utils/IconsPath';
+import { PassCoreIcon } from './PassCoreIcon';
+
+export const ImageEditor: React.FunctionComponent<any> = ({}) => {
+    const inputOpenFileRef: any = React.createRef();
+    const classes = getClasses();
+    const { sendMessage } = React.useContext(SnackbarContext);
+
+    const showOpenFileDlg = () => inputOpenFileRef.current.click();
+
+    sendMessage('Invalid file, use only image files', 'error');
+};
+```
+
 ### `TextValidator`
 
 An input with validations.
