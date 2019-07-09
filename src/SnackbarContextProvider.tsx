@@ -27,7 +27,7 @@ export const SnackbarContextProvider: React.FunctionComponent = ({ children }) =
                 messageType: type,
             });
             setSnackbarMode(mode);
-        }
+        },
     });
 
     return (
