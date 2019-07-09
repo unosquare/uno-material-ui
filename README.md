@@ -361,33 +361,28 @@ To generate a custom notfication, the user must provide the following parameters
 
 ```javascript
 import * as React from 'react';
-// Imports here. . .
 import { SnackbarContext } from 'uno-material-ui';
 
-const LanguageSwitchDialog: React.FunctionComponent<any> = ({ open, onClose }) => {
-    // Code here. . .
+const SnackbarButton: React.FunctionComponent<any> = () => {
     const { sendMessage } = React.useContext(SnackbarContext);
-    // More code here. . .
 
-    const changeLanguage = (lang: any) => {
-        i18n.changeLanguage(lang, (error: any) => {
-            if (error) {
-                sendMessage(
-                    'ErrorBoundaryTitle',
-                    'error',
-                );
-                return;
-            }
-        });
-        actions.changeLanguage(lang);
+    const launchNotif = (ev: any) => {
+        sendMessage(
+            'Notification launched!',
+            'info',
+        );
     };
 
     return (
-        // Rendered component. . .
+        <Button
+            onClick={LaunchNotif}
+        >
+            Press here to launch a message
+        </Button>
     );
 };
 
-export default LanguageSwitchDialog;
+export default SnackbarButton;
 ```
 
 ### `TextValidator`
