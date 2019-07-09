@@ -349,6 +349,8 @@ export default () => (
 ### `SnackbarContextProvider`
 
 A context provider to handle snackbar notifications.
+To prevent a general redraw on the app, this context handles the notifications rendering and calling.
+To generate a custom notfication, the user must provide the following parameters:
 
 ### Parameters
 - `messageText` **[string]** A custom message to show on the snackbar component.
@@ -360,7 +362,7 @@ A context provider to handle snackbar notifications.
 ```javascript
 import * as React from 'react';
 // Imports here. . .
-import { SnackbarContext } from '../Provider/SnackbarContextProvider';
+import { SnackbarContext } from 'uno-material-ui';
 
 const LanguageSwitchDialog: React.FunctionComponent<any> = ({ open, onClose }) => {
     // Code here. . .
