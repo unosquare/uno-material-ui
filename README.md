@@ -21,6 +21,7 @@ Table of contents
     * [LoadingIcon](#loadingicon)
     * [MenuList](#menulist)
     * [NavBar](#navbar)
+    * [SnackbarContextProvider](#snackbarcontextprovider)
     * [TextValidator](#textvalidator)
     * [ThumbnailPhoto](#thumbnailphoto)
     * [Title](#title)

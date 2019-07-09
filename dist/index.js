@@ -16,4 +16,5 @@ __export(require("./UnoSuspense"));
 __export(require("./UnoTheme"));
 __export(require("./FixedLinearProgress"));
 __export(require("./FormSwitch"));
+__export(require("./SnackbarContextProvider"));
 __export(require("./ThumbnailPhoto"));

@@ -2,7 +2,11 @@ import * as React from 'react';
 import { GlobalSnackbar } from './GlobalSnackbar';
 
 interface ISnackbarContext {
-    sendMessage: (text: string, type?: string) => void;
+    sendMessage: (
+        mode: boolean,
+        text: string,
+        type?: string,
+    ) => void;
 }
 
 export const SnackbarContext = React.createContext<ISnackbarContext>({
@@ -14,12 +18,16 @@ export const SnackbarContextProvider: React.FunctionComponent = ({ children }) =
         messageText: '',
         messageType: 'success',
     });
+    const [snackbarMode, setSnackbarMode] = React.useState(false);
 
     const [providerValue] = React.useState({
-        sendMessage: (text: string, type = 'success') => setMessage({
-            messageText: text,
-            messageType: type,
-        }),
+        sendMessage: (mode: boolean, text: string, type = 'success') => {
+            setMessage({
+                messageText: text,
+                messageType: type,
+            });
+            setSnackbarMode(mode);
+        }
     });
 
     return (
@@ -28,7 +36,7 @@ export const SnackbarContextProvider: React.FunctionComponent = ({ children }) =
             <GlobalSnackbar
                 seconds={5000}
                 message={getMessage}
-                mobile={false}
+                mobile={snackbarMode}
             />
         </SnackbarContext.Provider>
     );
