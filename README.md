@@ -348,32 +348,44 @@ export default () => (
 
 ### `SnackbarContextProvider`
 
-A context provider to handle snackbar notifications. You can add custom messages and set a .
+A context provider to handle snackbar notifications.
 
 ### Parameters
 - `messageText` **[string]** A custom message to show on the snackbar component.
 
-- `messageType` **[string]** Type of the message to show to the user. ***defaultValue***: `info`.
+- `messageType` **[string]** . ***defaultValue***: `info`.
 
 ### Example
 
 ```javascript
-import Typography from '@material-ui/core/Typography/Typography';
 import * as React from 'react';
-import { getClasses } from '../Providers/ClassesProvider';
-import { SnackbarContext } from '../Providers/SnackbarContextProvider';
-import { UpdateLogo } from '../Utils/IconsPath';
-import { PassCoreIcon } from './PassCoreIcon';
+// Imports here. . .
+import { SnackbarContext } from '../Provider/SnackbarContextProvider';
 
-export const ImageEditor: React.FunctionComponent<any> = ({}) => {
-    const inputOpenFileRef: any = React.createRef();
-    const classes = getClasses();
+const LanguageSwitchDialog: React.FunctionComponent<any> = ({ open, onClose }) => {
+    // Code here. . .
     const { sendMessage } = React.useContext(SnackbarContext);
+    // More code here. . .
 
-    const showOpenFileDlg = () => inputOpenFileRef.current.click();
+    const changeLanguage = (lang: any) => {
+        i18n.changeLanguage(lang, (error: any) => {
+            if (error) {
+                sendMessage(
+                    'ErrorBoundaryTitle',
+                    'error',
+                );
+                return;
+            }
+        });
+        actions.changeLanguage(lang);
+    };
 
-    sendMessage('Invalid file, use only image files', 'error');
+    return (
+        // Rendered component. . .
+    );
 };
+
+export default LanguageSwitchDialog;
 ```
 
 ### `TextValidator`
