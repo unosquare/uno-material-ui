@@ -2,7 +2,7 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import makeStyles from '@material-ui/styles/makeStyles';
 import * as React from 'react';
-import { GlobalSnackbar } from '../../src/';
+import { SnackbarContext } from '../../src/SnackbarContextProvider';
 
 const useStyles = makeStyles({
     error: {
@@ -27,28 +27,23 @@ const useStyles = makeStyles({
 
 export default (props: any) => {
     const classes = useStyles(props);
-    const [message, setMessage] = React.useState({});
-    const [mobile, setMobile] = React.useState(false);
+    const { sendMessage } = React.useContext(SnackbarContext);
     const info = { messageText: 'Hey! Check this snackbar', messageType: 'info' };
     const warning = { messageText: 'Hey! Be careful', messageType: 'warning' };
     const error = { messageText: 'Hey! This is broken', messageType: 'error' };
     const success = { messageText: 'Hey! Everything is awesome', messageType: 'success' };
 
     const onOpenInfo = () => {
-        setMobile(false);
-        setMessage(info);
+        sendMessage(info.messageText, info.messageType);
     };
     const onOpenWarning = () => {
-        setMobile(false);
-        setMessage(warning);
+        sendMessage(warning.messageText, warning.messageType);
     };
     const onOpenError = () => {
-        setMobile(false);
-        setMessage(error);
+        sendMessage(error.messageText, error.messageType);
     };
     const onOpenSuccess = () => {
-        setMobile(true);
-        setMessage(success);
+        sendMessage(success.messageText);
     };
 
     return (
@@ -58,7 +53,6 @@ export default (props: any) => {
             <Button className={classes.error}onClick={onOpenError}>Open Error Snackbar</Button>
             <Typography>It is also available in mobile version</Typography>
             <Button className={classes.success}onClick={onOpenSuccess}>Open Success Mobile Snackbar</Button>
-            {message.messageText && <GlobalSnackbar message={message} seconds={5000} mobile={mobile} />}
         </React.Fragment>
     );
 };
