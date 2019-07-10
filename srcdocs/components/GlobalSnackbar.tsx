@@ -34,16 +34,16 @@ export default (props: any) => {
     const success = { messageText: 'Hey! Everything is awesome', messageType: 'success' };
 
     const onOpenInfo = () => {
-        sendMessage(false, info.messageText, info.messageType);
+        sendMessage(info.messageText, info.messageType);
     };
     const onOpenWarning = () => {
-        sendMessage(false, warning.messageText, warning.messageType);
+        sendMessage(warning.messageText, warning.messageType);
     };
     const onOpenError = () => {
-        sendMessage(false, error.messageText, error.messageType);
+        sendMessage(error.messageText, error.messageType);
     };
     const onOpenSuccess = () => {
-        sendMessage(true, success.messageText);
+        sendMessage(success.messageText);
     };
 
     return (
