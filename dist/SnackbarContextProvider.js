@@ -8,10 +8,14 @@ var __importStar = (this && this.__importStar) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = __importStar(require("react"));
+var uno_react_1 = require("uno-react");
 var GlobalSnackbar_1 = require("./GlobalSnackbar");
 exports.SnackbarContext = React.createContext({
     sendMessage: null,
 });
+var updateComponentByResolution = function (setMobileResolution) { return function () {
+    setMobileResolution(window.outerWidth < 1000);
+}; };
 exports.SnackbarContextProvider = function (_a) {
     var children = _a.children;
     var _b = React.useState({
@@ -19,15 +23,21 @@ exports.SnackbarContextProvider = function (_a) {
         messageType: 'success',
     }), getMessage = _b[0], setMessage = _b[1];
     var _c = React.useState(false), snackbarMode = _c[0], setSnackbarMode = _c[1];
+    var listener = updateComponentByResolution(setSnackbarMode);
+    var resizeListener = uno_react_1.debounce(listener, 1500);
+    React.useEffect(function () {
+        setSnackbarMode(window.outerWidth < 1000);
+        window.addEventListener('resize', resizeListener);
+        return function () { return window.removeEventListener('resize', resizeListener); };
+    }, []);
     var providerValue = React.useState({
-        sendMessage: function (mode, text, type) {
+        sendMessage: function (text, type) {
             if (type === void 0) { type = 'success'; }
             setMessage({
                 messageText: text,
                 messageType: type,
             });
-            setSnackbarMode(mode);
-        }
+        },
     })[0];
     return (React.createElement(exports.SnackbarContext.Provider, { value: providerValue },
         children,
