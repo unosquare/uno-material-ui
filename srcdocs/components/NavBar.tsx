@@ -8,18 +8,18 @@ import makeStyles from '@material-ui/styles/makeStyles';
 import * as React from 'react';
 import { useResolutionSwitch } from 'uno-react';
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles({
     logo: {
         marginRight: 'auto',
         width: '200px',
     },
-}));
+});
 
 const outerWidth = 600;
 const timeout = 1000;
 
 export const NavBar = (props: any) => {
-    const classes = useStyles(props);
+    const classes = useStyles({});
     const [isMobileView] = useResolutionSwitch(outerWidth, timeout);
     const { title, logo, drawerOpen, setDrawerOpen } = props;
     const handleDrawerOpen = (e: any) => {
