@@ -50,7 +50,7 @@ export const NavBar = (props: any) => {
                             </IconButton>
                         }
                         <Typography color='textSecondary' variant='h5'>
-                            {title || 'uno-react'}
+                            {title}
                         </Typography>
                     </Grid>
                     <Grid

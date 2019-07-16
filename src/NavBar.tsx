@@ -1,11 +1,13 @@
 import AppBar from '@material-ui/core/AppBar';
 import Grid from '@material-ui/core/Grid';
+import IconButton from '@material-ui/core/IconButton';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
+import Build from '@material-ui/icons/Build';
 import * as React from 'react';
 
-export const NavBar = (props: any) => (
-    <AppBar position='absolute' color='primary'>
+export default () => (
+    <AppBar position='relative' color='primary'>
         <Toolbar>
             <Grid container={true} direction='row' item={true} xs={12}>
                 <Grid
@@ -17,7 +19,7 @@ export const NavBar = (props: any) => (
                     alignItems={'center'}
                 >
                     <Typography color='textSecondary' variant='h5'>
-                        {props.title || 'uno-react'}
+                        Uno-Material-UI
                     </Typography>
                 </Grid>
                 <Grid
@@ -28,7 +30,9 @@ export const NavBar = (props: any) => (
                     justify={'flex-end'}
                     alignItems={'center'}
                 >
-                    {props.children}
+                    <IconButton>
+            <Build />
+        </IconButton>
                 </Grid>
             </Grid>
         </Toolbar>
