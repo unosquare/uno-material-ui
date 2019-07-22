@@ -20,8 +20,10 @@ export const ThumbnailPhoto: React.FunctionComponent<IThumbnailPhotoProps> = ({
 
     React.useEffect(() => {
         const thumbnail = new Image();
-        thumbnail.onload = () => setImgLoad(true);
         thumbnail.src = imgSrc;
+        thumbnail.onload = () => setImgLoad(true);
+        
+        return () => setImgLoad(false);
     }, [imgSrc]);
 
     return (
