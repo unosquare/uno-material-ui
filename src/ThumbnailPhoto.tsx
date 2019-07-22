@@ -22,7 +22,7 @@ export const ThumbnailPhoto: React.FunctionComponent<IThumbnailPhotoProps> = ({
         const thumbnail = new Image();
         thumbnail.src = imgSrc;
         thumbnail.onload = () => setImgLoad(true);
-        
+
         return () => setImgLoad(false);
     }, [imgSrc]);
 
