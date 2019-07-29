@@ -41,8 +41,9 @@ exports.ThumbnailPhoto = function (_a) {
     var _b = React.useState(false), imgLoaded = _b[0], setImgLoad = _b[1];
     React.useEffect(function () {
         var thumbnail = new Image();
-        thumbnail.onload = function () { return setImgLoad(true); };
         thumbnail.src = imgSrc;
+        thumbnail.onload = function () { return setImgLoad(true); };
+        return function () { return setImgLoad(false); };
     }, [imgSrc]);
     return (React.createElement(Tooltip_1.default, { title: (imgLoaded && fullName) ? fullName : '', placement: placement },
         React.createElement(Avatar_1.default, __assign({}, rest, { src: imgLoaded ? imgSrc : '' }), (!imgLoaded) &&
