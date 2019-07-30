@@ -39,8 +39,7 @@ export const NavBar = (props: any) => {
                         justify={'flex-start'}
                         alignItems={'center'}
                     >
-                        <img src={isMobileView ? '' : logo} className={classes.logo}/>
-                        {isMobileView &&
+                        {isMobileView ?
                             <IconButton
                                 color='inherit'
                                 aria-label='Open drawer'
@@ -48,6 +47,8 @@ export const NavBar = (props: any) => {
                             >
                                 <MenuIcon />
                             </IconButton>
+                            :
+                            <img src={logo} className={classes.logo}/>
                         }
                         <Typography color='textSecondary' variant='h5'>
                             {title}
