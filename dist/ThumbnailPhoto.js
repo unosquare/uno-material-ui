@@ -49,3 +49,4 @@ exports.ThumbnailPhoto = function (_a) {
         React.createElement(Avatar_1.default, __assign({}, rest, { src: imgLoaded ? imgSrc : '' }), (!imgLoaded) &&
             initials)));
 };
+//# sourceMappingURL=ThumbnailPhoto.js.map

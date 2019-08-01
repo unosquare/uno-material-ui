@@ -20,3 +20,4 @@ exports.ButtonWithLoading = function (_a) {
         :
             React.createElement(Button_1.default, { type: 'submit', color: 'primary' }, text)));
 };
+//# sourceMappingURL=ButtonWithLoading.js.map

@@ -46,3 +46,4 @@ exports.ConfirmationDialog = function (_a) {
             onAgreeAction &&
                 React.createElement(Button_1.default, { onClick: handleAgree, color: 'primary', disabled: disabled, autoFocus: true, variant: 'contained' }, agree))));
 };
+//# sourceMappingURL=ConfirmationDialog.js.map

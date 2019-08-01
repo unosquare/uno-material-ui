@@ -30,3 +30,4 @@ exports.MenuList = function (props) {
     return (React.createElement(Drawer_1.default, { variant: 'permanent', className: classes.drawer, classes: { paper: classes.drawerPaper } },
         React.createElement(List_1.default, { className: classes.list }, props.children)));
 };
+//# sourceMappingURL=MenuList.js.map

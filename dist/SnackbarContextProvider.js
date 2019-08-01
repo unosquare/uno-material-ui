@@ -43,3 +43,4 @@ exports.SnackbarContextProvider = function (_a) {
         children,
         React.createElement(GlobalSnackbar_1.GlobalSnackbar, { seconds: 5000, message: getMessage, mobile: snackbarMode })));
 };
+//# sourceMappingURL=SnackbarContextProvider.js.map

@@ -19,3 +19,4 @@ exports.FormSwitch = function (_a) {
             label: labelClassName,
         }, disabled: disabled, label: label, name: name, className: className, labelPlacement: labelPlacement, onChange: onChange }));
 };
+//# sourceMappingURL=FormSwitch.js.map

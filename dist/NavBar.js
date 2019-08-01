@@ -47,3 +47,4 @@ exports.NavBar = function (props) {
                     React.createElement(Typography_1.default, { color: 'textSecondary', variant: 'h5' }, title)),
                 React.createElement(Grid_1.default, { xs: 6, item: true, container: true, direction: 'row', justify: 'flex-end', alignItems: 'center' }, props.children)))));
 };
+//# sourceMappingURL=NavBar.js.map
