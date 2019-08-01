@@ -48,7 +48,7 @@
   "homepage": "https://github.com/unosquare/uno-material-ui#readme",
   "devDependencies": {
     "@types/enzyme": "^3.10.3",
-    "@types/jest": "^24.0.15",
+    "@types/jest": "^24.0.16",
     "@types/react": "16.8.24",
     "@types/react-dom": "16.8.5",
     "enzyme": "^3.10.0",
