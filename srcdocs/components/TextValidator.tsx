@@ -1,8 +1,7 @@
 import Button from '@material-ui/core/Button';
 import makeStyles from '@material-ui/styles/makeStyles';
 import * as React from 'react';
-import { ValidatorForm } from 'react-form-validator-core';
-import { useStateForModel } from 'uno-react';
+import { useStateForModel, ValidatorForm } from 'uno-react';
 import { TextValidator } from '../../src/';
 
 const useStyles = makeStyles({
