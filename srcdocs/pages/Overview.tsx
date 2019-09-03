@@ -81,15 +81,7 @@ export default (props: any) => {
                                 href='https://www.npmjs.com/package/uno-react'
                                 className={classes.link}
                             >
-                                Uno-React - Version: 0.7.0
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                href='https://github.com/cssinjs/jss#readme'
-                                className={classes.link}
-                            >
-                                JSS - Version: 10.0.0-alpha.9
+                                uno-react - Version: 0.9.0
                             </a>
                         </li>
                         <li>
@@ -97,23 +89,7 @@ export default (props: any) => {
                                 href='https://material-ui.com/'
                                 className={classes.link}
                             >
-                                Material-UI - Version: 4.0.1
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                href='https://reactjs.org/'
-                                className={classes.link}
-                            >
-                                React - Version: 16.8.6
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                href='https://es.reactjs.org/docs/react-dom.html'
-                                className={classes.link}
-                            >
-                                React-Dom - Version: 16.8.6
+                                Material-UI - Version: 4.4.0
                             </a>
                         </li>
                     </ul>
@@ -137,7 +113,7 @@ export default (props: any) => {
                     variant='subtitle1'
                     className={classes.content}
                 >
-                    <a href='https://www.npmjs.com/package/uno-react' className={classes.link}>Uno-React</a> features
+                    <a href='https://www.npmjs.com/package/uno-react' className={classes.link}>uno-react</a> features
                     hooks and functions that are quite useful to every dev.
                 </Typography>
             </Paper>
