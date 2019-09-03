@@ -2,15 +2,15 @@ import Typography from '@material-ui/core/Typography';
 import makeStyles from '@material-ui/styles/makeStyles';
 import * as React from 'react';
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles({
     errorBoundBody: {
         color: 'red',
         marginBottom: '30px',
     },
-}));
+});
 
-export default (props: any) => {
-    const classes = useStyles(props);
+export default () => {
+    const classes = useStyles({});
 
     return (
         <React.Fragment>
