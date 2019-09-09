@@ -81,7 +81,7 @@ export default (props: any) => {
                                 href='https://www.npmjs.com/package/uno-react'
                                 className={classes.link}
                             >
-                                uno-react - Version: 0.9.0
+                                uno-react
                             </a>
                         </li>
                         <li>
@@ -89,7 +89,7 @@ export default (props: any) => {
                                 href='https://material-ui.com/'
                                 className={classes.link}
                             >
-                                Material-UI - Version: 4.4.0
+                                Material-UI
                             </a>
                         </li>
                     </ul>

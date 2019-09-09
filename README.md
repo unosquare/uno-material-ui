@@ -7,8 +7,7 @@
 
 Components and extensions for [Material UI](https://material-ui.com) (React).
 
-Table of contents
-=================
+## Table of contents
 
   * [💾Installation](#installation)
   * [What's in the library](#whats-in-the-library)
@@ -26,7 +25,7 @@ Table of contents
     * [ThumbnailPhoto](#thumbnailphoto)
     * [Title](#title)
 
-### Installation
+## Installation
 
 ```bash
 > npm i uno-material-ui
