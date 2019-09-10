@@ -2,7 +2,7 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import makeStyles from '@material-ui/styles/makeStyles';
 import * as React from 'react';
-import { SnackbarContext } from '../../src/SnackbarContextProvider';
+import { snackbarService } from '../../src/SnackbarService';
 
 const useStyles = makeStyles({
     error: {
@@ -27,23 +27,22 @@ const useStyles = makeStyles({
 
 export default (props: any) => {
     const classes = useStyles(props);
-    const { sendMessage } = React.useContext(SnackbarContext);
     const info = { messageText: 'Hey! Check this snackbar', messageType: 'info' };
     const warning = { messageText: 'Hey! Be careful', messageType: 'warning' };
     const error = { messageText: 'Hey! This is broken', messageType: 'error' };
     const success = { messageText: 'Hey! Everything is awesome', messageType: 'success' };
 
     const onOpenInfo = () => {
-        sendMessage(info.messageText, info.messageType);
+        snackbarService.showSnackbar(info.messageText, info.messageType);
     };
     const onOpenWarning = () => {
-        sendMessage(warning.messageText, warning.messageType);
+        snackbarService.showSnackbar(warning.messageText, warning.messageType);
     };
     const onOpenError = () => {
-        sendMessage(error.messageText, error.messageType);
+        snackbarService.showSnackbar(error.messageText, error.messageType);
     };
     const onOpenSuccess = () => {
-        sendMessage(success.messageText);
+        snackbarService.showSnackbar(success.messageText);
     };
 
     return (
