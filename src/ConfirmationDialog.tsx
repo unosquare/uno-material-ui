@@ -48,7 +48,7 @@ export const ConfirmationDialog = ({
                 </DialogContentText>
             </DialogContent>
             <DialogActions>
-                {onClose &&
+                {onClose && (
                     <Button
                         onClick={handleDisagree}
                         style={buttonStyle}
@@ -57,8 +57,8 @@ export const ConfirmationDialog = ({
                     >
                         {disagree}
                     </Button>
-                }
-                {onAgreeAction &&
+                )}
+                {onAgreeAction && (
                     <Button
                         onClick={handleAgree}
                         color='primary'
@@ -68,7 +68,7 @@ export const ConfirmationDialog = ({
                     >
                         {agree}
                     </Button>
-                }
+                )}
             </DialogActions>
         </Dialog>
     );

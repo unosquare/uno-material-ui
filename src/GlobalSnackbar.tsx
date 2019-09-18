@@ -105,16 +105,18 @@ export const GlobalSnackbar = ({ message, seconds = 2500, mobile = false }: any)
         >
             <SnackbarContent
                 className={getStyle()}
-                message={
-                    <Typography className={getTextStyle()}> {getIcon()} {message.messageText} </Typography>
-                }
-                action={!mobile &&
+                message={(
+                    <Typography className={getTextStyle()}>
+                        {getIcon()} {message.messageText}
+                    </Typography>
+                )}
+                action={!mobile && (
                     <IconButton
                         onClick={onClose}
                     >
                         <Close className={classes.closeIcon} />
                     </IconButton>
-                }
+                )}
             />
         </Snackbar>
     );

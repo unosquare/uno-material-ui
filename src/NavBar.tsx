@@ -35,20 +35,22 @@ export const NavBar = (props: any) => {
                         item={true}
                         xs={6}
                         container={true}
-                        direction={'row'}
-                        justify={'flex-start'}
-                        alignItems={'center'}
+                        direction='row'
+                        justify='flex-start'
+                        alignItems='center'
                     >
                         {isMobileView ?
-                            <IconButton
-                                color='inherit'
-                                aria-label='Open drawer'
-                                onClick={handleDrawerOpen}
-                            >
-                                <MenuIcon />
-                            </IconButton>
+                            (
+                                <IconButton
+                                    color='inherit'
+                                    aria-label='Open drawer'
+                                    onClick={handleDrawerOpen}
+                                >
+                                    <MenuIcon />
+                                </IconButton>
+                            )
                             :
-                            <img src={logo} className={classes.logo}/>
+                            <img src={logo} className={classes.logo} />
                         }
                         <Typography color='textSecondary' variant='h5'>
                             {title}
@@ -58,9 +60,9 @@ export const NavBar = (props: any) => {
                         xs={6}
                         item={true}
                         container={true}
-                        direction={'row'}
-                        justify={'flex-end'}
-                        alignItems={'center'}
+                        direction='row'
+                        justify='flex-end'
+                        alignItems='center'
                     >
                         {props.children}
                     </Grid>

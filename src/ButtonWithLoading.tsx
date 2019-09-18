@@ -8,9 +8,11 @@ export const ButtonWithLoading = ({ isFetching = false, text = 'Save', className
             isFetching ?
                 <CircularProgress />
                 :
-                <Button type='submit' color='primary'>
-                    {text}
-                </Button>
+                (
+                    <Button type='submit' color='primary'>
+                        {text}
+                    </Button>
+                )
         }
     </div>
 );
