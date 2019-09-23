@@ -102,13 +102,10 @@ exports.GlobalSnackbar = function (_a) {
         vertical: 'bottom',
     };
     return (React.createElement(Snackbar_1.default, { anchorOrigin: anchorOrigin, className: getStyle(), open: open },
-        React.createElement(SnackbarContent_1.default, { className: getStyle(), message: React.createElement(Typography_1.default, { className: getTextStyle() },
-                " ",
+        React.createElement(SnackbarContent_1.default, { className: getStyle(), message: (React.createElement(Typography_1.default, { className: getTextStyle() },
                 getIcon(),
                 " ",
-                message.messageText,
-                " "), action: !mobile &&
-                React.createElement(IconButton_1.default, { onClick: onClose },
-                    React.createElement(Close_1.default, { className: classes.closeIcon })) })));
+                message.messageText)), action: !mobile && (React.createElement(IconButton_1.default, { onClick: onClose },
+                React.createElement(Close_1.default, { className: classes.closeIcon }))) })));
 };
 //# sourceMappingURL=GlobalSnackbar.js.map

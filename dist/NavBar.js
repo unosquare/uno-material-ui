@@ -40,8 +40,8 @@ exports.NavBar = function (props) {
             React.createElement(Grid_1.default, { container: true, direction: 'row', item: true, xs: 12 },
                 React.createElement(Grid_1.default, { item: true, xs: 6, container: true, direction: 'row', justify: 'flex-start', alignItems: 'center' },
                     isMobileView ?
-                        React.createElement(IconButton_1.default, { color: 'inherit', "aria-label": 'Open drawer', onClick: handleDrawerOpen },
-                            React.createElement(Menu_1.default, null))
+                        (React.createElement(IconButton_1.default, { color: 'inherit', "aria-label": 'Open drawer', onClick: handleDrawerOpen },
+                            React.createElement(Menu_1.default, null)))
                         :
                             React.createElement("img", { src: logo, className: classes.logo }),
                     React.createElement(Typography_1.default, { color: 'textSecondary', variant: 'h5' }, title)),

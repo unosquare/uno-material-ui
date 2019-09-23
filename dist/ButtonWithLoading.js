@@ -18,6 +18,6 @@ exports.ButtonWithLoading = function (_a) {
     return (React.createElement("div", { className: className }, isFetching ?
         React.createElement(CircularProgress_1.default, null)
         :
-            React.createElement(Button_1.default, { type: 'submit', color: 'primary' }, text)));
+            (React.createElement(Button_1.default, { type: 'submit', color: 'primary' }, text))));
 };
 //# sourceMappingURL=ButtonWithLoading.js.map

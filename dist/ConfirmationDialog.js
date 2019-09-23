@@ -41,9 +41,7 @@ exports.ConfirmationDialog = function (_a) {
             React.createElement(DialogContentText_1.default, null,
                 React.createElement(Typography_1.default, { color: textColor }, contentText))),
         React.createElement(DialogActions_1.default, null,
-            onClose &&
-                React.createElement(Button_1.default, { onClick: handleDisagree, style: buttonStyle, disabled: disabled, color: 'secondary' }, disagree),
-            onAgreeAction &&
-                React.createElement(Button_1.default, { onClick: handleAgree, color: 'primary', disabled: disabled, autoFocus: true, variant: 'contained' }, agree))));
+            onClose && (React.createElement(Button_1.default, { onClick: handleDisagree, style: buttonStyle, disabled: disabled, color: 'secondary' }, disagree)),
+            onAgreeAction && (React.createElement(Button_1.default, { onClick: handleAgree, color: 'primary', disabled: disabled, autoFocus: true, variant: 'contained' }, agree)))));
 };
 //# sourceMappingURL=ConfirmationDialog.js.map
