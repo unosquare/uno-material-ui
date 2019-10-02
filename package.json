@@ -1,6 +1,6 @@
 {
   "name": "uno-material-ui",
-  "version": "1.5.3",
+  "version": "1.5.4",
   "description": "Components and extensions for Material UI",
   "main": "dist/index.js",
   "scripts": {
@@ -67,9 +67,9 @@
     "typescript": "^3.6.3"
   },
   "dependencies": {
-    "@material-ui/core": "^4.4.3",
+    "@material-ui/core": "^4.5.0",
     "@material-ui/icons": "^4.4.3",
-    "@material-ui/styles": "^4.4.3",
+    "@material-ui/styles": "^4.5.0",
     "react-form-validator-core": "^0.6.4",
     "uno-react": "^0.10.2"
   },
