@@ -41,8 +41,8 @@ const useStyles = makeStyles({
     },
 });
 
-export default (props: any) => {
-    const classes = useStyles(props);
+export default  () => {
+    const classes = useStyles({});
 
     return (
         <Grid container={true} className={classes.container}>
