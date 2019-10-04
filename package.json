@@ -49,15 +49,15 @@
   "devDependencies": {
     "@types/enzyme": "^3.10.3",
     "@types/jest": "^24.0.18",
-    "@types/react": "16.9.4",
+    "@types/react": "16.9.5",
     "@types/react-dom": "16.9.1",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
     "jest": "^24.9.0",
     "parcel-bundler": "^1.12.3",
     "parcel-plugin-clean-easy": "^1.0.2",
-    "react": "^16.10.1",
-    "react-dom": "^16.10.1",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2",
     "react-highlight": "^0.12.0",
     "react-router-dom": "^5.1.2",
     "react-router-hash-link": "^1.2.2",
@@ -74,8 +74,8 @@
     "uno-react": "^0.10.2"
   },
   "peerDependencies": {
-    "react": "^16.10.1",
-    "react-dom": "^16.10.1"
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2"
   },
   "files": [
     "dist",
