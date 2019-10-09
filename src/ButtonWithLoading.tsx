@@ -1,6 +1,5 @@
 import Button, { ButtonProps } from '@material-ui/core/Button';
 import CircularProgress from '@material-ui/core/CircularProgress';
-import withStyles from '@material-ui/core/styles/withStyles';
 import * as React from 'react';
 
 export type ButtonWithLoadingProps = ButtonProps & {
