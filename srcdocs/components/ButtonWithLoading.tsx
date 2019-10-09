@@ -13,7 +13,15 @@ export default () => {
 
     return (
         <ValidatorForm onSubmit={submit}>
-            <ButtonWithLoading isFetching={fetching} />
+            <ButtonWithLoading
+                isFetching={fetching}
+                variant='contained'
+                color='primary'
+                type='submit'
+                size='large'
+            >
+                Save
+            </ButtonWithLoading>
         </ValidatorForm>
     );
 };
