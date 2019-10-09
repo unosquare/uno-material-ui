@@ -9,26 +9,16 @@ describe('ButtonWithLoading', () => {
     let shallow;
     beforeEach(() => {
         jest.resetModules();
-        shallow = createShallow();
+        shallow = createShallow({ dive: true });
     });
 
-    test('Should appeard the <CircularProgress/> component', () => {
-        wrapper = shallow(<ButtonWithLoading isFetching={true} />);
+    test('Should appear the <CircularProgress/> component', () => {
+        wrapper = shallow(<ButtonWithLoading isFetching={true}>Save</ButtonWithLoading>).dive();
         expect(wrapper.find(CircularProgress)).toHaveLength(1);
     });
 
-    test('Should not appeard the <Button/> component', () => {
-        wrapper = shallow(<ButtonWithLoading isFetching={true} />);
-        expect(wrapper.find(Button)).toHaveLength(0);
-    });
-
-    test('Should not appeard the <CircularProgress/> component', () => {
-        wrapper = shallow(<ButtonWithLoading />);
+    test('Should not appear the <CircularProgress/> component', () => {
+        wrapper = shallow(<ButtonWithLoading isFetching={false} >Save</ButtonWithLoading>).dive();
         expect(wrapper.find(CircularProgress)).toHaveLength(0);
-    });
-
-    test('Should appeard the <Button/> component', () => {
-        wrapper = shallow(<ButtonWithLoading />);
-        expect(wrapper.find(Button)).toHaveLength(1);
     });
 });
