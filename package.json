@@ -1,6 +1,6 @@
 {
   "name": "uno-material-ui",
-  "version": "1.6.2",
+  "version": "1.6.3",
   "description": "Components and extensions for Material UI",
   "main": "dist/index.js",
   "scripts": {
@@ -56,8 +56,8 @@
     "jest": "^24.9.0",
     "parcel-bundler": "^1.12.4",
     "parcel-plugin-clean-easy": "^1.0.2",
-    "react": "^16.10.2",
-    "react-dom": "^16.10.2",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
     "react-highlight": "^0.12.0",
     "react-router-dom": "^5.1.2",
     "react-router-hash-link": "^1.2.2",
@@ -73,8 +73,8 @@
     "uno-react": "^0.10.3"
   },
   "peerDependencies": {
-    "react": "^16.10.2",
-    "react-dom": "^16.10.2"
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0"
   },
   "files": [
     "dist",

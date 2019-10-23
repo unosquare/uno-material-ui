@@ -27,7 +27,7 @@ var SnackbarContainer = function () {
         SnackbarService_1.snackbarService.subscribe(onUpdate);
     }, []);
     var onUpdate = function () {
-        setSnackbar(__assign({}, SnackbarService_1.snackbarService.getSnackbar()));
+        return setSnackbar(__assign({}, SnackbarService_1.snackbarService.getSnackbar()));
     };
     if (!snackbar) {
         return null;

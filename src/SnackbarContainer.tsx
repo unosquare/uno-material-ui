@@ -9,9 +9,8 @@ const SnackbarContainer: React.FunctionComponent<any> = () => {
         snackbarService.subscribe(onUpdate);
     }, []);
 
-    const onUpdate = () => {
+    const onUpdate = () =>
         setSnackbar({ ...snackbarService.getSnackbar() });
-    };
 
     if (!snackbar) {
         return null;
