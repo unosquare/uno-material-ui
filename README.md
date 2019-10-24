@@ -21,7 +21,6 @@ Components and extensions for [Material UI](https://material-ui.com) (React).
     * [LoadingIcon](#loadingicon)
     * [MenuList](#menulist)
     * [NavBar](#navbar)
-    * [SnackbarContextProvider](#snackbarcontextprovider)
     * [TextValidator](#textvalidator)
     * [ThumbnailPhoto](#thumbnailphoto)
     * [Title](#title)
@@ -345,45 +344,6 @@ import { NavBar } from 'uno-material-ui;
 export default () => (
     <NavBar title={'uno-material-ui'} />
 );
-```
-
-### `SnackbarContextProvider`
-
-A context provider to handle snackbar notifications.
-To prevent a general redraw on the app, this context handles the notifications rendering and calling.
-To generate a custom notfication, the user must provide the following parameters:
-
-### Parameters
-- `messageText` **[string]** A custom message to show on the snackbar component.
-
-- `messageType` **[string]** . ***defaultValue***: `info`.
-
-### Example
-
-```javascript
-import * as React from 'react';
-import { SnackbarContext } from 'uno-material-ui';
-
-const SnackbarButton: React.FunctionComponent<any> = () => {
-    const { sendMessage } = React.useContext(SnackbarContext);
-
-    const launchNotif = (ev: any) => {
-        sendMessage(
-            'Notification launched!',
-            'info',
-        );
-    };
-
-    return (
-        <Button
-            onClick={LaunchNotif}
-        >
-            Press here to launch a message
-        </Button>
-    );
-};
-
-export default SnackbarButton;
 ```
 
 ### `TextValidator`
