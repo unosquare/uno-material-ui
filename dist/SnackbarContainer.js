@@ -21,7 +21,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var React = __importStar(require("react"));
 var GlobalSnackbar_1 = require("./GlobalSnackbar");
 var SnackbarService_1 = require("./SnackbarService");
-var SnackbarContainer = function () {
+exports.SnackbarContainer = function () {
     var _a = React.useState(), snackbar = _a[0], setSnackbar = _a[1];
     React.useEffect(function () {
         SnackbarService_1.snackbarService.subscribe(onUpdate);
@@ -34,5 +34,4 @@ var SnackbarContainer = function () {
     }
     return (React.createElement(GlobalSnackbar_1.GlobalSnackbar, { seconds: 5000, message: snackbar.message, mobile: snackbar.isMobile }));
 };
-exports.default = SnackbarContainer;
 //# sourceMappingURL=SnackbarContainer.js.map

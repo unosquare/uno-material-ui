@@ -2,7 +2,7 @@ import * as React from 'react';
 import { GlobalSnackbar } from './GlobalSnackbar';
 import { ISnackbar, snackbarService } from './SnackbarService';
 
-const SnackbarContainer: React.FunctionComponent<any> = () => {
+export const SnackbarContainer: React.FunctionComponent = () => {
     const [snackbar, setSnackbar] = React.useState<ISnackbar>();
 
     React.useEffect(() => {
@@ -24,5 +24,3 @@ const SnackbarContainer: React.FunctionComponent<any> = () => {
         />
     );
 };
-
-export default SnackbarContainer;

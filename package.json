@@ -1,6 +1,6 @@
 {
   "name": "uno-material-ui",
-  "version": "1.6.5",
+  "version": "1.6.6",
   "description": "Components and extensions for Material UI",
   "main": "dist/index.js",
   "scripts": {
@@ -48,7 +48,7 @@
   "homepage": "https://github.com/unosquare/uno-material-ui#readme",
   "devDependencies": {
     "@types/enzyme": "^3.10.3",
-    "@types/jest": "^24.0.20",
+    "@types/jest": "^24.0.21",
     "@types/react": "16.9.11",
     "@types/react-dom": "16.9.3",
     "enzyme": "^3.10.0",
