@@ -99,7 +99,7 @@ export default () => {
                 checked={true}
                 disabled={true}
                 label='Disabled'
-                labelPlacement='start'
+                labelPlacement='bottom-start'
                 onChange={onChange}
             />
         </ValidatorForm>
@@ -168,6 +168,27 @@ export default (props: any) => {
             <Typography>It is also available in mobile version</Typography>
             <Button className={classes.success}onClick={onOpenSuccess}>Open Success Mobile Snackbar</Button>
             {message.messageText && <GlobalSnackbar message={message} seconds={5000} mobile={mobile} />}
+        </React.Fragment>
+    );
+};`;
+
+const SafeLoading = `
+import * as React from 'react';
+import { SafeLoading } from 'uno-material-ui';
+
+export default () => {
+    const [fetching, setFetching] = React.useState(false);
+
+    const startFetching = () => setFetching(true);
+
+    if (fetching) {
+        setTimeout(() => setFetching(false), 4000);
+    }
+
+    return (
+        <React.Fragment>
+            <Button onClick={startFetching} />
+            <SafeLoading isLoading={fetching} />
         </React.Fragment>
     );
 };`;
@@ -277,7 +298,7 @@ export default () => (
         <ThumbnailPhoto
             fullName='Geovanni Perez'
             imgSrc='https://avatars0.githubusercontent.com/u/1775792?s=400&v=4'
-            placement='start'
+            placement='bottom-start'
         />
     </React.Fragment>
 );`;
@@ -293,7 +314,7 @@ export default () => (
 
 const Codes = {
     ButtonWithLoading, ConfirmationDialog, ErrorBoundary, FixedLinearProgress, FormSwitch,
-    GlobalSnackBar, LoadingIcon, MenuList, NavBar, TextValidator, ThumbnailPhoto, Title,
+    GlobalSnackBar, SafeLoading, LoadingIcon, MenuList, NavBar, TextValidator, ThumbnailPhoto, Title,
 };
 
 export default Codes;

@@ -33,7 +33,7 @@ const useStyles = makeStyles({
 });
 
 export default ({ children, title, text, api, code }: any) => {
-    const classes = useStyles();
+    const classes = useStyles({});
     const [openApi, setOpenApi] = useToggle(false);
     const [openCode, setOpenCode] = useToggle(false);
 
@@ -43,7 +43,7 @@ export default ({ children, title, text, api, code }: any) => {
                 <Typography variant='h4' className={classes.title}>
                     {title}
                 </Typography>
-                <Tooltip title={'Show Code'}>
+                <Tooltip title='Show Code'>
                     <IconButton
                         className={classes.icon}
                         onClick={setOpenCode}
@@ -53,7 +53,7 @@ export default ({ children, title, text, api, code }: any) => {
                     </IconButton>
                 </Tooltip>
                 {api &&
-                    <Tooltip title={'Component API'}>
+                    <Tooltip title='Component API'>
                         <IconButton onClick={setOpenApi} color={openApi ? 'primary' : 'secondary'}>
                             <Settings />
                         </IconButton>

@@ -81,6 +81,11 @@ export default () => {
                         <ListItemText className={classes.sub} secondary='NavBar' />
                     </ListItem>
                 </HashLink>
+                <HashLink to='/uno-material-ui/examples#SafeLoading' className={classes.link}>
+                    <ListItem button={true}>
+                        <ListItemText className={classes.sub} secondary='SafeLoading' />
+                    </ListItem>
+                </HashLink>
                 <HashLink to='/uno-material-ui/examples#ThumbnailPhoto' className={classes.link}>
                     <ListItem button={true}>
                         <ListItemText className={classes.sub} secondary='ThumbnailPhoto' />

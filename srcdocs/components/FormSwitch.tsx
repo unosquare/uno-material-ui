@@ -20,7 +20,7 @@ export default () => {
                 checked={true}
                 disabled={true}
                 label='Disabled'
-                labelPlacement='start'
+                labelPlacement='bottom-start'
                 onChange={onChange}
             />
         </ValidatorForm>

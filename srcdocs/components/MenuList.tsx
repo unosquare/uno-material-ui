@@ -8,6 +8,9 @@ import { Link } from 'react-router-dom';
 import { MenuList } from '../../src';
 
 const useStyles = makeStyles(({ palette }: any) => ({
+    container: {
+        height: '180px',
+    },
     icon: {
         color: palette.primary.light,
         marginRight: '5px',
@@ -21,19 +24,21 @@ export default (props: any) => {
     const classes = useStyles(props);
 
     return (
-        <MenuList>
-            <Link to='#' className={classes.link}>
-                <ListItem button={true}>
-                    <Dashboard className={classes.icon} />
-                    <ListItemText secondary='Dashboard' />
-                </ListItem>
-            </Link>
-            <Link to='#' className={classes.link}>
-                <ListItem button={true}>
-                    <Build className={classes.icon} />
-                    <ListItemText secondary='Tools' />
-                </ListItem>
-            </Link>
-        </MenuList>
+        <div className={classes.container}>
+            <MenuList>
+                <Link to='#' className={classes.link}>
+                    <ListItem button={true}>
+                        <Dashboard className={classes.icon} />
+                        <ListItemText secondary='Dashboard' />
+                    </ListItem>
+                </Link>
+                <Link to='#' className={classes.link}>
+                    <ListItem button={true}>
+                        <Build className={classes.icon} />
+                        <ListItemText secondary='Tools' />
+                    </ListItem>
+                </Link>
+            </MenuList>
+        </div>
     );
 };

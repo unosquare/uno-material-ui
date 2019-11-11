@@ -215,7 +215,7 @@ export default () => {
                 checked={true}
                 disabled={true}
                 label='Disabled'
-                labelPlacement='start'
+                labelPlacement='bottom-start'
                 onChange={onChange}
             />
         </ValidatorForm>
@@ -429,7 +429,7 @@ export default () => (
         <ThumbnailPhoto
             fullName='Geovanni Perez'
             imgSrc='https://avatars0.githubusercontent.com/u/1775792?s=400&v=4'
-            placement='start'
+            placement='bottom-start'
         />
     </React.Fragment>
 );
