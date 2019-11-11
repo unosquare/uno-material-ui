@@ -21,6 +21,7 @@ Components and extensions for [Material UI](https://material-ui.com) (React).
     * [LoadingIcon](#loadingicon)
     * [MenuList](#menulist)
     * [NavBar](#navbar)
+    * [SafeLoading](#safeloading)
     * [TextValidator](#textvalidator)
     * [ThumbnailPhoto](#thumbnailphoto)
     * [Title](#title)
@@ -323,6 +324,38 @@ export default () => {
                 </ListItem>
             </Link>
         </MenuList>
+    );
+};
+```
+
+### `SafeLoading`
+
+A screen-wide modal that blocks the entire UI to prevent interruption during loading or fetching.
+
+### Parameters
+
+- `isLoading` **[boolean]** If true, the component will block the UI until it become false.
+
+### Example
+
+```javascript
+import * as React from 'react';
+import { SafeLoading } from 'uno-material-ui';
+
+export default () => {
+    const [fetching, setFetching] = React.useState(false);
+
+    const startFetching = () => setFetching(true);
+
+    if (fetching) {
+        setTimeout(() => setFetching(false), 4000);
+    }
+
+    return (
+        <React.Fragment>
+            <Button onClick={startFetching} />
+            <SafeLoading isLoading={fetching} />
+        </React.Fragment>
     );
 };
 ```
