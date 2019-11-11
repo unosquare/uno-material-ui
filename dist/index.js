@@ -16,7 +16,7 @@ __export(require("./UnoSuspense"));
 __export(require("./UnoTheme"));
 __export(require("./FixedLinearProgress"));
 __export(require("./FormSwitch"));
-__export(require("./SafeLoading"));
+__export(require("./IndeterminatedLoading"));
 __export(require("./SnackbarContainer"));
 __export(require("./SnackbarService"));
 __export(require("./ThumbnailPhoto"));

@@ -172,9 +172,9 @@ export default (props: any) => {
     );
 };`;
 
-const SafeLoading = `
+const IndeterminatedLoading = `
 import * as React from 'react';
-import { SafeLoading } from 'uno-material-ui';
+import { IndeterminatedLoading } from 'uno-material-ui';
 
 export default () => {
     const [fetching, setFetching] = React.useState(false);
@@ -188,7 +188,7 @@ export default () => {
     return (
         <React.Fragment>
             <Button onClick={startFetching} />
-            <SafeLoading isLoading={fetching} />
+            <IndeterminatedLoading isLoading={fetching} />
         </React.Fragment>
     );
 };`;
@@ -314,7 +314,7 @@ export default () => (
 
 const Codes = {
     ButtonWithLoading, ConfirmationDialog, ErrorBoundary, FixedLinearProgress, FormSwitch,
-    GlobalSnackBar, SafeLoading, LoadingIcon, MenuList, NavBar, TextValidator, ThumbnailPhoto, Title,
+    GlobalSnackBar, IndeterminatedLoading, LoadingIcon, MenuList, NavBar, TextValidator, ThumbnailPhoto, Title,
 };
 
 export default Codes;

@@ -11,7 +11,7 @@ export * from './UnoSuspense';
 export * from './UnoTheme';
 export * from './FixedLinearProgress';
 export * from './FormSwitch';
-export * from './SafeLoading';
+export * from './IndeterminatedLoading';
 export * from './SnackbarContainer';
 export * from './SnackbarService';
 export * from './ThumbnailPhoto';

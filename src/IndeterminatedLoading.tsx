@@ -21,9 +21,9 @@ const useStyles = makeStyles(({spacing }: any) => ({
     },
 }));
 
-export const SafeLoading: React.FunctionComponent<any> = ({ isLoading }: any) => {
+export const IndeterminatedLoading: React.FunctionComponent<any> = ({ isLoading }: any) => {
     if (!isLoading) {
-        return <React.Fragment/>;
+        return <div/>;
     }
     const classes = useStyles({});
     const [progress, setProgress] = React.useState(0);

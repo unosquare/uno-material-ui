@@ -44,7 +44,7 @@ const GlobalSnackBar = [
     createData('mobile', 'It displays the mobile version, a centered and bigger variant', 'boolean', 'false'),
 ];
 
-const SafeLoading = [
+const IndeterminatedLoading = [
     createData('isLoading', 'If true, the component will block the UI until it become false', 'boolean', ''),
 ];
 
@@ -75,6 +75,6 @@ const Title = [
 ];
 
 const Apis = {ButtonWithLoading, ConfirmationDialog, FixedLinearProgress, FormSwitch,
-     GlobalSnackBar, SafeLoading, LoadingIcon, TextValidator, ThumbnailPhoto, Title};
+     GlobalSnackBar, IndeterminatedLoading, LoadingIcon, TextValidator, ThumbnailPhoto, Title};
 
 export default Apis;

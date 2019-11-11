@@ -13,7 +13,7 @@ import GlobalSnackbar from '../components/GlobalSnackbar';
 import LoadingIcon from '../components/LoadingIcon';
 import MenuList from '../components/MenuList';
 import NavBar from '../components/NavBar';
-import SafeLoading from '../components/SafeLoading';
+import IndeterminatedLoading from '../components/IndeterminatedLoading';
 import TextValidator from '../components/TextValidator';
 import ThumbnailPhoto from '../components/ThumbnailPhoto';
 import Title from '../components/Title';
@@ -118,12 +118,12 @@ export default () => {
                     <NavBar />
                 </Component>
                 <Component
-                    title='SafeLoading'
+                    title='IndeterminatedLoading'
                     text='A screen-wide modal that blocks the entire UI to prevent interruption during loading or fetching'
-                    api={Apis.SafeLoading}
-                    code={Codes.SafeLoading}
+                    api={Apis.IndeterminatedLoading}
+                    code={Codes.IndeterminatedLoading}
                 >
-                    <SafeLoading />
+                    <IndeterminatedLoading />
                 </Component>
                 <Component
                     title='TextValidator'
