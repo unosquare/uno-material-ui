@@ -2,7 +2,7 @@ import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import makeStyles from '@material-ui/styles/makeStyles';
 import * as React from 'react';
-import SnackbarContainer from '../../src/SnackbarContainer';
+import {SnackbarContainer} from '../../src';
 import ButtonWithLoading from '../components/ButtonWithLoading';
 import Component from '../components/Component';
 import ConfirmationDialog from '../components/ConfirmationDialog';
@@ -13,6 +13,7 @@ import GlobalSnackbar from '../components/GlobalSnackbar';
 import LoadingIcon from '../components/LoadingIcon';
 import MenuList from '../components/MenuList';
 import NavBar from '../components/NavBar';
+import IndeterminatedLoading from '../components/IndeterminatedLoading';
 import TextValidator from '../components/TextValidator';
 import ThumbnailPhoto from '../components/ThumbnailPhoto';
 import Title from '../components/Title';
@@ -115,6 +116,14 @@ export default () => {
                     code={Codes.NavBar}
                 >
                     <NavBar />
+                </Component>
+                <Component
+                    title='IndeterminatedLoading'
+                    text='A screen-wide modal that blocks the entire UI to prevent interruption during loading or fetching'
+                    api={Apis.IndeterminatedLoading}
+                    code={Codes.IndeterminatedLoading}
+                >
+                    <IndeterminatedLoading />
                 </Component>
                 <Component
                     title='TextValidator'

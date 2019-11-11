@@ -21,6 +21,7 @@ Components and extensions for [Material UI](https://material-ui.com) (React).
     * [LoadingIcon](#loadingicon)
     * [MenuList](#menulist)
     * [NavBar](#navbar)
+    * [IndeterminatedLoading](#indeterminatedloading)
     * [TextValidator](#textvalidator)
     * [ThumbnailPhoto](#thumbnailphoto)
     * [Title](#title)
@@ -215,7 +216,7 @@ export default () => {
                 checked={true}
                 disabled={true}
                 label='Disabled'
-                labelPlacement='start'
+                labelPlacement='bottom-start'
                 onChange={onChange}
             />
         </ValidatorForm>
@@ -327,6 +328,38 @@ export default () => {
 };
 ```
 
+### `IndeterminatedLoading`
+
+A screen-wide modal that blocks the entire UI to prevent interruption during loading or fetching.
+
+### Parameters
+
+- `isLoading` **[boolean]** If true, the component will block the UI until it become false.
+
+### Example
+
+```javascript
+import * as React from 'react';
+import { IndeterminatedLoading } from 'uno-material-ui';
+
+export default () => {
+    const [fetching, setFetching] = React.useState(false);
+
+    const startFetching = () => setFetching(true);
+
+    if (fetching) {
+        setTimeout(() => setFetching(false), 4000);
+    }
+
+    return (
+        <React.Fragment>
+            <Button onClick={startFetching} />
+            <IndeterminatedLoading isLoading={fetching} />
+        </React.Fragment>
+    );
+};
+```
+
 ### `NavBar`
 
 A navbar that uses the primary color in your Theme, you can add a title or logo, and buttons.
@@ -429,7 +462,7 @@ export default () => (
         <ThumbnailPhoto
             fullName='Geovanni Perez'
             imgSrc='https://avatars0.githubusercontent.com/u/1775792?s=400&v=4'
-            placement='start'
+            placement='bottom-start'
         />
     </React.Fragment>
 );
