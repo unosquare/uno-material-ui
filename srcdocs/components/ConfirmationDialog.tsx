@@ -14,8 +14,8 @@ export default () => {
             <ConfirmationDialog
                 onClose={onCancel}
                 open={open}
-                title={'Confirmation Dialog'}
-                contentText={'Are you sure?'}
+                title='Confirmation Dialog'
+                contentText='Are you sure?'
                 onAgreeAction={onCancel}
             />
         </React.Fragment>
