@@ -8,12 +8,13 @@ import Component from '../components/Component';
 import ConfirmationDialog from '../components/ConfirmationDialog';
 import ErrorBoundary from '../components/ErrorBoundary';
 import FixedLinearProgress from '../components/FixedLinearProgress';
+import FormModal from '../components/FormModal';
 import FormSwitch from '../components/FormSwitch';
 import GlobalSnackbar from '../components/GlobalSnackbar';
+import IndeterminatedLoading from '../components/IndeterminatedLoading';
 import LoadingIcon from '../components/LoadingIcon';
 import MenuList from '../components/MenuList';
 import NavBar from '../components/NavBar';
-import IndeterminatedLoading from '../components/IndeterminatedLoading';
 import TextValidator from '../components/TextValidator';
 import ThumbnailPhoto from '../components/ThumbnailPhoto';
 import Title from '../components/Title';
@@ -79,6 +80,14 @@ export default () => {
                     <FixedLinearProgress />
                 </Component>
                 <Component
+                    title='FormModal'
+                    text='A wrapper for your modals with a form logic, just add input fields.'
+                    api={Apis.FormModal}
+                    code={Codes.FormModal}
+                >
+                    <FormModal />
+                </Component>
+                <Component
                     title='FormSwitch'
                     text='A useful switch component with label, perfect for forms.'
                     api={Apis.FormSwitch}
@@ -93,6 +102,14 @@ export default () => {
                     code={Codes.GlobalSnackBar}
                 >
                     <GlobalSnackbar />
+                </Component>
+                <Component
+                    title='IndeterminatedLoading'
+                    text='A screen-wide modal that blocks the entire UI to prevent interruption during loading or fetching'
+                    api={Apis.IndeterminatedLoading}
+                    code={Codes.IndeterminatedLoading}
+                >
+                    <IndeterminatedLoading />
                 </Component>
                 <Component
                     title='LoadingIcon'
@@ -112,18 +129,10 @@ export default () => {
                 </Component>
                 <Component
                     title='NavBar'
-                    text={'A navbar. Uses primary color of your theme. You can add a title or logo, and buttons.'}
+                    text='A navbar. Uses primary color of your theme. You can add a title or logo, and buttons.'
                     code={Codes.NavBar}
                 >
                     <NavBar />
-                </Component>
-                <Component
-                    title='IndeterminatedLoading'
-                    text='A screen-wide modal that blocks the entire UI to prevent interruption during loading or fetching'
-                    api={Apis.IndeterminatedLoading}
-                    code={Codes.IndeterminatedLoading}
-                >
-                    <IndeterminatedLoading />
                 </Component>
                 <Component
                     title='TextValidator'

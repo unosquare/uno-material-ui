@@ -6,6 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 __export(require("./ButtonWithLoading"));
 __export(require("./ConfirmationDialog"));
 __export(require("./ErrorBoundary"));
+__export(require("./FormModal"));
 __export(require("./GlobalSnackbar"));
 __export(require("./LoadingIcon"));
 __export(require("./MenuList"));

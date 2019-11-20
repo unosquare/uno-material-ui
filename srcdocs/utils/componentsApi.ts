@@ -26,6 +26,15 @@ const FixedLinearProgress = [
     createData('isLoading', 'It controls if the component is displayed or not', 'boolean', 'false'),
 ];
 
+const FormModal = [
+    createData('actions', 'JSX Element displayed at the bottom of the dialog.', 'JSX Element', ''),
+    createData('onClose', 'Function called when the dialog is closed.', 'Function', ''),
+    createData('onSubmit', 'Function called when the form is submitted', 'Function', ''),
+    createData('open', 'It controls if the component is displayed or not', 'boolean', 'false'),
+    createData('title', 'Dialog\'s title', 'string', ''),
+    createData('DialogProps', 'You can use any prop available on Material-UI\'s dialog: https://material-ui.com/api/dialog/#dialog-api', 'Object', ''),
+];
+
 const FormSwitch = [
     createData('checked', 'It controls if the switch is active', 'boolean', 'false'),
     createData('className', 'The components style', 'Object', ''),
@@ -74,7 +83,7 @@ const Title = [
     createData('titleClass', 'The component style', 'Object', ''),
 ];
 
-const Apis = {ButtonWithLoading, ConfirmationDialog, FixedLinearProgress, FormSwitch,
+const Apis = {ButtonWithLoading, ConfirmationDialog, FixedLinearProgress, FormModal, FormSwitch,
      GlobalSnackBar, IndeterminatedLoading, LoadingIcon, TextValidator, ThumbnailPhoto, Title};
 
 export default Apis;

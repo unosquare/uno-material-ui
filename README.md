@@ -16,12 +16,13 @@ Components and extensions for [Material UI](https://material-ui.com) (React).
     * [ConfirmationDialog](#confirmationdialog)
     * [ErrorBoundary](#errorboundary)
     * [FixedLinearProgress](#fixedlinearprogress)
+    * [FormModal](#formmodal)
     * [FormSwitch](#formswitch)
     * [GlobalSnackbar](#globalsnackbar)
+    * [IndeterminatedLoading](#indeterminatedloading)
     * [LoadingIcon](#loadingicon)
     * [MenuList](#menulist)
     * [NavBar](#navbar)
-    * [IndeterminatedLoading](#indeterminatedloading)
     * [TextValidator](#textvalidator)
     * [ThumbnailPhoto](#thumbnailphoto)
     * [Title](#title)
@@ -167,6 +168,115 @@ export default () => {
 };
 ```
 
+### `FormModal`
+
+A wrapper for your modals with a form logic, just add input fields.
+
+### Parameters
+
+- `actions` **[JSXElement]** JSX Element displayed at the bottom of the dialog.
+
+- `onClose` **[Function]** Function called when the dialog is closed.
+
+- `onSubmit` **[Function]** Function called when the form is submitted.
+
+- `open` **[boolean]** It controls if the component is displayed or not. ***defaultValue***: false.
+
+- `title` **[string]** Dialog's title.
+
+- `DialogProps` **[Object]** You can use any prop available on Material-UI\'s dialog: https://material-ui.com/api/dialog/#dialog-api
+
+### Example
+
+```javascript
+import Button from '@material-ui/core/Button';
+import Grid from '@material-ui/core/Grid';
+import TextField from '@material-ui/core/TextField';
+import CancelIcon from '@material-ui/icons/Cancel';
+import SaveIcon from '@material-ui/icons/Save';
+import * as React from 'react';
+import { FormModal } from 'uno-material-ui';
+
+const initialState = { Comments: '' };
+
+export default () => {
+    const [open, setOpen] = React.useState(false);
+    const [state, setState] = React.useState(initialState);
+
+    const onCancel = () => setOpen(false);
+    const onOpen = () => setOpen(true);
+
+    const changeNotes = (event: any) => setState({
+        ...state,
+        Comments: event.target.value,
+    });
+
+    const handleSubmit = () => {
+        alert('Hi, this is the comment:' + state.Comments);
+        onCancel();
+    };
+
+    const Actions: React.FunctionComponent = () => (
+        <Grid
+            alignItems='center'
+            container={true}
+            direction='row'
+            justify='space-between'
+        >
+            <Grid
+                item={true}
+            >
+                <Button
+                    color='default'
+                    onClick={onCancel}
+                    startIcon={<CancelIcon />}
+                    variant='contained'
+                >
+                    Cancel
+                </Button>
+            </Grid>
+            <Grid
+                item={true}
+            >
+                <Button
+                    color='primary'
+                    startIcon={<SaveIcon />}
+                    type='submit'
+                    variant='contained'
+                >
+                    Save
+                </Button>
+            </Grid>
+        </Grid>
+    );
+
+    return (
+        <React.Fragment>
+            <Button onClick={onOpen}>Open Dialog</Button>
+            <FormModal
+                actions={<Actions />}
+                onClose={onCancel}
+                onSubmit={handleSubmit}
+                open={open}
+                maxWidth='md'
+                fullWidth={true}
+                title='Form Modal'
+            >
+                <TextField
+                    fullWidth={true}
+                    label='Notes'
+                    multiline={true}
+                    variant='outlined'
+                    value={state.Comments}
+                    onChange={changeNotes}
+                    rows={4}
+                />
+            </FormModal>
+        </React.Fragment>
+    );
+};
+```
+
 ### `FormSwitch`
 
 A useful switch component with label, perfect for forms.
@@ -259,6 +369,38 @@ const myContext = () => {
     // 'error' type uses Theme's error main color
 ```
 
+### `IndeterminatedLoading`
+
+A screen-wide modal that blocks the entire UI to prevent interruption during loading or fetching.
+
+### Parameters
+
+- `isLoading` **[boolean]** If true, the component will block the UI until it become false.
+
+### Example
+
+```javascript
+import * as React from 'react';
+import { IndeterminatedLoading } from 'uno-material-ui';
+
+export default () => {
+    const [fetching, setFetching] = React.useState(false);
+
+    const startFetching = () => setFetching(true);
+
+    if (fetching) {
+        setTimeout(() => setFetching(false), 4000);
+    }
+
+    return (
+        <React.Fragment>
+            <Button onClick={startFetching} />
+            <IndeterminatedLoading isLoading={fetching} />
+        </React.Fragment>
+    );
+};
+```
+
 ### `LoadingIcon`
 
 A center-aligned circular loading animation.
@@ -324,38 +466,6 @@ export default () => {
                 </ListItem>
             </Link>
         </MenuList>
-    );
-};
-```
-
-### `IndeterminatedLoading`
-
-A screen-wide modal that blocks the entire UI to prevent interruption during loading or fetching.
-
-### Parameters
-
-- `isLoading` **[boolean]** If true, the component will block the UI until it become false.
-
-### Example
-
-```javascript
-import * as React from 'react';
-import { IndeterminatedLoading } from 'uno-material-ui';
-
-export default () => {
-    const [fetching, setFetching] = React.useState(false);
-
-    const startFetching = () => setFetching(true);
-
-    if (fetching) {
-        setTimeout(() => setFetching(false), 4000);
-    }
-
-    return (
-        <React.Fragment>
-            <Button onClick={startFetching} />
-            <IndeterminatedLoading isLoading={fetching} />
-        </React.Fragment>
     );
 };
 ```
