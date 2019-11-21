@@ -11,9 +11,9 @@ var __importStar = (this && this.__importStar) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var CircularProgress_1 = __importDefault(require("@material-ui/core/CircularProgress"));
-var styles_1 = require("@material-ui/core/styles");
+var makeStyles_1 = __importDefault(require("@material-ui/core/styles/makeStyles"));
 var React = __importStar(require("react"));
-var useStyles = styles_1.makeStyles(function (_a) {
+var useStyles = makeStyles_1.default(function (_a) {
     var spacing = _a.spacing;
     return ({
         progress: {

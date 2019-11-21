@@ -36,10 +36,10 @@ var Dialog_1 = __importDefault(require("@material-ui/core/Dialog"));
 var DialogActions_1 = __importDefault(require("@material-ui/core/DialogActions"));
 var DialogContent_1 = __importDefault(require("@material-ui/core/DialogContent"));
 var DialogTitle_1 = __importDefault(require("@material-ui/core/DialogTitle"));
-var styles_1 = require("@material-ui/core/styles");
+var makeStyles_1 = __importDefault(require("@material-ui/core/styles/makeStyles"));
 var React = __importStar(require("react"));
 var uno_react_1 = require("uno-react");
-var useDialogStyles = styles_1.makeStyles({
+var useDialogStyles = makeStyles_1.default({
     root: { overflowY: 'visible' },
 });
 exports.FormModal = function (props) {
