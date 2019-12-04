@@ -45,11 +45,9 @@ A button that turns into an animated loading icon when the action is resolving, 
 
 ### Parameters
 
-- `className` **[Object]** The components styles.
-
-- `text` **[string]** Text to be displayed on the button ***defaultValue***: "Save".
-
 - `isFetching` **[boolean]** if true, it displays a loading icon. ***defaultValue***: false.
+
+- `DialogProps` **[Object]** You can use any prop available on Material-UI\'s dialog: https://material-ui.com/api/button
 
 ### Example
 
@@ -71,7 +69,9 @@ export default () => {
 
     return (
         <ValidatorForm onSubmit={submit}>
-            <ButtonWithLoading isFetching={fetching} />
+            <ButtonWithLoading isFetching={fetching} type='submit'>
+                Save
+            </ButtonWithLoading>
         </ValidatorForm>
     );
 };
@@ -176,11 +176,7 @@ A wrapper for your modals with a form logic, just add input fields.
 
 - `actions` **[JSXElement]** JSX Element displayed at the bottom of the dialog.
 
-- `onClose` **[Function]** Function called when the dialog is closed.
-
 - `onSubmit` **[Function]** Function called when the form is submitted.
-
-- `open` **[boolean]** It controls if the component is displayed or not. ***defaultValue***: false.
 
 - `title` **[string]** Dialog's title.
 

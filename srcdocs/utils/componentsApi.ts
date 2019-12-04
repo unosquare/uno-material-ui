@@ -5,8 +5,7 @@ const createData = (name: any, description: any, type: any, defaultValue: any) =
 const ButtonWithLoading = [
     createData('isFetching',
         'It controls if the component displays the button or the loading icon', 'boolean', 'false'),
-    createData('text', 'Text to be displayed on the button', 'string', '"Save"'),
-    createData('className', 'The components style', 'Object', ''),
+    createData('ButtonProps', 'You can use any prop available on Material-UI\'s button: https://material-ui.com/api/button/', 'Object', ''),
 ];
 
 const ConfirmationDialog = [
@@ -28,9 +27,7 @@ const FixedLinearProgress = [
 
 const FormModal = [
     createData('actions', 'JSX Element displayed at the bottom of the dialog.', 'JSX Element', ''),
-    createData('onClose', 'Function called when the dialog is closed.', 'Function', ''),
     createData('onSubmit', 'Function called when the form is submitted', 'Function', ''),
-    createData('open', 'It controls if the component is displayed or not', 'boolean', 'false'),
     createData('title', 'Dialog\'s title', 'string', ''),
     createData('DialogProps', 'You can use any prop available on Material-UI\'s dialog: https://material-ui.com/api/dialog/#dialog-api', 'Object', ''),
 ];

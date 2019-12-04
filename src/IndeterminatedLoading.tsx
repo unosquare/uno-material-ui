@@ -16,7 +16,7 @@ const useStyles = makeStyles(({spacing }: any) => ({
         opacity: 0.5,
         position: 'absolute',
         top: 0,
-        width: '1s00%',
+        width: '100%',
         zIndex: 2000,
     },
 }));
