@@ -29,7 +29,7 @@ var useStyles = makeStyles_1.default(function (_a) {
             opacity: 0.5,
             position: 'absolute',
             top: 0,
-            width: '1s00%',
+            width: '100%',
             zIndex: 2000,
         },
     });

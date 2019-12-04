@@ -14,7 +14,9 @@ export default () => {
 
     return (
         <ValidatorForm onSubmit={submit}>
-            <ButtonWithLoading isFetching={fetching} />
+            <ButtonWithLoading isFetching={fetching} type='submit'>
+                Save
+            </ButtonWithLoading>
         </ValidatorForm>
     );
 };`;
