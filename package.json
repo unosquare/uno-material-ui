@@ -47,9 +47,9 @@
   },
   "homepage": "https://github.com/unosquare/uno-material-ui#readme",
   "devDependencies": {
-    "@types/enzyme": "^3.10.3",
+    "@types/enzyme": "^3.10.4",
     "@types/jest": "^24.0.23",
-    "@types/react": "16.9.14",
+    "@types/react": "16.9.15",
     "@types/react-dom": "16.9.4",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.15.1",
@@ -67,10 +67,10 @@
     "typescript": "^3.7.3"
   },
   "dependencies": {
-    "@material-ui/core": "^4.7.1",
+    "@material-ui/core": "^4.7.2",
     "@material-ui/icons": "^4.5.1",
     "react-form-validator-core": "^0.6.4",
-    "uno-react": "^0.10.9"
+    "uno-react": "^0.10.10"
   },
   "peerDependencies": {
     "react": "^16.12.0",
