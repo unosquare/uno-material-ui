@@ -66,11 +66,6 @@ export default () => {
                         <ListItemText className={classes.sub} secondary='FormSwitch' />
                     </ListItem>
                 </HashLink>
-                <HashLink to='/uno-material-ui/examples#GlobalSnackbar' className={classes.link}>
-                    <ListItem button={true}>
-                        <ListItemText className={classes.sub} secondary='GlobalSnackbar' />
-                    </ListItem>
-                </HashLink>
                 <HashLink to='/uno-material-ui/examples#IndeterminatedLoading' className={classes.link}>
                     <ListItem button={true}>
                         <ListItemText className={classes.sub} secondary='IndeterminatedLoading' />
@@ -89,6 +84,16 @@ export default () => {
                 <HashLink to='/uno-material-ui/examples#NavBar' className={classes.link}>
                     <ListItem button={true}>
                         <ListItemText className={classes.sub} secondary='NavBar' />
+                    </ListItem>
+                </HashLink>
+                <HashLink to='/uno-material-ui/examples#SnackbarContainer' className={classes.link}>
+                    <ListItem button={true}>
+                        <ListItemText className={classes.sub} secondary='SnackbarContainer' />
+                    </ListItem>
+                </HashLink>
+                <HashLink to='/uno-material-ui/examples#TextValidator' className={classes.link}>
+                    <ListItem button={true}>
+                        <ListItemText className={classes.sub} secondary='TextValidator' />
                     </ListItem>
                 </HashLink>
                 <HashLink to='/uno-material-ui/examples#ThumbnailPhoto' className={classes.link}>

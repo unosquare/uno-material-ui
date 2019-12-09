@@ -196,72 +196,64 @@ export default () => {
     );
 };`;
 
-
-
-
-const GlobalSnackBar = `
+const SnackbarContainer = `
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import makeStyles from '@material-ui/styles/makeStyles';
+import ThemeProvider from '@material-ui/styles/ThemeProvider';
 import * as React from 'react';
-import { GlobalSnackbar } from 'uno-material-ui';
+import { SnackbarContainer, snackbarService, UnoTheme } from 'uno-material-ui';
 
 const useStyles = makeStyles({
     error: {
         color: 'red',
-        marginBottom: '40px',
+    },
+    flexContainer: {
+        display: 'flex',
+        justifyContent: 'space-between',
+        paddingBottom: '40px',
     },
     info: {
         color: 'blue',
-        marginBottom: '40px',
-        marginRight: '20%',
     },
     success: {
         color: 'green',
-        marginTop: '30px',
     },
     warning: {
         color: 'orange',
-        marginBottom: '40px',
-        marginRight: '20%',
     },
 });
 
 export default (props: any) => {
     const classes = useStyles(props);
-    const [message, setMessage] = React.useState({});
-    const [mobile, setMobile] = React.useState(false);
     const info = { messageText: 'Hey! Check this snackbar', messageType: 'info' };
     const warning = { messageText: 'Hey! Be careful', messageType: 'warning' };
     const error = { messageText: 'Hey! This is broken', messageType: 'error' };
     const success = { messageText: 'Hey! Everything is awesome', messageType: 'success' };
 
     const onOpenInfo = () => {
-        setMobile(false);
-        setMessage(info);
+        snackbarService.showSnackbar(info.messageText, info.messageType);
     };
     const onOpenWarning = () => {
-        setMobile(false);
-        setMessage(warning);
+        snackbarService.showSnackbar(warning.messageText, warning.messageType);
     };
     const onOpenError = () => {
-        setMobile(false);
-        setMessage(error);
+        snackbarService.showSnackbar(error.messageText, error.messageType);
     };
     const onOpenSuccess = () => {
-        setMobile(true);
-        setMessage(success);
+        snackbarService.showSnackbar(success.messageText);
     };
 
     return (
-        <React.Fragment>
-            <Button className={classes.info} onClick={onOpenInfo}>Open Info Snackbar</Button>
-            <Button className={classes.warning}onClick={onOpenWarning}>Open Warning Snackbar</Button>
-            <Button className={classes.error}onClick={onOpenError}>Open Error Snackbar</Button>
-            <Typography>It is also available in mobile version</Typography>
-            <Button className={classes.success}onClick={onOpenSuccess}>Open Success Mobile Snackbar</Button>
-            {message.messageText && <GlobalSnackbar message={message} seconds={5000} mobile={mobile} />}
-        </React.Fragment>
+        <ThemeProvider theme={UnoTheme}>
+            <SnackbarContainer />
+            <div className={classes.flexContainer}>
+                <Button className={classes.info} onClick={onOpenInfo}>Open Info Snackbar</Button>
+                <Button className={classes.warning} onClick={onOpenWarning}>Open Warning Snackbar</Button>
+                <Button className={classes.error} onClick={onOpenError}>Open Error Snackbar</Button>
+                <Button className={classes.success} onClick={onOpenSuccess}>Open Success Snackbar</Button>
+            </div>
+        </RThemeProvider>
     );
 };`;
 
@@ -407,7 +399,7 @@ export default () => (
 
 const Codes = {
     ButtonWithLoading, ConfirmationDialog, ErrorBoundary, FixedLinearProgress, FormModal, FormSwitch,
-    GlobalSnackBar, IndeterminatedLoading, LoadingIcon, MenuList, NavBar, TextValidator, ThumbnailPhoto, Title,
+    IndeterminatedLoading, LoadingIcon, MenuList, NavBar, SnackbarContainer, TextValidator, ThumbnailPhoto, Title,
 };
 
 export default Codes;
