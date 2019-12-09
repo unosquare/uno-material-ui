@@ -10,11 +10,11 @@ import ErrorBoundary from '../components/ErrorBoundary';
 import FixedLinearProgress from '../components/FixedLinearProgress';
 import FormModal from '../components/FormModal';
 import FormSwitch from '../components/FormSwitch';
-import GlobalSnackbar from '../components/GlobalSnackbar';
 import IndeterminatedLoading from '../components/IndeterminatedLoading';
 import LoadingIcon from '../components/LoadingIcon';
 import MenuList from '../components/MenuList';
 import NavBar from '../components/NavBar';
+import SnackbarContainerDemo from '../components/SnackbarContainer';
 import TextValidator from '../components/TextValidator';
 import ThumbnailPhoto from '../components/ThumbnailPhoto';
 import Title from '../components/Title';
@@ -89,23 +89,23 @@ export default () => {
                 </Component>
                 <Component
                     title='FormSwitch'
-                    text='A useful switch component with label, perfect for forms.'
+                    text='An useful switch component with label, perfect for forms.'
                     api={Apis.FormSwitch}
                     code={Codes.FormSwitch}
                 >
                     <FormSwitch />
                 </Component>
                 <Component
-                    title='GlobalSnackBar'
-                    text='A snackbar to display information.'
-                    api={Apis.GlobalSnackBar}
-                    code={Codes.GlobalSnackBar}
+                    title='SnackbarContainer'
+                    text='A global snackbar component implemented using Observer pattern, reducing the load on re-renders. It has to be immediately after your ThemeProvider tag
+                     because the snackbar type colors are based on the theme. Just add the container and consume the service at any children on your app.'
+                    code={Codes.SnackbarContainer}
                 >
-                    <GlobalSnackbar />
+                    <SnackbarContainerDemo />
                 </Component>
                 <Component
                     title='IndeterminatedLoading'
-                    text='A screen-wide modal that blocks the entire UI to prevent interruption during loading or fetching'
+                    text='A screen-wide modal that blocks the entire UI to prevent interruption during loading or fetching.'
                     api={Apis.IndeterminatedLoading}
                     code={Codes.IndeterminatedLoading}
                 >
@@ -136,7 +136,7 @@ export default () => {
                 </Component>
                 <Component
                     title='TextValidator'
-                    text='An input with validations'
+                    text='An input with validations.'
                     api={Apis.TextValidator}
                     code={Codes.TextValidator}
                 >
@@ -144,7 +144,7 @@ export default () => {
                 </Component>
                 <Component
                     title='ThumbnailPhoto'
-                    text='An small avatar to display a photo with tooltip'
+                    text='An small avatar to display a photo with tooltip.'
                     api={Apis.ThumbnailPhoto}
                     code={Codes.ThumbnailPhoto}
                 >

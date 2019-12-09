@@ -2,7 +2,6 @@ export * from './ButtonWithLoading';
 export * from './ConfirmationDialog';
 export * from './ErrorBoundary';
 export * from './FormModal';
-export * from './GlobalSnackbar';
 export * from './LoadingIcon';
 export * from './MenuList';
 export * from './NavBar';

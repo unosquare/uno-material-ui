@@ -43,13 +43,6 @@ const FormSwitch = [
     createData('onChange', 'The function to call when the switch changes', 'Function', ''),
 ];
 
-const GlobalSnackBar = [
-    createData('message',
-        'An object with 2 props, messageText, the text to be displayed and messageType, that it can be: "info" | "warning" | "error" | "success"', 'Object', ''),
-    createData('seconds', 'How many miliseconds until the snackbar disappear', 'number', '2500'),
-    createData('mobile', 'It displays the mobile version, a centered and bigger variant', 'boolean', 'false'),
-];
-
 const IndeterminatedLoading = [
     createData('isLoading', 'If true, the component will block the UI until it become false', 'boolean', ''),
 ];
@@ -81,6 +74,6 @@ const Title = [
 ];
 
 const Apis = {ButtonWithLoading, ConfirmationDialog, FixedLinearProgress, FormModal, FormSwitch,
-     GlobalSnackBar, IndeterminatedLoading, LoadingIcon, TextValidator, ThumbnailPhoto, Title};
+    IndeterminatedLoading, LoadingIcon, TextValidator, ThumbnailPhoto, Title};
 
 export default Apis;

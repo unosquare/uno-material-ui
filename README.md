@@ -18,11 +18,11 @@ Components and extensions for [Material UI](https://material-ui.com) (React).
     * [FixedLinearProgress](#fixedlinearprogress)
     * [FormModal](#formmodal)
     * [FormSwitch](#formswitch)
-    * [GlobalSnackbar](#globalsnackbar)
     * [IndeterminatedLoading](#indeterminatedloading)
     * [LoadingIcon](#loadingicon)
     * [MenuList](#menulist)
     * [NavBar](#navbar)
+    * [SnackbarContainer](#snackbarcontainer)
     * [TextValidator](#textvalidator)
     * [ThumbnailPhoto](#thumbnailphoto)
     * [Title](#title)
@@ -41,13 +41,13 @@ In this section, we present the different components that are available in the u
 
 ### `ButtonWithLoading`
 
-A button that turns into an animated loading icon when the action is resolving, this only works in Forms.
+A button that turns into an animated loading icon when the action is resolving.
 
 ### Parameters
 
 - `isFetching` **[boolean]** if true, it displays a loading icon. ***defaultValue***: false.
 
-- `DialogProps` **[Object]** You can use any prop available on Material-UI\'s dialog: https://material-ui.com/api/button
+- `ButtonProps` **[Object]** You can use any prop available on Material-UI\'s button: https://material-ui.com/api/button
 
 ### Example
 
@@ -330,41 +330,6 @@ export default () => {
 };
 ```
 
-### `GlobalSnackbar`
-
-A global snackbar instance to display messages and errors. You just need to add it to your `Context` and pass it which message you want to display. You will need a Material-UI Theme in order to change the colors. It is available in mobile version too.
-
-### Parameters
-
-- `message` **[Object]** with messageText **[string][2]** and messageType **[string][2]**
-
-- `timeout` **[number]** miliseconds after the snackbar will automatically hide ***defaultValue***: 2500.
-
-- `mobile` **[boolean]** if true, it displays a smaller and center-aligned snackbar. ***defaultValue***: false.
-
-### Example
-
-![GlobalSnackBar](https://user-images.githubusercontent.com/25437790/59793181-87f3d180-929b-11e9-81b7-e57492b903ae.gif)
-
-```javascript
-const myContext = () => {
-    const [message, handleChange] = useStateForModel({
-        messageText: 'Hey!', // Message to display
-        messageType: 'info' // success, warning, error or info.
-    });
-
-    return (
-    <GlobalSnackbar
-        message={message}
-        seconds={3000}
-        mobile={false}
-    />
-    )
-};
-    // 'info' type uses Theme's primary main color
-    // 'error' type uses Theme's error main color
-```
-
 ### `IndeterminatedLoading`
 
 A screen-wide modal that blocks the entire UI to prevent interruption during loading or fetching.
@@ -483,6 +448,79 @@ import { NavBar } from 'uno-material-ui;
 export default () => (
     <NavBar title={'uno-material-ui'} />
 );
+```
+
+### `SnackbarContainer`
+
+A global snackbar component implemented using Observer pattern, reducing the load on re-renders. It has to be immediately after your ThemeProvider tag because the snackbar type colors are based on the theme. Just add the container and consume the service at any children on your app.
+
+### Example
+
+![SnackbarContainer](https://user-images.githubusercontent.com/25437790/70462742-2578d280-1a81-11ea-8da7-9cba00644a64.gif)
+
+```javascript
+import Button from '@material-ui/core/Button';
+import Typography from '@material-ui/core/Typography';
+import makeStyles from '@material-ui/styles/makeStyles';
+import ThemeProvider from '@material-ui/styles/ThemeProvider';
+import * as React from 'react';
+import { SnackbarContainer, snackbarService, UnoTheme } from 'uno-material-ui';
+
+const useStyles = makeStyles({
+    error: {
+        color: 'red',
+    },
+    flexContainer: {
+        display: 'flex',
+        justifyContent: 'space-between',
+        paddingBottom: '40px',
+    },
+    info: {
+        color: 'blue',
+    },
+    success: {
+        color: 'green',
+    },
+    warning: {
+        color: 'orange',
+    },
+});
+
+const SnackbarDemo = (props: any) => {
+    const classes = useStyles(props);
+    const info = { messageText: 'Hey! Check this snackbar', messageType: 'info' };
+    const warning = { messageText: 'Hey! Be careful', messageType: 'warning' };
+    const error = { messageText: 'Hey! This is broken', messageType: 'error' };
+    const success = { messageText: 'Hey! Everything is awesome', messageType: 'success' };
+
+    const onOpenInfo = () => {
+        snackbarService.showSnackbar(info.messageText, info.messageType);
+    };
+    const onOpenWarning = () => {
+        snackbarService.showSnackbar(warning.messageText, warning.messageType);
+    };
+    const onOpenError = () => {
+        snackbarService.showSnackbar(error.messageText, error.messageType);
+    };
+    const onOpenSuccess = () => {
+        snackbarService.showSnackbar(success.messageText);
+    };
+
+    return (
+        <ThemeProvider theme={UnoTheme}>
+            <SnackbarContainer />
+            <div className={classes.flexContainer}>
+                <Button className={classes.info} onClick={onOpenInfo}>Open Info Snackbar</Button>
+                <Button className={classes.warning} onClick={onOpenWarning}>Open Warning Snackbar</Button>
+                <Button className={classes.error} onClick={onOpenError}>Open Error Snackbar</Button>
+                <Button className={classes.success} onClick={onOpenSuccess}>Open Success Snackbar</Button>
+            </div>
+        </RThemeProvider>
+    );
+};
+
+export default SnackbarDemo;
+
 ```
 
 ### `TextValidator`
