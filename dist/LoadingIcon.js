@@ -10,4 +10,3 @@ exports.LoadingIcon = styled_1.default(CircularProgress_1.default)(function () {
     margin: 'auto !important',
     marginBottom: '15px !important',
 }); });
-//# sourceMappingURL=LoadingIcon.js.map

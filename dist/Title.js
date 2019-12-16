@@ -26,8 +26,10 @@ var React = __importStar(require("react"));
 function Title(_a) {
     var prefix = _a.prefix, suffix = _a.suffix, value = _a.value, titleClass = _a.titleClass;
     var title = "" + (prefix || '') + value + (suffix || '');
-    React.useEffect(function () { document.title = title; }, [title]);
-    return React.createElement(Typography_1.default, { variant: 'h4', className: titleClass }, value);
+    React.useEffect(function () {
+        document.title = title;
+    }, [title]);
+    return (React.createElement(Typography_1.default, { variant: "h4", className: titleClass }, value));
 }
 exports.Title = Title;
 function AppTitle(prefix, suffix) {
@@ -38,4 +40,3 @@ function AppTitle(prefix, suffix) {
     };
 }
 exports.AppTitle = AppTitle;
-//# sourceMappingURL=Title.js.map

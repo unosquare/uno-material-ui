@@ -3,6 +3,5 @@ declare module 'react-form-validator-core' {
         public getErrorMessage(): string;
     }
 
-    export class ValidatorForm extends React.Component<any> {
-    }
+    export class ValidatorForm extends React.Component<any> {}
 }

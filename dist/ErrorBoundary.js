@@ -27,12 +27,14 @@ var createStyles_1 = __importDefault(require("@material-ui/core/styles/createSty
 var withStyles_1 = __importDefault(require("@material-ui/core/styles/withStyles"));
 var Typography_1 = __importDefault(require("@material-ui/core/Typography"));
 var React = __importStar(require("react"));
-var styles = function () { return createStyles_1.default({
-    errorBoundBody: {
-        color: 'red',
-        marginBottom: '30px',
-    },
-}); };
+var styles = function () {
+    return createStyles_1.default({
+        errorBoundBody: {
+            color: 'red',
+            marginBottom: '30px',
+        },
+    });
+};
 var ErrorBoundaryComponent = /** @class */ (function (_super) {
     __extends(ErrorBoundaryComponent, _super);
     function ErrorBoundaryComponent() {
@@ -54,8 +56,8 @@ var ErrorBoundaryComponent = /** @class */ (function (_super) {
         if (this.state.errorInfo) {
             var classes = this.props.classes;
             return (React.createElement(React.Fragment, null,
-                React.createElement(Typography_1.default, { className: classes.errorBoundBody, variant: 'h4' }, "Something went terribly wrong..."),
-                React.createElement(Typography_1.default, { variant: 'h5' }, "Please, refresh the page.")));
+                React.createElement(Typography_1.default, { className: classes.errorBoundBody, variant: "h4" }, "Something went terribly wrong..."),
+                React.createElement(Typography_1.default, { variant: "h5" }, "Please, refresh the page.")));
         }
         // eslint-disable-next-line react/prop-types
         return this.props.children;
@@ -63,4 +65,3 @@ var ErrorBoundaryComponent = /** @class */ (function (_super) {
     return ErrorBoundaryComponent;
 }(React.Component));
 exports.ErrorBoundary = withStyles_1.default(styles)(ErrorBoundaryComponent);
-//# sourceMappingURL=ErrorBoundary.js.map

@@ -28,42 +28,22 @@ export const NavBar = (props: any) => {
     };
 
     return (
-        <AppBar position='absolute' color='primary'>
+        <AppBar position="absolute" color="primary">
             <Toolbar>
-                <Grid container={true} direction='row' item={true} xs={12}>
-                    <Grid
-                        item={true}
-                        xs={6}
-                        container={true}
-                        direction='row'
-                        justify='flex-start'
-                        alignItems='center'
-                    >
-                        {isMobileView ?
-                            (
-                                <IconButton
-                                    color='inherit'
-                                    aria-label='Open drawer'
-                                    onClick={handleDrawerOpen}
-                                >
-                                    <MenuIcon />
-                                </IconButton>
-                            )
-                            :
+                <Grid container={true} direction="row" item={true} xs={12}>
+                    <Grid item={true} xs={6} container={true} direction="row" justify="flex-start" alignItems="center">
+                        {isMobileView ? (
+                            <IconButton color="inherit" aria-label="Open drawer" onClick={handleDrawerOpen}>
+                                <MenuIcon />
+                            </IconButton>
+                        ) : (
                             <img src={logo} className={classes.logo} />
-                        }
-                        <Typography color='textSecondary' variant='h5'>
+                        )}
+                        <Typography color="textSecondary" variant="h5">
                             {title}
                         </Typography>
                     </Grid>
-                    <Grid
-                        xs={6}
-                        item={true}
-                        container={true}
-                        direction='row'
-                        justify='flex-end'
-                        alignItems='center'
-                    >
+                    <Grid xs={6} item={true} container={true} direction="row" justify="flex-end" alignItems="center">
                         {props.children}
                     </Grid>
                 </Grid>

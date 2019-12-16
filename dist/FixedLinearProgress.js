@@ -22,7 +22,5 @@ var useStyles = makeStyles_1.default({
 exports.FixedLinearProgress = function (_a) {
     var _b = _a.isLoading, isLoading = _b === void 0 ? false : _b;
     var classes = useStyles({});
-    return (React.createElement("div", { className: classes.linearProgress }, isLoading &&
-        React.createElement(LinearProgress_1.default, null)));
+    return React.createElement("div", { className: classes.linearProgress }, isLoading && React.createElement(LinearProgress_1.default, null));
 };
-//# sourceMappingURL=FixedLinearProgress.js.map

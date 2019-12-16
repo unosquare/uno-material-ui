@@ -35,16 +35,12 @@ exports.NavBar = function (props) {
         e.preventDefault();
         setDrawerOpen(!drawerOpen);
     };
-    return (React.createElement(AppBar_1.default, { position: 'absolute', color: 'primary' },
+    return (React.createElement(AppBar_1.default, { position: "absolute", color: "primary" },
         React.createElement(Toolbar_1.default, null,
-            React.createElement(Grid_1.default, { container: true, direction: 'row', item: true, xs: 12 },
-                React.createElement(Grid_1.default, { item: true, xs: 6, container: true, direction: 'row', justify: 'flex-start', alignItems: 'center' },
-                    isMobileView ?
-                        (React.createElement(IconButton_1.default, { color: 'inherit', "aria-label": 'Open drawer', onClick: handleDrawerOpen },
-                            React.createElement(Menu_1.default, null)))
-                        :
-                            React.createElement("img", { src: logo, className: classes.logo }),
-                    React.createElement(Typography_1.default, { color: 'textSecondary', variant: 'h5' }, title)),
-                React.createElement(Grid_1.default, { xs: 6, item: true, container: true, direction: 'row', justify: 'flex-end', alignItems: 'center' }, props.children)))));
+            React.createElement(Grid_1.default, { container: true, direction: "row", item: true, xs: 12 },
+                React.createElement(Grid_1.default, { item: true, xs: 6, container: true, direction: "row", justify: "flex-start", alignItems: "center" },
+                    isMobileView ? (React.createElement(IconButton_1.default, { color: "inherit", "aria-label": "Open drawer", onClick: handleDrawerOpen },
+                        React.createElement(Menu_1.default, null))) : (React.createElement("img", { src: logo, className: classes.logo })),
+                    React.createElement(Typography_1.default, { color: "textSecondary", variant: "h5" }, title)),
+                React.createElement(Grid_1.default, { xs: 6, item: true, container: true, direction: "row", justify: "flex-end", alignItems: "center" }, props.children)))));
 };
-//# sourceMappingURL=NavBar.js.map

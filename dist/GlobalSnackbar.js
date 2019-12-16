@@ -70,24 +70,32 @@ exports.GlobalSnackbar = function (_a) {
     var message = _a.message, _b = _a.seconds, seconds = _b === void 0 ? 2500 : _b, _c = _a.mobile, mobile = _c === void 0 ? false : _c;
     var classes = useStyles({});
     var _d = React.useState(false), open = _d[0], setOpen = _d[1];
+    var getIconStyle = function () { return (mobile ? classes.iconMobile : classes.icon); };
     var getIcon = function () {
         switch (message.messageType) {
-            case 'info': return React.createElement(Info_1.default, { className: getIconStyle() });
-            case 'warning': return React.createElement(Warning_1.default, { className: getIconStyle() });
-            case 'error': return React.createElement(Error_1.default, { className: getIconStyle() });
-            default: return React.createElement(CheckCircle_1.default, { className: getIconStyle() });
+            case 'info':
+                return React.createElement(Info_1.default, { className: getIconStyle() });
+            case 'warning':
+                return React.createElement(Warning_1.default, { className: getIconStyle() });
+            case 'error':
+                return React.createElement(Error_1.default, { className: getIconStyle() });
+            default:
+                return React.createElement(CheckCircle_1.default, { className: getIconStyle() });
         }
     };
     var getStyle = function () {
         switch (message.messageType) {
-            case 'info': return classes.info;
-            case 'warning': return classes.warning;
-            case 'error': return classes.error;
-            default: return classes.success;
+            case 'info':
+                return classes.info;
+            case 'warning':
+                return classes.warning;
+            case 'error':
+                return classes.error;
+            default:
+                return classes.success;
         }
     };
     var getTextStyle = function () { return (mobile ? classes.textMobile : classes.text); };
-    var getIconStyle = function () { return (mobile ? classes.iconMobile : classes.icon); };
     var onClose = function () { return setOpen(false); };
     React.useEffect(function () {
         if (message && message.messageText !== '') {
@@ -102,10 +110,9 @@ exports.GlobalSnackbar = function (_a) {
         vertical: 'bottom',
     };
     return (React.createElement(Snackbar_1.default, { anchorOrigin: anchorOrigin, className: getStyle(), open: open },
-        React.createElement(SnackbarContent_1.default, { className: getStyle(), message: (React.createElement(Typography_1.default, { className: getTextStyle() },
+        React.createElement(SnackbarContent_1.default, { className: getStyle(), message: React.createElement(Typography_1.default, { className: getTextStyle() },
                 getIcon(),
                 " ",
-                message.messageText)), action: !mobile && (React.createElement(IconButton_1.default, { onClick: onClose },
+                message.messageText), action: !mobile && (React.createElement(IconButton_1.default, { onClick: onClose },
                 React.createElement(Close_1.default, { className: classes.closeIcon }))) })));
 };
-//# sourceMappingURL=GlobalSnackbar.js.map

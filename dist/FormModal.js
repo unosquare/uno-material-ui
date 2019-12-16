@@ -50,4 +50,3 @@ exports.FormModal = function (props) {
         React.createElement(DialogContent_1.default, { style: { overflowY: 'visible' } }, children),
         actions && React.createElement(DialogActions_1.default, null, actions)));
 };
-//# sourceMappingURL=FormModal.js.map

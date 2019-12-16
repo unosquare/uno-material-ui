@@ -12,21 +12,16 @@ export const FormSwitch: React.FunctionComponent<any> = ({
     name,
     onChange,
 }) => (
-        <FormControlLabel
-            control={(
-                <Switch
-                    checked={checked}
-                    color='primary'
-                />
-            )}
-            classes={{
-                label: labelClassName,
-            }}
-            disabled={disabled}
-            label={label}
-            name={name}
-            className={className}
-            labelPlacement={labelPlacement}
-            onChange={onChange}
-        />
-    );
+    <FormControlLabel
+        control={<Switch checked={checked} color="primary" />}
+        classes={{
+            label: labelClassName,
+        }}
+        disabled={disabled}
+        label={label}
+        name={name}
+        className={className}
+        labelPlacement={labelPlacement}
+        onChange={onChange}
+    />
+);

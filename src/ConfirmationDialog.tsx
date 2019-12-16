@@ -37,10 +37,7 @@ export const ConfirmationDialog = ({
     }
 
     return (
-        <Dialog
-            open={open}
-            onClose={onClose}
-        >
+        <Dialog open={open} onClose={onClose}>
             <DialogTitle>{title}</DialogTitle>
             <DialogContent>
                 <DialogContentText>
@@ -49,22 +46,17 @@ export const ConfirmationDialog = ({
             </DialogContent>
             <DialogActions>
                 {onClose && (
-                    <Button
-                        onClick={handleDisagree}
-                        style={buttonStyle}
-                        disabled={disabled}
-                        color='secondary'
-                    >
+                    <Button onClick={handleDisagree} style={buttonStyle} disabled={disabled} color="secondary">
                         {disagree}
                     </Button>
                 )}
                 {onAgreeAction && (
                     <Button
                         onClick={handleAgree}
-                        color='primary'
+                        color="primary"
                         disabled={disabled}
                         autoFocus={true}
-                        variant='contained'
+                        variant="contained"
                     >
                         {agree}
                     </Button>

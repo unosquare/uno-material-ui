@@ -13,4 +13,3 @@ exports.UnoSuspense = function (_a) {
     var children = _a.children;
     return (React.createElement(React.Suspense, { fallback: React.createElement(LoadingIcon_1.LoadingIcon, null) }, children));
 };
-//# sourceMappingURL=UnoSuspense.js.map

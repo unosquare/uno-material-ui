@@ -10,7 +10,8 @@ export class TextValidator extends ValidatorComponent {
     };
 
     public render() {
-        const { error,
+        const {
+            error,
             errorMessages,
             validators,
             requiredError,
@@ -19,7 +20,8 @@ export class TextValidator extends ValidatorComponent {
             withRequiredValidator,
             label,
             id,
-            ...rest } = this.props;
+            ...rest
+        } = this.props;
         const { isValid } = this.state;
 
         return (

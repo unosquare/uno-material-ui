@@ -50,6 +50,5 @@ exports.IndeterminatedLoading = function (_a) {
         };
     }, []);
     return (React.createElement("div", { className: classes.workingModal, onClick: workingInProgress },
-        React.createElement(CircularProgress_1.default, { className: classes.progress, value: progress, variant: 'determinate' })));
+        React.createElement(CircularProgress_1.default, { className: classes.progress, value: progress, variant: "determinate" })));
 };
-//# sourceMappingURL=IndeterminatedLoading.js.map

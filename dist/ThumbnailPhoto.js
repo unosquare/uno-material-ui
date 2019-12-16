@@ -37,7 +37,7 @@ var Tooltip_1 = __importDefault(require("@material-ui/core/Tooltip/Tooltip"));
 var React = __importStar(require("react"));
 exports.ThumbnailPhoto = function (_a) {
     var fullName = _a.fullName, imgSrc = _a.imgSrc, placement = _a.placement, rest = __rest(_a, ["fullName", "imgSrc", "placement"]);
-    var initials = fullName ? fullName.split(' ').reduce(function (p, s, i) { return i > 1 ? p : p + s[0]; }, '') : '';
+    var initials = fullName ? fullName.split(' ').reduce(function (p, s, i) { return (i > 1 ? p : p + s[0]); }, '') : '';
     var _b = React.useState(false), imgLoaded = _b[0], setImgLoad = _b[1];
     React.useEffect(function () {
         var thumbnail = new Image();
@@ -45,8 +45,6 @@ exports.ThumbnailPhoto = function (_a) {
         thumbnail.onload = function () { return setImgLoad(true); };
         return function () { return setImgLoad(false); };
     }, [imgSrc]);
-    return (React.createElement(Tooltip_1.default, { title: (imgLoaded && fullName) ? fullName : '', placement: placement },
-        React.createElement(Avatar_1.default, __assign({}, rest, { src: imgLoaded ? imgSrc : '' }), (!imgLoaded) &&
-            initials)));
+    return (React.createElement(Tooltip_1.default, { title: imgLoaded && fullName ? fullName : '', placement: placement },
+        React.createElement(Avatar_1.default, __assign({}, rest, { src: imgLoaded ? imgSrc : '' }), !imgLoaded && initials)));
 };
-//# sourceMappingURL=ThumbnailPhoto.js.map

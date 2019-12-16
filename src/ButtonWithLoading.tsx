@@ -7,11 +7,7 @@ export type ButtonWithLoadingProps = ButtonProps & {
 };
 
 export const ButtonWithLoading = (props: ButtonWithLoadingProps) => {
-    const {
-        isFetching,
-        children,
-        ...other
-    } = props;
+    const { isFetching, children, ...other } = props;
 
     return (
         <Button {...other} endIcon={isFetching ? <CircularProgress size={25} /> : null} disabled={isFetching}>

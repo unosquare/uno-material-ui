@@ -15,8 +15,7 @@ var Switch_1 = __importDefault(require("@material-ui/core/Switch"));
 var React = __importStar(require("react"));
 exports.FormSwitch = function (_a) {
     var checked = _a.checked, className = _a.className, disabled = _a.disabled, label = _a.label, labelClassName = _a.labelClassName, _b = _a.labelPlacement, labelPlacement = _b === void 0 ? 'end' : _b, name = _a.name, onChange = _a.onChange;
-    return (React.createElement(FormControlLabel_1.default, { control: (React.createElement(Switch_1.default, { checked: checked, color: 'primary' })), classes: {
+    return (React.createElement(FormControlLabel_1.default, { control: React.createElement(Switch_1.default, { checked: checked, color: "primary" }), classes: {
             label: labelClassName,
         }, disabled: disabled, label: label, name: name, className: className, labelPlacement: labelPlacement, onChange: onChange }));
 };
-//# sourceMappingURL=FormSwitch.js.map

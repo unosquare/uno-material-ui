@@ -40,4 +40,3 @@ var SnackbarService = /** @class */ (function (_super) {
     return SnackbarService;
 }(uno_react_1.SimpleObservable));
 exports.snackbarService = new SnackbarService();
-//# sourceMappingURL=SnackbarService.js.map

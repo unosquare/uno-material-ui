@@ -3,9 +3,15 @@ import * as React from 'react';
 
 export function Title({ prefix, suffix, value, titleClass }: any) {
     const title = `${prefix || ''}${value}${suffix || ''}`;
-    React.useEffect(() => { document.title = title; }, [title]);
+    React.useEffect(() => {
+        document.title = title;
+    }, [title]);
 
-    return <Typography variant='h4' className={titleClass}>{value}</Typography>;
+    return (
+        <Typography variant="h4" className={titleClass}>
+            {value}
+        </Typography>
+    );
 }
 
 export function AppTitle(prefix: any, suffix: any) {

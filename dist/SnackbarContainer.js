@@ -26,12 +26,9 @@ exports.SnackbarContainer = function () {
     React.useEffect(function () {
         SnackbarService_1.snackbarService.subscribe(onUpdate);
     }, []);
-    var onUpdate = function () {
-        return setSnackbar(__assign({}, SnackbarService_1.snackbarService.getSnackbar()));
-    };
+    var onUpdate = function () { return setSnackbar(__assign({}, SnackbarService_1.snackbarService.getSnackbar())); };
     if (!snackbar) {
         return null;
     }
-    return (React.createElement(GlobalSnackbar_1.GlobalSnackbar, { seconds: 5000, message: snackbar.message, mobile: snackbar.isMobile }));
+    return React.createElement(GlobalSnackbar_1.GlobalSnackbar, { seconds: 5000, message: snackbar.message, mobile: snackbar.isMobile });
 };
-//# sourceMappingURL=SnackbarContainer.js.map

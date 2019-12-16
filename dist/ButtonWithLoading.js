@@ -39,4 +39,3 @@ exports.ButtonWithLoading = function (props) {
     var isFetching = props.isFetching, children = props.children, other = __rest(props, ["isFetching", "children"]);
     return (React.createElement(Button_1.default, __assign({}, other, { endIcon: isFetching ? React.createElement(CircularProgress_1.default, { size: 25 }) : null, disabled: isFetching }), children));
 };
-//# sourceMappingURL=ButtonWithLoading.js.map

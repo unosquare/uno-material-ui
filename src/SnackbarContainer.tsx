@@ -9,18 +9,11 @@ export const SnackbarContainer: React.FunctionComponent = () => {
         snackbarService.subscribe(onUpdate);
     }, []);
 
-    const onUpdate = () =>
-        setSnackbar({ ...snackbarService.getSnackbar() });
+    const onUpdate = () => setSnackbar({ ...snackbarService.getSnackbar() });
 
     if (!snackbar) {
         return null;
     }
 
-    return (
-        <GlobalSnackbar
-            seconds={5000}
-            message={snackbar.message}
-            mobile={snackbar.isMobile}
-        />
-    );
+    return <GlobalSnackbar seconds={5000} message={snackbar.message} mobile={snackbar.isMobile} />;
 };
