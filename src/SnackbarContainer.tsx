@@ -9,7 +9,7 @@ export const SnackbarContainer: React.FunctionComponent = () => {
         snackbarService.subscribe(onUpdate);
     }, []);
 
-    const onUpdate = () => setSnackbar({ ...snackbarService.getSnackbar() });
+    const onUpdate = (): void => setSnackbar({ ...snackbarService.getSnackbar() });
 
     if (!snackbar) {
         return null;

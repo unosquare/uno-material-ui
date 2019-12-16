@@ -5,7 +5,19 @@ import * as React from 'react';
 interface IThumbnailPhotoProps extends AvatarProps {
     fullName: string;
     imgSrc: string;
-    placement: any;
+    placement:
+        | 'bottom-end'
+        | 'bottom-start'
+        | 'bottom'
+        | 'left-end'
+        | 'left-start'
+        | 'left'
+        | 'right-end'
+        | 'right-start'
+        | 'right'
+        | 'top-end'
+        | 'top-start'
+        | 'top';
 }
 
 export const ThumbnailPhoto: React.FunctionComponent<IThumbnailPhotoProps> = ({
@@ -22,7 +34,7 @@ export const ThumbnailPhoto: React.FunctionComponent<IThumbnailPhotoProps> = ({
         thumbnail.src = imgSrc;
         thumbnail.onload = (): void => setImgLoad(true);
 
-        return () => setImgLoad(false);
+        return (): void => setImgLoad(false);
     }, [imgSrc]);
 
     return (
