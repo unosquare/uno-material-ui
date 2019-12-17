@@ -2,7 +2,7 @@
 import TextField from '@material-ui/core/TextField';
 import * as React from 'react';
 import { ValidatorComponent } from 'react-form-validator-core';
-import { humanize } from 'uno-react';
+import { humanize } from 'uno-js';
 
 export class TextValidator extends ValidatorComponent {
     public state = {

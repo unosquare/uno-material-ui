@@ -1,4 +1,4 @@
-import { SimpleObservable } from 'uno-react';
+import { SimpleObservable } from 'uno-js';
 
 export interface ISnackbar {
     message: { messageText: string; messageType: string };

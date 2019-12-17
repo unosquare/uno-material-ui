@@ -43,9 +43,9 @@ var useDialogStyles = makeStyles_1.default({
     root: { overflowY: 'visible' },
 });
 exports.FormModal = function (props) {
-    var actions = props.actions, children = props.children, onClose = props.onClose, onSubmit = props.onSubmit, open = props.open, title = props.title, dialogProps = __rest(props, ["actions", "children", "onClose", "onSubmit", "open", "title"]);
+    var actions = props.actions, children = props.children, onClose = props.onClose, onSubmit = props.onSubmit, validatorForm = props.validatorForm, open = props.open, title = props.title, dialogProps = __rest(props, ["actions", "children", "onClose", "onSubmit", "validatorForm", "open", "title"]);
     var classes = useDialogStyles({});
-    return (React.createElement(Dialog_1.default, __assign({ onClose: onClose, onExit: onClose, open: open, PaperProps: { component: uno_react_1.ValidatorForm, onSubmit: onSubmit, classes: classes } }, dialogProps),
+    return (React.createElement(Dialog_1.default, __assign({ onClose: onClose, onExit: onClose, open: open, PaperProps: { component: validatorForm || uno_react_1.ValidatorForm, onSubmit: onSubmit, classes: classes } }, dialogProps),
         React.createElement(DialogTitle_1.default, null, title),
         React.createElement(DialogContent_1.default, { style: { overflowY: 'visible' } }, children),
         actions && React.createElement(DialogActions_1.default, null, actions)));

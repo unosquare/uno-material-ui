@@ -49,7 +49,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var TextField_1 = __importDefault(require("@material-ui/core/TextField"));
 var React = __importStar(require("react"));
 var react_form_validator_core_1 = require("react-form-validator-core");
-var uno_react_1 = require("uno-react");
+var uno_js_1 = require("uno-js");
 var TextValidator = /** @class */ (function (_super) {
     __extends(TextValidator, _super);
     function TextValidator() {
@@ -62,7 +62,7 @@ var TextValidator = /** @class */ (function (_super) {
     TextValidator.prototype.render = function () {
         var _a = this.props, error = _a.error, errorMessages = _a.errorMessages, validators = _a.validators, requiredError = _a.requiredError, helperText = _a.helperText, validatorListener = _a.validatorListener, withRequiredValidator = _a.withRequiredValidator, label = _a.label, id = _a.id, rest = __rest(_a, ["error", "errorMessages", "validators", "requiredError", "helperText", "validatorListener", "withRequiredValidator", "label", "id"]);
         var isValid = this.state.isValid;
-        return (React.createElement(TextField_1.default, __assign({}, rest, { id: id, label: label || uno_react_1.humanize(id), error: !isValid || error, helperText: (!isValid && this.getErrorMessage()) || helperText })));
+        return (React.createElement(TextField_1.default, __assign({}, rest, { id: id, label: label || uno_js_1.humanize(id), error: !isValid || error, helperText: (!isValid && this.getErrorMessage()) || helperText })));
     };
     return TextValidator;
 }(react_form_validator_core_1.ValidatorComponent));

@@ -13,7 +13,7 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
-var uno_react_1 = require("uno-react");
+var uno_js_1 = require("uno-js");
 var SnackbarService = /** @class */ (function (_super) {
     __extends(SnackbarService, _super);
     function SnackbarService() {
@@ -38,5 +38,5 @@ var SnackbarService = /** @class */ (function (_super) {
         });
     };
     return SnackbarService;
-}(uno_react_1.SimpleObservable));
+}(uno_js_1.SimpleObservable));
 exports.snackbarService = new SnackbarService();
