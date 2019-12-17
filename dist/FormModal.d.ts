@@ -6,5 +6,6 @@ export declare type FormModalProps = DialogProps & {
     onSubmit: (event: any) => void;
     open: boolean;
     title: string;
+    validatorForm?: any;
 };
 export declare const FormModal: (props: FormModalProps) => JSX.Element;
