@@ -1,8 +1,12 @@
-import FormControlLabel from '@material-ui/core/FormControlLabel';
+import FormControlLabel, { FormControlLabelProps } from '@material-ui/core/FormControlLabel';
 import Switch from '@material-ui/core/Switch';
 import * as React from 'react';
 
-export const FormSwitch: React.FunctionComponent<any> = ({
+export interface FormSwitchProps extends FormControlLabelProps {
+    labelClassName?: string;
+}
+
+export const FormSwitch: React.FunctionComponent<FormSwitchProps> = ({
     checked,
     className,
     disabled,
@@ -11,7 +15,7 @@ export const FormSwitch: React.FunctionComponent<any> = ({
     labelPlacement = 'end',
     name,
     onChange,
-}) => (
+}: FormSwitchProps) => (
     <FormControlLabel
         control={<Switch checked={checked} color="primary" />}
         classes={{
