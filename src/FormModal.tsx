@@ -16,6 +16,7 @@ export type FormModalProps = DialogProps & {
     onSubmit: (event: any) => void;
     open: boolean;
     title: string;
+    validatorForm?: any;
 };
 
 export const FormModal = (props: FormModalProps) => {
@@ -24,6 +25,7 @@ export const FormModal = (props: FormModalProps) => {
         children,
         onClose,
         onSubmit,
+        validatorForm,
         open,
         title,
         ...dialogProps
@@ -36,7 +38,7 @@ export const FormModal = (props: FormModalProps) => {
             onClose={onClose}
             onExit={onClose}
             open={open}
-            PaperProps={{ component: ValidatorForm, onSubmit, classes }}
+            PaperProps={{ component: validatorForm || ValidatorForm, onSubmit, classes }}
             {...dialogProps}
         >
             <DialogTitle>{title}</DialogTitle>
