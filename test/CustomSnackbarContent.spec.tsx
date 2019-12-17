@@ -7,12 +7,12 @@ import SnackbarContent from '@material-ui/core/SnackbarContent';
 describe('CustomSnackBarContent', () => {
     let wrapper;
     let shallow;
+
     beforeEach(() => {
+        const messageTest = { messageText: 'test message', messageType: 'Info' };
         jest.resetModules();
         shallow = createShallow();
-        wrapper = shallow(<GlobalSnackbar
-            message='test message'
-        />);
+        wrapper = shallow(<GlobalSnackbar message={messageTest} seconds={0} mobile={false} />);
     });
 
     test('Should contain a <Snackbar />', () => {
