@@ -19,7 +19,7 @@
         "jsx": "react",
         "outDir": "./dist",
         "declaration": true,
-        "sourceMap": true,
+        "sourceMap": false,
     },
     "include": ["src/**/*.ts", "src/**/*.tsx"],
     "exclude": ["test/**/*.*", "node_modules"]

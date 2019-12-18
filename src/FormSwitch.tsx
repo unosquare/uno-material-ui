@@ -1,32 +1,35 @@
-import FormControlLabel from '@material-ui/core/FormControlLabel';
+import FormControlLabel, { FormControlLabelProps } from '@material-ui/core/FormControlLabel';
 import Switch from '@material-ui/core/Switch';
 import * as React from 'react';
 
-export const FormSwitch: React.FunctionComponent<any> = ({
+type Omit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>;
+
+export interface FormSwitchProps extends Omit<FormControlLabelProps, 'control'> {
+    labelClassName?: string;
+}
+
+export const FormSwitch: React.FunctionComponent<FormSwitchProps> = ({
     checked,
-    className,
-    disabled,
+    className = '',
+    disabled = false,
     label,
     labelClassName,
     labelPlacement = 'end',
     name,
-    onChange,
-}) => (
-        <FormControlLabel
-            control={(
-                <Switch
-                    checked={checked}
-                    color='primary'
-                />
-            )}
-            classes={{
-                label: labelClassName,
-            }}
-            disabled={disabled}
-            label={label}
-            name={name}
-            className={className}
-            labelPlacement={labelPlacement}
-            onChange={onChange}
-        />
-    );
+    onChange = (): void => {
+        // do nothing
+    },
+}: FormSwitchProps) => (
+    <FormControlLabel
+        control={<Switch checked={checked} color="primary" />}
+        classes={{
+            label: labelClassName,
+        }}
+        disabled={disabled}
+        label={label}
+        name={name}
+        className={className}
+        labelPlacement={labelPlacement}
+        onChange={onChange}
+    />
+);

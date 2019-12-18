@@ -2,7 +2,7 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 import makeStyles from '@material-ui/core/styles/makeStyles';
 import * as React from 'react';
 
-const useStyles = makeStyles(({spacing }: any) => ({
+const useStyles = makeStyles(({ spacing }: any) => ({
     progress: {
         margin: spacing(2),
     },
@@ -23,7 +23,7 @@ const useStyles = makeStyles(({spacing }: any) => ({
 
 export const IndeterminatedLoading: React.FunctionComponent<any> = ({ isLoading }: any) => {
     if (!isLoading) {
-        return <div/>;
+        return <div />;
     }
     const classes = useStyles({});
     const [progress, setProgress] = React.useState(0);
@@ -32,21 +32,14 @@ export const IndeterminatedLoading: React.FunctionComponent<any> = ({ isLoading 
 
     React.useEffect(() => {
         const timer = setInterval(tick, 20);
-        return () => {
+        return (): void => {
             clearInterval(timer);
         };
     }, []);
 
     return (
-        <div
-            className={classes.workingModal}
-            onClick={workingInProgress}
-        >
-            <CircularProgress
-                className={classes.progress}
-                value={progress}
-                variant='determinate'
-            />
+        <div className={classes.workingModal} onClick={workingInProgress}>
+            <CircularProgress className={classes.progress} value={progress} variant="determinate" />
         </div>
     );
 };

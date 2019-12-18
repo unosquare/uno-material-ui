@@ -20,14 +20,8 @@ export const MenuList = (props: any) => {
     const classes = useStyles(props);
 
     return (
-        <Drawer
-            variant='permanent'
-            className={classes.drawer}
-            classes={{ paper: classes.drawerPaper }}
-        >
-            <List className={classes.list}>
-                {props.children}
-            </List>
+        <Drawer variant="permanent" className={classes.drawer} classes={{ paper: classes.drawerPaper }}>
+            <List className={classes.list}>{props.children}</List>
         </Drawer>
     );
 };

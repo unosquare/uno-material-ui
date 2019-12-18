@@ -56,32 +56,46 @@ const useStyles = makeStyles((theme: any) => ({
     },
 }));
 
-export const GlobalSnackbar = ({ message, seconds = 2500, mobile = false }: any) => {
+export interface GlobalSnackbarProps {
+    message: { messageText: string; messageType: string };
+    seconds: number;
+    mobile: boolean;
+}
+
+export const GlobalSnackbar = ({ message, seconds = 2500, mobile = false }: GlobalSnackbarProps) => {
     const classes = useStyles({});
     const [open, setOpen] = React.useState(false);
 
+    const getIconStyle = (): string => (mobile ? classes.iconMobile : classes.icon);
+
     const getIcon = () => {
         switch (message.messageType) {
-            case 'info': return <Info className={getIconStyle()} />;
-            case 'warning': return <Warning className={getIconStyle()} />;
-            case 'error': return <Error className={getIconStyle()} />;
-            default: return <CheckCircle className={getIconStyle()} />;
+            case 'info':
+                return <Info className={getIconStyle()} />;
+            case 'warning':
+                return <Warning className={getIconStyle()} />;
+            case 'error':
+                return <Error className={getIconStyle()} />;
+            default:
+                return <CheckCircle className={getIconStyle()} />;
         }
     };
 
-    const getStyle = () => {
+    const getStyle = (): string => {
         switch (message.messageType) {
-            case 'info': return classes.info;
-            case 'warning': return classes.warning;
-            case 'error': return classes.error;
-            default: return classes.success;
+            case 'info':
+                return classes.info;
+            case 'warning':
+                return classes.warning;
+            case 'error':
+                return classes.error;
+            default:
+                return classes.success;
         }
     };
 
-    const getTextStyle = () => (mobile ? classes.textMobile : classes.text);
-    const getIconStyle = () => (mobile ? classes.iconMobile : classes.icon);
-
-    const onClose = () => setOpen(false);
+    const getTextStyle = (): string => (mobile ? classes.textMobile : classes.text);
+    const onClose = (): void => setOpen(false);
 
     React.useEffect(() => {
         if (message && message.messageText !== '') {
@@ -98,25 +112,21 @@ export const GlobalSnackbar = ({ message, seconds = 2500, mobile = false }: any)
     };
 
     return (
-        <Snackbar
-            anchorOrigin={anchorOrigin}
-            className={getStyle()}
-            open={open}
-        >
+        <Snackbar anchorOrigin={anchorOrigin} className={getStyle()} open={open}>
             <SnackbarContent
                 className={getStyle()}
-                message={(
+                message={
                     <Typography className={getTextStyle()}>
                         {getIcon()} {message.messageText}
                     </Typography>
-                )}
-                action={!mobile && (
-                    <IconButton
-                        onClick={onClose}
-                    >
-                        <Close className={classes.closeIcon} />
-                    </IconButton>
-                )}
+                }
+                action={
+                    !mobile && (
+                        <IconButton onClick={onClose}>
+                            <Close className={classes.closeIcon} />
+                        </IconButton>
+                    )
+                }
             />
         </Snackbar>
     );

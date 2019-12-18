@@ -5,7 +5,19 @@ import * as React from 'react';
 interface IThumbnailPhotoProps extends AvatarProps {
     fullName: string;
     imgSrc: string;
-    placement: any;
+    placement:
+        | 'bottom-end'
+        | 'bottom-start'
+        | 'bottom'
+        | 'left-end'
+        | 'left-start'
+        | 'left'
+        | 'right-end'
+        | 'right-start'
+        | 'right'
+        | 'top-end'
+        | 'top-start'
+        | 'top';
 }
 
 export const ThumbnailPhoto: React.FunctionComponent<IThumbnailPhotoProps> = ({
@@ -14,31 +26,21 @@ export const ThumbnailPhoto: React.FunctionComponent<IThumbnailPhotoProps> = ({
     placement,
     ...rest
 }) => {
-
-    const initials = fullName ? fullName.split(' ').reduce((p, s, i) => i > 1 ? p : p + s[0], '') : '';
+    const initials = fullName ? fullName.split(' ').reduce((p, s, i) => (i > 1 ? p : p + s[0]), '') : '';
     const [imgLoaded, setImgLoad] = React.useState(false);
 
     React.useEffect(() => {
         const thumbnail = new Image();
         thumbnail.src = imgSrc;
-        thumbnail.onload = () => setImgLoad(true);
+        thumbnail.onload = (): void => setImgLoad(true);
 
-        return () => setImgLoad(false);
+        return (): void => setImgLoad(false);
     }, [imgSrc]);
 
     return (
-        <Tooltip
-            title={(imgLoaded && fullName) ? fullName : ''}
-            placement={placement}
-        >
-            <Avatar
-                {...rest}
-                src={imgLoaded ? imgSrc : ''}
-            >
-                {
-                    (!imgLoaded) &&
-                    initials
-                }
+        <Tooltip title={imgLoaded && fullName ? fullName : ''} placement={placement}>
+            <Avatar {...rest} src={imgLoaded ? imgSrc : ''}>
+                {!imgLoaded && initials}
             </Avatar>
         </Tooltip>
     );

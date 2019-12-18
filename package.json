@@ -9,8 +9,8 @@
     "test": "jest",
     "cest": "jest --collectCoverage",
     "build": "tsc",
-    "lint": "tslint src/**/*.ts src/**/*.tsx",
-    "lint:fix": "tslint src/**/*.ts src/**/*.tsx --fix"
+    "lint": "eslint src/**/*.{tsx,ts}",
+    "lint:fix": "eslint src/**/*.{tsx,ts} --fix"
   },
   "jest": {
     "automock": false,
@@ -52,19 +52,24 @@
     "@types/jest": "^24.0.23",
     "@types/react": "16.9.16",
     "@types/react-dom": "16.9.4",
+    "@typescript-eslint/eslint-plugin": "^2.11.0",
+    "@typescript-eslint/parser": "^2.11.0",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.15.1",
+    "eslint": "^6.7.2",
+    "eslint-config-prettier": "^6.7.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-react": "^7.17.0",
     "jest": "^24.9.0",
     "parcel-bundler": "^1.12.4",
     "parcel-plugin-clean-easy": "^1.0.2",
+    "prettier": "^1.19.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-highlight": "^0.12.0",
     "react-router-dom": "^5.1.2",
     "react-router-hash-link": "^1.2.2",
     "ts-jest": "^24.2.0",
-    "tslint": "^5.20.1",
-    "tslint-react": "^4.1.0",
     "typescript": "^3.7.3"
   },
   "dependencies": {

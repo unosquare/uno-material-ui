@@ -20,16 +20,7 @@ export type FormModalProps = DialogProps & {
 };
 
 export const FormModal = (props: FormModalProps) => {
-    const {
-        actions,
-        children,
-        onClose,
-        onSubmit,
-        validatorForm,
-        open,
-        title,
-        ...dialogProps
-    } = props;
+    const { actions, children, onClose, onSubmit, validatorForm, open, title, ...dialogProps } = props;
 
     const classes = useDialogStyles({});
 
