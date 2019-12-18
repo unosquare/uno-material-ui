@@ -4,7 +4,7 @@ import * as React from 'react';
 
 type Omit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>;
 
-export interface FormSwitchProps extends Omit<FormControlLabelProps, 'control'>  {
+export interface FormSwitchProps extends Omit<FormControlLabelProps, 'control'> {
     labelClassName?: string;
 }
 
