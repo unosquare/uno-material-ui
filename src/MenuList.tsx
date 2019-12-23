@@ -16,8 +16,8 @@ const useStyles = makeStyles({
     },
 });
 
-export const MenuList = (props: any) => {
-    const classes = useStyles(props);
+export const MenuList = () => {
+    const classes = useStyles({});
 
     return (
         <Drawer variant="permanent" className={classes.drawer} classes={{ paper: classes.drawerPaper }}>

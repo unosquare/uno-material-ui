@@ -14,7 +14,7 @@ import Warning from '@material-ui/icons/Warning';
 import makeStyles from '@material-ui/styles/makeStyles';
 import * as React from 'react';
 
-const useStyles = makeStyles((theme: any) => ({
+const useStyles = makeStyles((theme: {}) => ({
     closeIcon: {
         color: '#fff !important',
         fontSize: '20px  !important',
@@ -62,13 +62,17 @@ export interface GlobalSnackbarProps {
     mobile: boolean;
 }
 
-export const GlobalSnackbar = ({ message, seconds = 2500, mobile = false }: GlobalSnackbarProps) => {
+export const GlobalSnackbar: React.FunctionComponent<GlobalSnackbarProps> = ({
+    message,
+    seconds = 2500,
+    mobile = false,
+}) => {
     const classes = useStyles({});
     const [open, setOpen] = React.useState(false);
 
     const getIconStyle = (): string => (mobile ? classes.iconMobile : classes.icon);
 
-    const getIcon = () => {
+    const getIcon = (): JSX.Element => {
         switch (message.messageType) {
             case 'info':
                 return <Info className={getIconStyle()} />;

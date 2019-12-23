@@ -9,7 +9,11 @@ const useStyles = makeStyles({
     },
 });
 
-export const FixedLinearProgress = ({ isLoading = false }) => {
+export interface FixedLinearProgressProps {
+    isLoading?: boolean;
+}
+
+export const FixedLinearProgress: React.FunctionComponent<FixedLinearProgressProps> = ({ isLoading = false }) => {
     const classes = useStyles({});
     return <div className={classes.linearProgress}>{isLoading && <LinearProgress />}</div>;
 };

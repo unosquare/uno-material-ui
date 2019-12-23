@@ -2,7 +2,7 @@ import Avatar, { AvatarProps } from '@material-ui/core/Avatar/Avatar';
 import Tooltip from '@material-ui/core/Tooltip/Tooltip';
 import * as React from 'react';
 
-interface IThumbnailPhotoProps extends AvatarProps {
+interface ThumbnailPhotoProps extends AvatarProps {
     fullName: string;
     imgSrc: string;
     placement:
@@ -20,7 +20,7 @@ interface IThumbnailPhotoProps extends AvatarProps {
         | 'top';
 }
 
-export const ThumbnailPhoto: React.FunctionComponent<IThumbnailPhotoProps> = ({
+export const ThumbnailPhoto: React.FunctionComponent<ThumbnailPhotoProps> = ({
     fullName,
     imgSrc,
     placement,

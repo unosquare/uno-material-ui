@@ -1,4 +1,4 @@
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/ddb0cdc179c748b3b8f16ddad1194f07)](https://app.codacy.com/app/UnosquareLabs/uno-material-ui?utm_source=github.com&utm_medium=referral&utm_content=unosquare/uno-material-ui&utm_campaign=Badge_Grade_Dashboard)
+[![codecov](https://codecov.io/gh/unosquare/uno-material-ui/branch/master/graph/badge.svg)](https://codecov.io/gh/unosquare/uno-material-ui)
 ![Buils status](https://github.com/unosquare/uno-material-ui/workflows/Node.js%20Package/badge.svg)
 [![Analytics](https://ga-beacon.appspot.com/UA-8535255-2/unosquare/uno-material-ui/)](https://github.com/igrigorik/ga-beacon)
 
@@ -6,11 +6,16 @@
 
 *:star: Please star this project if you find it useful!*
 
-Components and extensions for [Material UI](https://material-ui.com) (React).
+Components, wrappers and extensions for [Material UI](https://material-ui.com) (React components).
+
+```bash
+> npm i uno-material-ui
+```
+
+We are using hooks, so you need to work with React ^16.8.0.
 
 ## Table of contents
 
-  * [💾Installation](#installation)
   * [What's in the library](#whats-in-the-library)
     * [ButtonWithLoading](#buttonwithloading)
     * [ConfirmationDialog](#confirmationdialog)
@@ -27,17 +32,7 @@ Components and extensions for [Material UI](https://material-ui.com) (React).
     * [ThumbnailPhoto](#thumbnailphoto)
     * [Title](#title)
 
-## Installation
-
-```bash
-> npm i uno-material-ui
-```
-
-We are using hooks, so you need to work with React ^16.8.0.
-
 ## What's in the library
-
-In this section, we present the different components that are available in the uno-material-io library.
 
 ### `ButtonWithLoading`
 
