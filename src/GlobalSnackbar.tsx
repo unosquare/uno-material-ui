@@ -14,7 +14,7 @@ import Warning from '@material-ui/icons/Warning';
 import makeStyles from '@material-ui/styles/makeStyles';
 import * as React from 'react';
 
-const useStyles = makeStyles((theme: {}) => ({
+const useStyles = makeStyles((theme: any) => ({
     closeIcon: {
         color: '#fff !important',
         fontSize: '20px  !important',

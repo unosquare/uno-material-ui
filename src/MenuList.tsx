@@ -16,7 +16,7 @@ const useStyles = makeStyles({
     },
 });
 
-export const MenuList = () => {
+export const MenuList = (props: any) => {
     const classes = useStyles({});
 
     return (
