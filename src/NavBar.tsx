@@ -18,9 +18,10 @@ const useStyles = makeStyles({
 const outerWidth = 600;
 const timeout = 1000;
 
-export const NavBar = ({ title, logo, drawerOpen, setDrawerOpen, children }) => {
+export const NavBar = (props) => {
     const classes = useStyles({});
     const [isMobileView] = useResolutionSwitch(outerWidth, timeout);
+    const { title, logo, drawerOpen, setDrawerOpen } = props;
 
     const handleDrawerOpen = (e: React.MouseEvent) => {
         e.preventDefault();
@@ -44,7 +45,7 @@ export const NavBar = ({ title, logo, drawerOpen, setDrawerOpen, children }) => 
                         </Typography>
                     </Grid>
                     <Grid xs={6} item={true} container={true} direction="row" justify="flex-end" alignItems="center">
-                        {children}
+                        {props.children}
                     </Grid>
                 </Grid>
             </Toolbar>
