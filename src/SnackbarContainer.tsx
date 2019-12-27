@@ -1,15 +1,15 @@
 import * as React from 'react';
 import { GlobalSnackbar } from './GlobalSnackbar';
-import { ISnackbar, snackbarService } from './SnackbarService';
+import { Snackbar, snackbarService } from './SnackbarService';
 
 export const SnackbarContainer: React.FunctionComponent = () => {
-    const [snackbar, setSnackbar] = React.useState<ISnackbar>();
+    const [snackbar, setSnackbar] = React.useState<Snackbar>();
+
+    const onUpdate = (): void => setSnackbar({ ...snackbarService.getSnackbar() });
 
     React.useEffect(() => {
         snackbarService.subscribe(onUpdate);
     }, []);
-
-    const onUpdate = (): void => setSnackbar({ ...snackbarService.getSnackbar() });
 
     if (!snackbar) {
         return null;

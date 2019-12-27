@@ -11,7 +11,18 @@ const buttonStyle = {
     marginRight: '5px !important',
 };
 
-export const ConfirmationDialog = ({
+export interface ConfirmationDialogProps {
+    contentText: string;
+    title: string;
+    onAgreeAction: (ev: React.MouseEvent) => void;
+    onClose: () => void;
+    open: boolean;
+    agree?: string;
+    disagree?: string;
+    textColor?: 'initial' | 'inherit' | 'primary' | 'secondary' | 'textPrimary' | 'textSecondary' | 'error';
+}
+
+export const ConfirmationDialog: React.FunctionComponent<ConfirmationDialogProps> = ({
     contentText,
     title,
     onAgreeAction,
@@ -20,14 +31,15 @@ export const ConfirmationDialog = ({
     agree = 'Agree',
     disagree = 'Disagree',
     textColor = 'textSecondary',
-}: any) => {
+}: ConfirmationDialogProps) => {
     const [disabled, setDisabled] = React.useState(false);
-    const handleAgree = (e: any) => {
+
+    const handleAgree = (e: React.MouseEvent): void => {
         setDisabled(true);
         onAgreeAction(e);
     };
 
-    const handleDisagree = () => {
+    const handleDisagree = (): void => {
         setDisabled(true);
         onClose();
     };

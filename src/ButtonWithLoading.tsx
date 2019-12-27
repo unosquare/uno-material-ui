@@ -6,7 +6,7 @@ export type ButtonWithLoadingProps = ButtonProps & {
     isFetching: boolean;
 };
 
-export const ButtonWithLoading = (props: ButtonWithLoadingProps) => {
+export const ButtonWithLoading: React.FunctionComponent<ButtonWithLoadingProps> = (props: ButtonWithLoadingProps) => {
     const { isFetching, children, ...other } = props;
 
     return (

@@ -1,7 +1,5 @@
-import {
-    Button, Dialog, DialogActions, DialogContent,
-    DialogContentText, DialogTitle,
-} from '@material-ui/core';
+import Button from '@material-ui/core/Button';
+import { Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle } from '@material-ui/core';
 import createShallow from '@material-ui/core/test-utils/createShallow';
 import * as React from 'react';
 import { ConfirmationDialog } from '../src/ConfirmationDialog';
@@ -13,13 +11,15 @@ describe('ConfirmationDialog', () => {
     beforeAll(() => {
         jest.resetModules();
         shallow = createShallow();
-        wrapper = shallow(<ConfirmationDialog
-            contentText='Are you sure?'
-            title='Do action'
-            onAgreeAction={context.actions.onAgreeAction}
-            onClose={context.actions.onDesagreeAction}
-            open={true}
-        />);
+        wrapper = shallow(
+            <ConfirmationDialog
+                contentText="Are you sure?"
+                title="Do action"
+                onAgreeAction={context.actions.onAgreeAction}
+                onClose={context.actions.onDesagreeAction}
+                open={true}
+            />,
+        );
     });
 
     test('Should contain a <Dialog />', () => {

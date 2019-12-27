@@ -8,7 +8,7 @@ export interface TitleProps {
     titleClass: string;
 }
 
-export function Title({ prefix, suffix, value, titleClass }: TitleProps) {
+export const Title: React.FunctionComponent<TitleProps> = ({ prefix, suffix, value, titleClass }: TitleProps) => {
     const title = `${prefix || ''}${value}${suffix || ''}`;
     React.useEffect(() => {
         document.title = title;
@@ -19,7 +19,7 @@ export function Title({ prefix, suffix, value, titleClass }: TitleProps) {
             {value}
         </Typography>
     );
-}
+};
 
 export function AppTitle(prefix?: string, suffix?: string) {
     return ({ value, titleClass }: TitleProps) => {

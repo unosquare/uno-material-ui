@@ -19,9 +19,16 @@ export type FormModalProps = DialogProps & {
     validatorForm?: any;
 };
 
-export const FormModal = (props: FormModalProps) => {
-    const { actions, children, onClose, onSubmit, validatorForm, open, title, ...dialogProps } = props;
-
+export const FormModal: React.FunctionComponent<FormModalProps> = ({
+    actions,
+    children,
+    onClose,
+    onSubmit,
+    validatorForm,
+    open,
+    title,
+    ...dialogProps
+}: FormModalProps) => {
     const classes = useDialogStyles({});
 
     return (

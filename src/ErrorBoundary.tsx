@@ -3,7 +3,7 @@ import withStyles, { WithStyles } from '@material-ui/core/styles/withStyles';
 import Typography from '@material-ui/core/Typography';
 import * as React from 'react';
 
-const styles = () =>
+const styles = (): any =>
     createStyles({
         errorBoundBody: {
             color: 'red',
@@ -18,7 +18,7 @@ class ErrorBoundaryComponent extends React.Component<WithStyles<typeof styles>> 
         errorInfo: null,
     };
 
-    public componentDidCatch(error: any, errorInfo: any) {
+    public componentDidCatch(error: any, errorInfo: any): void {
         this.setState({
             error,
             errorInfo,

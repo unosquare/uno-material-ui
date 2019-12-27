@@ -1,4 +1,3 @@
-import Button from '@material-ui/core/Button';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import createShallow from '@material-ui/core/test-utils/createShallow';
 import * as React from 'react';

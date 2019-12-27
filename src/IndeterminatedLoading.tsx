@@ -21,14 +21,17 @@ const useStyles = makeStyles(({ spacing }: any) => ({
     },
 }));
 
-export const IndeterminatedLoading: React.FunctionComponent<any> = ({ isLoading }: any) => {
-    if (!isLoading) {
-        return <div />;
-    }
+export interface IndeterminatedLoadingProps {
+    isLoading: boolean;
+}
+
+export const IndeterminatedLoading: React.FunctionComponent<IndeterminatedLoadingProps> = ({
+    isLoading,
+}: IndeterminatedLoadingProps) => {
     const classes = useStyles({});
     const [progress, setProgress] = React.useState(0);
-    const workingInProgress = (event: any) => event.preventDefault();
-    const tick = () => setProgress((oldProgress: number) => (oldProgress >= 100 ? 0 : oldProgress + 1));
+    const workingInProgress = (event: React.MouseEvent): void => event.preventDefault();
+    const tick = (): void => setProgress((oldProgress: number) => (oldProgress >= 100 ? 0 : oldProgress + 1));
 
     React.useEffect(() => {
         const timer = setInterval(tick, 20);
@@ -36,6 +39,10 @@ export const IndeterminatedLoading: React.FunctionComponent<any> = ({ isLoading 
             clearInterval(timer);
         };
     }, []);
+
+    if (!isLoading) {
+        return <div />;
+    }
 
     return (
         <div className={classes.workingModal} onClick={workingInProgress}>

@@ -13,14 +13,15 @@ import Info from '@material-ui/icons/Info';
 import Warning from '@material-ui/icons/Warning';
 import makeStyles from '@material-ui/styles/makeStyles';
 import * as React from 'react';
+import { Theme } from '@material-ui/core/styles/createMuiTheme';
 
-const useStyles = makeStyles((theme: any) => ({
+const useStyles = makeStyles(({ palette }: Theme) => ({
     closeIcon: {
         color: '#fff !important',
         fontSize: '20px  !important',
     },
     error: {
-        backgroundColor: theme.palette ? `${theme.palette.error.main} !important` : `${red[600]} !important`,
+        backgroundColor: palette ? `${palette.error.main} !important` : `${red[600]} !important`,
         display: 'flex !important',
     },
     icon: {
@@ -32,7 +33,7 @@ const useStyles = makeStyles((theme: any) => ({
         marginRight: '15px  !important',
     },
     info: {
-        backgroundColor: theme.palette ? `${theme.palette.primary.main} !important` : `${blue[600]} !important`,
+        backgroundColor: palette ? `${palette.primary.main} !important` : `${blue[600]} !important`,
         display: 'flex !important',
     },
     success: {

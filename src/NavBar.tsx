@@ -18,7 +18,7 @@ const useStyles = makeStyles({
 const outerWidth = 600;
 const timeout = 1000;
 
-export const NavBar = (props) => {
+export const NavBar = props => {
     const classes = useStyles({});
     const [isMobileView] = useResolutionSwitch(outerWidth, timeout);
     const { title, logo, drawerOpen, setDrawerOpen } = props;
