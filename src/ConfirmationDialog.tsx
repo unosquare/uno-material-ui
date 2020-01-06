@@ -15,7 +15,7 @@ export interface ConfirmationDialogProps {
     contentText: string;
     title: string;
     onAgreeAction: (ev: React.MouseEvent) => void;
-    onClose: () => void;
+    onClose?: () => void;
     open: boolean;
     agree?: string;
     disagree?: string;
