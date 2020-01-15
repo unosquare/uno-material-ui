@@ -71,7 +71,7 @@
     "react-router-hash-link": "^1.2.2",
     "ts-jest": "^24.3.0",
     "typescript": "^3.7.4",
-    "uno-js": "^0.3.4"
+    "uno-js": "^0.4.1"
   },
   "dependencies": {
     "@material-ui/core": "^4.8.3",
