@@ -64,7 +64,7 @@
     "react-dom": "^16.12.0",
     "ts-jest": "^24.3.0",
     "typescript": "^3.7.4",
-    "uno-js": "^0.4.3"
+    "uno-js": "^0.5.0"
   },
   "dependencies": {
     "@material-ui/core": "^4.8.3",
