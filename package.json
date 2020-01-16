@@ -4,8 +4,6 @@
   "description": "Components and extensions for Material UI",
   "main": "dist/index.js",
   "scripts": {
-    "build:docs": "parcel build ./srcdocs/index.html --no-source-maps --public-url /uno-material-ui/ -d ./docs",
-    "start": "parcel ./srcdocs/index.html --no-source-maps --port 8080 --open -d ./docs",
     "test": "jest",
     "cest": "jest --collectCoverage",
     "build": "tsc",
@@ -49,35 +47,30 @@
   "homepage": "https://github.com/unosquare/uno-material-ui#readme",
   "devDependencies": {
     "@types/enzyme": "^3.10.4",
-    "@types/jest": "^24.0.25",
+    "@types/jest": "^24.9.0",
     "@types/react": "16.9.17",
     "@types/react-dom": "16.9.4",
-    "@typescript-eslint/eslint-plugin": "^2.15.0",
-    "@typescript-eslint/parser": "^2.15.0",
+    "@typescript-eslint/eslint-plugin": "^2.16.0",
+    "@typescript-eslint/parser": "^2.16.0",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.9.0",
     "eslint-plugin-prettier": "^3.1.2",
-    "eslint-plugin-react": "^7.17.0",
+    "eslint-plugin-react": "^7.18.0",
     "jest": "^24.9.0",
-    "parcel-bundler": "^1.12.4",
-    "parcel-plugin-clean-easy": "^1.0.2",
     "prettier": "^1.19.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-highlight": "^0.12.0",
-    "react-router-dom": "^5.1.2",
-    "react-router-hash-link": "^1.2.2",
     "ts-jest": "^24.3.0",
     "typescript": "^3.7.4",
-    "uno-js": "^0.3.4"
+    "uno-js": "^0.4.3"
   },
   "dependencies": {
     "@material-ui/core": "^4.8.3",
     "@material-ui/icons": "^4.5.1",
     "react-form-validator-core": "^0.6.4",
-    "uno-react": "^0.11.8"
+    "uno-react": "^0.11.9"
   },
   "peerDependencies": {
     "react": "^16.12.0",
@@ -86,8 +79,5 @@
   "files": [
     "dist",
     "src"
-  ],
-  "parcelCleanPaths": [
-    "docs/*.*"
   ]
 }
