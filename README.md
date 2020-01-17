@@ -1,3 +1,4 @@
+[![npm version](https://badge.fury.io/js/uno-material-ui.svg)](https://www.npmjs.com/package/uno-material-ui)
 [![codecov](https://codecov.io/gh/unosquare/uno-material-ui/branch/master/graph/badge.svg)](https://codecov.io/gh/unosquare/uno-material-ui)
 ![Buils status](https://github.com/unosquare/uno-material-ui/workflows/Node.js%20Package/badge.svg)
 [![Analytics](https://ga-beacon.appspot.com/UA-8535255-2/unosquare/uno-material-ui/)](https://github.com/igrigorik/ga-beacon)
@@ -12,12 +13,8 @@ Components, wrappers and extensions for [Material UI](https://material-ui.com) (
 
 To install uno-material-ui through npm, you only need to run the following command:
 
-```bash
-> npm i uno-material-ui
+```sh
+  npm install uno-material-ui --save
 ```
 
-We are using hooks, so you need to work with React ^16.8.0.
-
 Check the documentation of this library at [https://unosquare.github.io/uno/uno-material-ui](https://unosquare.github.io/uno/uno-material-ui)
-
-
