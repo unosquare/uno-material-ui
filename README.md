@@ -10,7 +10,7 @@ Components, wrappers and extensions for [Material UI](https://material-ui.com) (
 
 ### Installation (npm)
 
-To install uno-material-ui through npm, you only need to write down the following command:
+To install uno-material-ui through npm, you only need to run the following command:
 
 ```bash
 > npm i uno-material-ui
