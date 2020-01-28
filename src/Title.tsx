@@ -4,11 +4,11 @@ import * as React from 'react';
 export interface TitleProps {
     prefix?: string;
     suffix?: string;
+    titleClass?: string;
     value: string;
-    titleClass: string;
 }
 
-export const Title: React.FunctionComponent<TitleProps> = ({ prefix, suffix, value, titleClass }: TitleProps) => {
+export const Title: React.FunctionComponent<TitleProps> = ({ prefix, suffix, titleClass, value }: TitleProps) => {
     const title = `${prefix || ''}${value}${suffix || ''}`;
     React.useEffect(() => {
         document.title = title;
