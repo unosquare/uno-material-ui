@@ -64,13 +64,13 @@
     "react-dom": "^16.13.0",
     "ts-jest": "^25.2.1",
     "typescript": "^3.8.3",
-    "uno-js": "^0.7.1"
+    "uno-js": "^0.7.2"
   },
   "dependencies": {
     "@material-ui/core": "^4.9.5",
     "@material-ui/icons": "^4.9.1",
     "react-form-validator-core": "^0.6.5",
-    "uno-react": "^0.14.1"
+    "uno-react": "^0.14.2"
   },
   "peerDependencies": {
     "react": "^16.13.0",
