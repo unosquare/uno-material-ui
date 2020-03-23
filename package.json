@@ -48,33 +48,33 @@
   "devDependencies": {
     "@types/enzyme": "^3.10.5",
     "@types/jest": "^25.1.4",
-    "@types/react": "16.9.23",
+    "@types/react": "16.9.25",
     "@types/react-dom": "16.9.5",
-    "@typescript-eslint/eslint-plugin": "^2.24.0",
-    "@typescript-eslint/parser": "^2.24.0",
+    "@typescript-eslint/eslint-plugin": "^2.25.0",
+    "@typescript-eslint/parser": "^2.25.0",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
     "eslint": "^6.8.0",
-    "eslint-config-prettier": "^6.10.0",
+    "eslint-config-prettier": "^6.10.1",
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-react": "^7.19.0",
     "jest": "^25.1.0",
-    "prettier": "^1.19.1",
-    "react": "^16.13.0",
-    "react-dom": "^16.13.0",
+    "prettier": "^2.0.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
     "ts-jest": "^25.2.1",
     "typescript": "^3.8.3",
-    "uno-js": "^0.7.4"
+    "uno-js": "^0.7.6"
   },
   "dependencies": {
     "@material-ui/core": "^4.9.7",
     "@material-ui/icons": "^4.9.1",
     "react-form-validator-core": "^0.6.5",
-    "uno-react": "^0.15.1"
+    "uno-react": "^0.15.3"
   },
   "peerDependencies": {
-    "react": "^16.13.0",
-    "react-dom": "^16.13.0"
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
   },
   "files": [
     "dist",

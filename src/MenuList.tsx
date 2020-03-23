@@ -16,7 +16,7 @@ const useStyles = makeStyles({
     },
 });
 
-export const MenuList: React.FunctionComponent = props => {
+export const MenuList: React.FunctionComponent = (props) => {
     const classes = useStyles({});
 
     return (
