@@ -1,7 +1,8 @@
 import { SimpleObservable } from 'uno-js';
+import { MessageType } from './GlobalSnackbar';
 
 export interface Snackbar {
-    message: { messageText: string; messageType: string };
+    message: { messageText: string; messageType: MessageType };
     seconds?: number;
     isMobile: boolean;
 }
@@ -13,7 +14,7 @@ class SnackbarService extends SimpleObservable {
         return this.snackbar;
     }
 
-    public showSnackbar(message: string, type = 'success'): Promise<{}> {
+    public showSnackbar(message: string, type: MessageType = 'success'): Promise<{}> {
         return new Promise(() => {
             this.snackbar = {
                 isMobile: false,
