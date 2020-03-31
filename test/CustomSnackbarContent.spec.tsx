@@ -3,13 +3,17 @@ import createShallow from '@material-ui/core/test-utils/createShallow';
 import { GlobalSnackbar } from '../src/GlobalSnackbar';
 import Snackbar from '@material-ui/core/Snackbar';
 import SnackbarContent from '@material-ui/core/SnackbarContent';
+import { MessageType } from '../src/GlobalSnackbar';
 
 describe('CustomSnackBarContent', () => {
     let wrapper;
     let shallow;
 
     beforeEach(() => {
-        const messageTest = { messageText: 'test message', messageType: 'Info' };
+        const messageTest: { messageText: string; messageType: MessageType } = {
+            messageText: 'test message',
+            messageType: 'info',
+        };
         jest.resetModules();
         shallow = createShallow();
         wrapper = shallow(<GlobalSnackbar message={messageTest} seconds={0} mobile={false} />);
