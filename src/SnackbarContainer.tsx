@@ -15,5 +15,5 @@ export const SnackbarContainer: React.FunctionComponent = () => {
         return null;
     }
 
-    return <GlobalSnackbar seconds={5000} message={snackbar.message} mobile={snackbar.isMobile} />;
+    return <GlobalSnackbar milliSeconds={5000} message={snackbar.message} mobile={snackbar.isMobile} />;
 };

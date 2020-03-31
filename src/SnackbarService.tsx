@@ -3,7 +3,7 @@ import { MessageType } from './GlobalSnackbar';
 
 export interface Snackbar {
     message: { messageText: string; messageType: MessageType };
-    seconds?: number;
+    milliSeconds?: number;
     isMobile: boolean;
 }
 
@@ -14,7 +14,7 @@ class SnackbarService extends SimpleObservable {
         return this.snackbar;
     }
 
-    public showSnackbar(message: string, type: MessageType = 'success', seconds = 5000): Promise<{}> {
+    public showSnackbar(message: string, type: MessageType = 'success', milliSeconds = 5000): Promise<{}> {
         return new Promise(() => {
             this.snackbar = {
                 isMobile: false,
@@ -22,7 +22,7 @@ class SnackbarService extends SimpleObservable {
                     messageText: message,
                     messageType: type,
                 },
-                seconds,
+                milliSeconds,
             };
             this.inform();
         });

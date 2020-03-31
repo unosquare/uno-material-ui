@@ -61,13 +61,13 @@ const useStyles = makeStyles(({ palette }: Theme) => ({
 
 export interface GlobalSnackbarProps {
     message: { messageText: string; messageType: MessageType };
-    seconds: number;
+    milliSeconds: number;
     mobile: boolean;
 }
 
 export const GlobalSnackbar: React.FunctionComponent<GlobalSnackbarProps> = ({
     message,
-    seconds = 2500,
+    milliSeconds = 2500,
     mobile = false,
 }) => {
     const classes = useStyles({});
@@ -107,9 +107,7 @@ export const GlobalSnackbar: React.FunctionComponent<GlobalSnackbarProps> = ({
     React.useEffect(() => {
         if (message && message.messageText !== '') {
             setOpen(true);
-            setTimeout(() => {
-                setOpen(false);
-            }, seconds);
+            setTimeout(() => setOpen(false), milliSeconds);
         }
     }, [message]);
 

@@ -16,7 +16,7 @@ describe('CustomSnackBarContent', () => {
         };
         jest.resetModules();
         shallow = createShallow();
-        wrapper = shallow(<GlobalSnackbar message={messageTest} seconds={0} mobile={false} />);
+        wrapper = shallow(<GlobalSnackbar message={messageTest} milliSeconds={0} mobile={false} />);
     });
 
     test('Should contain a <Snackbar />', () => {
