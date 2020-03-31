@@ -15,6 +15,8 @@ import makeStyles from '@material-ui/styles/makeStyles';
 import * as React from 'react';
 import { Theme } from '@material-ui/core/styles/createMuiTheme';
 
+export type MessageType = 'success' | 'error' | 'warning' | 'info';
+
 const useStyles = makeStyles(({ palette }: Theme) => ({
     closeIcon: {
         color: '#fff !important',
@@ -58,7 +60,7 @@ const useStyles = makeStyles(({ palette }: Theme) => ({
 }));
 
 export interface GlobalSnackbarProps {
-    message: { messageText: string; messageType: string };
+    message: { messageText: string; messageType: MessageType };
     seconds: number;
     mobile: boolean;
 }
