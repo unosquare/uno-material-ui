@@ -13,7 +13,7 @@ class SnackbarService extends SimpleObservable {
         return this.snackbar;
     }
 
-    public showSnackbar(message: string, type = 'success'): Promise<{}> {
+    public showSnackbar(message: string, type = 'success', seconds = 5000): Promise<{}> {
         return new Promise(() => {
             this.snackbar = {
                 isMobile: false,
@@ -21,7 +21,7 @@ class SnackbarService extends SimpleObservable {
                     messageText: message,
                     messageType: type,
                 },
-                seconds: 5000,
+                seconds,
             };
             this.inform();
         });
