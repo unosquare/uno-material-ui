@@ -47,14 +47,14 @@
   "homepage": "https://github.com/unosquare/uno-material-ui#readme",
   "devDependencies": {
     "@types/enzyme": "^3.10.5",
-    "@types/jest": "^25.2.2",
+    "@types/jest": "^25.2.3",
     "@types/react": "16.9.35",
     "@types/react-dom": "16.9.8",
-    "@typescript-eslint/eslint-plugin": "^2.33.0",
-    "@typescript-eslint/parser": "^2.33.0",
+    "@typescript-eslint/eslint-plugin": "^3.0.1",
+    "@typescript-eslint/parser": "^3.0.1",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
-    "eslint": "^7.0.0",
+    "eslint": "^7.1.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-prettier": "^3.1.3",
     "eslint-plugin-react": "^7.20.0",
@@ -62,15 +62,15 @@
     "prettier": "^2.0.5",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "ts-jest": "^25.5.1",
-    "typescript": "^3.9.2",
-    "uno-js": "^0.7.20"
+    "ts-jest": "^26.0.0",
+    "typescript": "^3.9.3",
+    "uno-js": "^0.7.23"
   },
   "dependencies": {
-    "@material-ui/core": "^4.9.14",
+    "@material-ui/core": "^4.10.0",
     "@material-ui/icons": "^4.9.1",
     "react-form-validator-core": "^0.6.5",
-    "uno-react": "^0.16.7"
+    "uno-react": "^0.16.10"
   },
   "peerDependencies": {
     "react": "^16.13.1",
