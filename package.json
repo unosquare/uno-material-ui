@@ -47,16 +47,16 @@
   "homepage": "https://github.com/unosquare/uno-material-ui#readme",
   "devDependencies": {
     "@types/enzyme": "^3.10.5",
-    "@types/jest": "^25.2.3",
-    "@types/react": "16.9.35",
+    "@types/jest": "^26.0.0",
+    "@types/react": "16.9.36",
     "@types/react-dom": "16.9.8",
-    "@typescript-eslint/eslint-plugin": "^3.2.0",
-    "@typescript-eslint/parser": "^3.2.0",
+    "@typescript-eslint/eslint-plugin": "^3.3.0",
+    "@typescript-eslint/parser": "^3.3.0",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
     "eslint": "^7.2.0",
     "eslint-config-prettier": "^6.11.0",
-    "eslint-plugin-prettier": "^3.1.3",
+    "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.20.0",
     "jest": "^26.0.1",
     "prettier": "^2.0.5",
@@ -67,10 +67,10 @@
     "uno-js": "^0.7.26"
   },
   "dependencies": {
-    "@material-ui/core": "^4.10.1",
+    "@material-ui/core": "^4.10.2",
     "@material-ui/icons": "^4.9.1",
     "react-form-validator-core": "^0.6.5",
-    "uno-react": "^0.16.11"
+    "uno-react": "^0.16.15"
   },
   "peerDependencies": {
     "react": "^16.13.1",
